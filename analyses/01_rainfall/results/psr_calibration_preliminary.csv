@@ -1,0 +1,6 @@
+psr_category,observed_significant_rain_rate_pct,hko_probability_band,analysis_status
+Low,4.0,<30%,preliminary_from_prior_note
+Medium Low,24.0,30-44%,preliminary_from_prior_note
+Medium,49.5,45-54%,preliminary_from_prior_note
+Medium High,61.4,55-69%,preliminary_from_prior_note
+High,75.0,>=70%,preliminary_from_prior_note

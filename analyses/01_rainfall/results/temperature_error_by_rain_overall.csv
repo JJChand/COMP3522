@@ -1,0 +1,5 @@
+metric,rain_group,n_forecasts,mae_c,bias_c
+Tmax,at_least_10_mm,1701,1.543,0.818
+Tmax,under_10_mm,11402,1.349,-0.37
+Tmin,at_least_10_mm,1701,1.24,1.033
+Tmin,under_10_mm,11402,0.969,-0.236

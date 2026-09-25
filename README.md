@@ -20,6 +20,11 @@ analyses/
 See [`analyses/00_data_access/README.md`](analyses/00_data_access/README.md) for
 environment setup and the run command.
 
+For the current macOS rainfall and temperature-error analysis, see
+[`analyses/01_rainfall/README.md`](analyses/01_rainfall/README.md). It uses
+Python, reads the existing server database, and saves only aggregate research
+results locally.
+
 The fetch deliberately:
 
 - reads credentials only from PostgreSQL environment variables;

@@ -9,7 +9,7 @@ __pycache__/
 .venv/
 
 # Generated analysis artifacts (retain folder placeholders)
-analyses/**/results/*
+
 !analyses/**/results/.gitkeep
 
 # Temporary PDF inspection files

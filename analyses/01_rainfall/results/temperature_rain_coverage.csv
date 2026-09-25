@@ -1,0 +1,2 @@
+start_inclusive,end_exclusive,calendar_days,days_with_any_observation,usable_tmax_days,usable_tmin_days,usable_rain_days,usable_all_three_days,days_at_least_10_mm
+2022-01-01,2026-01-01,1461,1461,1461,1461,1461,1461,189

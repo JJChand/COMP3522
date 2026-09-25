@@ -1,0 +1,6 @@
+psr_category,n_forecasts,n_valid_days,n_significant_rain_forecasts,observed_rate_pct,cluster_ci_low_pct,cluster_ci_high_pct,hko_probability_band
+Low,7837,1061,196,2.5,1.8,3.5,<30%
+Medium Low,1589,495,256,16.1,12.9,19.7,30-44%
+Medium,900,333,346,38.4,32.1,45.5,45-54%
+Medium High,449,189,249,55.5,46.4,64.4,55-69%
+High,474,131,348,73.4,63.6,82.2,>=70%

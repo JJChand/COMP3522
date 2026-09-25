@@ -7,7 +7,8 @@ searching across the repository.
 ```text
 analyses/
   00_data_access/       # connection and source-data feasibility checks
-  01_<direction>/       # future research direction
+  01_rainfall/          # macOS rainfall access and coverage checks
+  02_<direction>/       # future research direction
     README.md
     <scripts>
     results/
@@ -15,4 +16,7 @@ analyses/
 
 Generated files belong in the analysis folder's `results/` directory. Result
 contents are ignored by Git by default because database extracts may be large;
-promote only small, reviewed outputs into version control deliberately.
+promote only small, reviewed outputs into version control deliberately. The
+rainfall procedure reads the existing database without saving raw observations.
+Its requested research CSVs and plots are aggregate outputs in
+`01_rainfall/results/`.

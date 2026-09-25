@@ -1,0 +1,3 @@
+metric,mae_difference_c,cluster_ci_low_c,cluster_ci_high_c,n_forecasts_at_least_10_mm,n_forecasts_under_10_mm
+Tmax,0.194,0.059,0.338,1701,11402
+Tmin,0.271,0.146,0.39,1701,11402
