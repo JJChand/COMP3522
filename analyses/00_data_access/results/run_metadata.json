@@ -1,0 +1,19 @@
+﻿{
+    "generated_at_utc":  "2026-09-21T15:36:58.6618979Z",
+    "start_date_inclusive":  "2022-01-01",
+    "end_date_exclusive":  "2022-01-08",
+    "lead_days":  [
+                      1,
+                      9
+                  ],
+    "requested_sample_limit":  100,
+    "series_codes":  [
+                         "obs_hko_daily_tmax",
+                         "obs_hko_daily_tmin"
+                     ],
+    "row_counts":  {
+                       "connection_check.csv":  1,
+                       "table_counts.csv":  7,
+                       "forecast_temperature_sample.csv":  77
+                   }
+}
