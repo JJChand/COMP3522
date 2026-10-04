@@ -1,0 +1,51 @@
+scope,before,after,n_pairs
+consecutive_le24h,Low,Low,30844
+consecutive_le24h,Low,Medium Low,378
+consecutive_le24h,Low,Medium,47
+consecutive_le24h,Low,Medium High,5
+consecutive_le24h,Low,High,2
+consecutive_le24h,Medium Low,Low,354
+consecutive_le24h,Medium Low,Medium Low,6513
+consecutive_le24h,Medium Low,Medium,314
+consecutive_le24h,Medium Low,Medium High,35
+consecutive_le24h,Medium Low,High,2
+consecutive_le24h,Medium,Low,28
+consecutive_le24h,Medium,Medium Low,163
+consecutive_le24h,Medium,Medium,3633
+consecutive_le24h,Medium,Medium High,212
+consecutive_le24h,Medium,High,43
+consecutive_le24h,Medium High,Low,2
+consecutive_le24h,Medium High,Medium Low,17
+consecutive_le24h,Medium High,Medium,66
+consecutive_le24h,Medium High,Medium High,1819
+consecutive_le24h,Medium High,High,139
+consecutive_le24h,High,Low,0
+consecutive_le24h,High,Medium Low,1
+consecutive_le24h,High,Medium,11
+consecutive_le24h,High,Medium High,27
+consecutive_le24h,High,High,1952
+daily_latest,Low,Low,7400
+daily_latest,Low,Medium Low,365
+daily_latest,Low,Medium,47
+daily_latest,Low,Medium High,5
+daily_latest,Low,High,3
+daily_latest,Medium Low,Low,342
+daily_latest,Medium Low,Medium Low,1139
+daily_latest,Medium Low,Medium,299
+daily_latest,Medium Low,Medium High,37
+daily_latest,Medium Low,High,4
+daily_latest,Medium,Low,29
+daily_latest,Medium,Medium Low,151
+daily_latest,Medium,Medium,603
+daily_latest,Medium,Medium High,189
+daily_latest,Medium,High,48
+daily_latest,Medium High,Low,3
+daily_latest,Medium High,Medium Low,20
+daily_latest,Medium High,Medium,52
+daily_latest,Medium High,Medium High,303
+daily_latest,Medium High,High,129
+daily_latest,High,Low,0
+daily_latest,High,Medium Low,1
+daily_latest,High,Medium,9
+daily_latest,High,Medium High,27
+daily_latest,High,High,438

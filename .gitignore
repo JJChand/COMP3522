@@ -2,11 +2,14 @@
 .env
 .env.*
 !.env.example
+.ecmwfapirc
+.ecmwfapirc.*
 
 # Python
 __pycache__/
 *.py[cod]
 .venv/
+.mplconfig/
 
 # Generated analysis artifacts (retain folder placeholders)
 

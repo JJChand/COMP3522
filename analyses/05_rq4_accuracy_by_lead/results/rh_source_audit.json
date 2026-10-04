@@ -1,0 +1,588 @@
+{
+  "humidity_series": [
+    {
+      "unit": "%",
+      "n_rows": 1461,
+      "title_en": "Daily Mean Relative Humidity (%) at the Hong Kong Observatory",
+      "title_zh": "日平均相對濕度(百分比) - 天文台",
+      "last_date": "2025-12-31",
+      "first_date": "2022-01-01",
+      "metric_name": "Daily Mean Relative Humidity (%)",
+      "series_code": "obs_hko_daily_mean_rh",
+      "station_name": "Hong Kong Observatory",
+      "relative_path": "02_實際天氣觀測\\HKO_HEADQUARTERS_DAILY\\obs_hko_daily_mean_rh\\20260911T035810Z__sha256-0889e92cfbe5.csv",
+      "source_file_id": 7130,
+      "n_complete_numeric": 1461,
+      "observation_series_id": 5
+    }
+  ],
+  "daily_report_count": 1461,
+  "humidity_source_csvs": [
+    {
+      "relative_path": "02_實際天氣觀測\\HKO_HEADQUARTERS_DAILY\\obs_hko_daily_mean_rh\\20260911T035810Z__sha256-0889e92cfbe5.csv",
+      "source_file_id": 7130,
+      "imported_series_id": 5
+    }
+  ],
+  "distinct_report_dates": 1461,
+  "report_field_inventory": [
+    {
+      "n_reports": 1461,
+      "field_name": "BulletinDate"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "BulletinTime"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ChekLapKokLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ChekLapKokMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ChekLapKokMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ChekLapKokMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "CheungChauLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "CheungChauMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "CheungChauMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HappyValleyLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HappyValleyMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HappyValleyMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsAccumRainfall"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsAvgRainfall"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsMaxRH"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsMinGrassTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsMinRH"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsRainfall"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HongKongDesc"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HongKongParkLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HongKongParkMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HongKongParkMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KaiTakRunwayParkLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KaiTakRunwayParkMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KaiTakRunwayParkMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KatOLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KatOMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KingsParkLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KingsParkMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KingsParkReadingsMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KingsParkReadingsMaxUVIndex"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KingsParkReadingsMeanUVIndex"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KingsParkReadingsMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KingsParkReadingsSunShine"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KowloonCityLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KowloonCityMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KowloonCityMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KwunTongLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KwunTongMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KwunTongMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "KwunTongMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "LauFauShanLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "LauFauShanMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "LauFauShanMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "NoteDesc"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "NoteDesc1"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "NoteDesc2"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "NoteDesc3"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "PingChauLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "PingChauMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ReportTimeInfoDate"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "SaiKungLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "SaiKungMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "SaiKungMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "SaiWanHoLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "SaiWanHoMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShamShuiPoLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShamShuiPoMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShamShuiPoMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShaTauKokLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShaTauKokMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShaTinLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShaTinMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShaTinMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShauKeiWanLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShauKeiWanMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShauKeiWanMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShekKongLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShekKongMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "ShekKongMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "StanleyLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "StanleyMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "StanleyMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaiMeiTukLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaiMeiTukMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaiMeiTukMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaiMeiTukMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaiPoLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaiPoMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaiPoMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaKwuLingLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaKwuLingMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TaKwuLingMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TapMunLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TapMunMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TseungKwanOLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TseungKwanOMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TseungKwanOMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsimBeiTsuiLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsimBeiTsuiMicrosieverts"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsingYiLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsingYiMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsingYiMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsuenWanHoKoonLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsuenWanHoKoonMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsuenWanHoKoonMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsuenWanShingMunValleyLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsuenWanShingMunValleyMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TsuenWanShingMunValleyMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TuenMunLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TuenMunMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "TuenMunMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "WongChukHangLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "WongChukHangMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "WongChukHangMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "WongTaiSinLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "WongTaiSinMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "WongTaiSinMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "YuenLongParkLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "YuenLongParkMaxTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "YuenLongParkMinTemp"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "YuenNgFanLocationName"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "YuenNgFanMicrosieverts"
+    }
+  ],
+  "humidity_candidate_report_fields": [
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsMaxRH"
+    },
+    {
+      "n_reports": 1461,
+      "field_name": "HKOReadingsMinRH"
+    }
+  ],
+  "observation_catalog_series_count": 151,
+  "measurement_notes": [
+    {
+      "field_name": "NoteDesc",
+      "note": "From readings taken at various locations in Hong Kong in the past, the hourly mean ambient gamma radiation dose rate may vary between 0.06 and 0.3 microsievert per hour. (1 microsievert = 0.000001 sievert = 0.001 millisievert)",
+      "n_reports": 1461,
+      "first_report_date": "2022-01-01",
+      "last_report_date": "2025-12-31"
+    },
+    {
+      "field_name": "NoteDesc1",
+      "note": "Temporal variations are generally caused by changes in meteorological conditions such as rainfall, wind and barometric pressure.",
+      "n_reports": 1461,
+      "first_report_date": "2022-01-01",
+      "last_report_date": "2025-12-31"
+    },
+    {
+      "field_name": "NoteDesc2",
+      "note": "Spatial variations are generally caused by differences in the radioactive content of local rock and soil.",
+      "n_reports": 1461,
+      "first_report_date": "2022-01-01",
+      "last_report_date": "2025-12-31"
+    },
+    {
+      "field_name": "NoteDesc3",
+      "note": "The data displayed is provisional. Only limited data validation has been carried out.",
+      "n_reports": 1461,
+      "first_report_date": "2022-01-01",
+      "last_report_date": "2025-12-31"
+    }
+  ],
+  "notes_query_sha256": "1ae5ca24dfac2edd862860296fe45ac738351e302c17755f044ca34059b460b3",
+  "checked_at_utc": "2026-10-03T17:54:09.615814+00:00",
+  "database_modified": false,
+  "start_inclusive": "2022-01-01",
+  "end_exclusive": "2026-01-01",
+  "query_sha256": "bca3616286b99d340de8aa989e6baed3c8259fd0c9e9addab5701a4c31498469",
+  "extrema_series_candidates": [],
+  "validated_json_extrema": {
+    "source_table": "project.hko_multistation_report",
+    "station": "Hong Kong Observatory",
+    "observed_fields": {
+      "rh_min": "HKOReadingsMinRH",
+      "rh_max": "HKOReadingsMaxRH"
+    },
+    "unit": "percent",
+    "error_unit": "percentage_points",
+    "observation_date": "report_date = ReportTimeInfoDate",
+    "official_definition_source": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
+    "documentation_pages": "36–37 (printed pages), station/attribute/date definitions",
+    "source_completeness_marker": "not supplied in retained JSON; numeric/date/range validation only",
+    "source_quality_notes": {
+      "The data displayed is provisional. Only limited data validation has been carried out.": 1461
+    },
+    "n_reports": 1461,
+    "n_expected_dates": 1461,
+    "n_valid_dates": 1461,
+    "n_missing_or_rejected_dates": 0,
+    "rejected_by_reason": {},
+    "valid_dates_by_year": {
+      "2022": 365,
+      "2023": 365,
+      "2024": 366,
+      "2025": 365
+    },
+    "bulletin_minus_observation_days": {
+      "1": 1461
+    },
+    "bulletin_times": {
+      "0015": 1456,
+      "0045": 1,
+      "0025": 1,
+      "0020": 1,
+      "0120": 1,
+      "0035": 1
+    },
+    "temperature_crosscheck_matches": {
+      "tmin": 1461,
+      "tmax": 1461
+    },
+    "temperature_crosscheck_mismatches": {},
+    "temperature_crosscheck_missing": {},
+    "mean_rh_crosscheck_n": 1461,
+    "mean_rh_outside_report_extrema_n": 0,
+    "mean_rh_crosscheck_interpretation": "sanity check only; agreement does not establish finalized RH completeness"
+  },
+  "rh_report_rows_sha256": "b3c2f90ebc78ee5a3cf0d899a58fcc3eba1ee9105d000e354e97fe72c422239c",
+  "scoring_status": "validated_daily_report_extrema_available"
+}

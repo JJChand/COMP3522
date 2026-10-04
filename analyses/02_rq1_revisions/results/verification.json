@@ -1,0 +1,11 @@
+{
+  "verified_at_utc": "2026-10-03T17:51:49.261765+00:00",
+  "database_modified": false,
+  "independent_sql_group_count": 104,
+  "checks": [
+    "all scope/metric/lead pair counts, distinct target counts and change counts match SQL",
+    "all mean absolute revisions and change frequencies match SQL to 1e-10",
+    "lead counts and weighted absolute revisions reconcile to overall"
+  ],
+  "validation_query_sha256": "52c6ae9c04b43ce6fcd6ea90c3da74f4939bce81960a72a88984a312305dcbde"
+}

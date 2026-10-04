@@ -1,0 +1,4 @@
+proxy,n_target_dates,n_events,n_matched_forecasts,n_candidate_forecasts,n_unmatched_forecasts
+area_weighted_22,1255,155,11249,13103,1854
+station_mean_22,1255,154,11249,13103,1854
+hko_point,1461,189,13103,13103,0

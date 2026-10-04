@@ -1,0 +1,21 @@
+{
+  "verified_at_utc": "2026-10-03T18:15:04.563377+00:00",
+  "database_modified": false,
+  "independent_aggregate_checks": 16,
+  "scope": "SQL aggregates RQ2 direction/PSR transitions, RQ3 temperature/RH usefulness, RQ4 temperature/RH accuracy and matched temperature baselines, RQ5 temperature/RH bias. Independently written Python checks RQ4 daily-latest RH matched baselines plus all 732 frozen RH calendar bins; RQ6 all three proxies and all/1-3/4-6/7-9 lead groups: reliability counts/rates/bands, midpoint and endpoint Brier scores, score bounds, all confusion cells/rates, coverage and unique exported grain; RQ7 join/outcome means. No independent CI, FFI, coefficient or SHAP verification.",
+  "verifier_sha256": "213b7858813264ca0e4bdb545061a47ebbbc7b4697a9e4f97ed252fdae9c145a",
+  "source_queries_sha256": "885167b31f3a26259e75e75731fff9ffe31f6ea3af32d731ed949ff296eb20ce",
+  "baseline_query_sha256": "ff0e91f71f58e512c4cf1e55e3535c4630ba883a2929a1faafc444eca1d2ba8f",
+  "forecast_rows_sha256": "9e55b2e718918aa5582eaeebae27b1398147b597d1e10f87df69b64b311ceb6b",
+  "observation_rows_sha256": "1eeb40b1a147fb39269f107fb8f612170f4dbefaa0724e8bc0a48bff0e0ad9f1",
+  "rh_report_rows_sha256": "b3c2f90ebc78ee5a3cf0d899a58fcc3eba1ee9105d000e354e97fe72c422239c",
+  "output_file_sha256": {
+    "findings.md": "f1e9f8c99078e0311247826fa7ed8dbfd7f32715b29b52fa5b279145ec49d80d",
+    "join_coverage.csv": "744eceeea5b5ae88a8d08d11a4a3deca0fdf71763a5967cccccc79110ce853d0",
+    "revision_usefulness.png": "92a05388ecc5123580ea16b69da9f5400660d1dfe84c72ed17d18150253a3d9c",
+    "rh_revision_usefulness.png": "59b9b32be4afcde49a52cb69b3d6c6ba11c33dc22db11eb0d802e357098b6dce",
+    "run_metadata.json": "cea6e9e971911059ef3587a10ede741f8bb08980688a2a6534c488c95cbd4ec1",
+    "usefulness_by_lead.csv": "f9386385a9c42fee0e4ce9b6a78f991b2308236658f99d2126017f835225465e",
+    "usefulness_overall.csv": "cf40cf861da5e03e198a264239697669a73e507477a6c0b0fbce13615d03df4d"
+  }
+}

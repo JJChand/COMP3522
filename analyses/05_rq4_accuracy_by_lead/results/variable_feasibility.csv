@@ -1,0 +1,3 @@
+variable,comparable_observations,observation,status
+Tmin/Tmax,True,HKO daily extrema,MAE/RMSE scored
+RH min/max,True,HKOReadingsMinRH/MaxRH daily JSON report,MAE/RMSE scored; no CSV completeness flag

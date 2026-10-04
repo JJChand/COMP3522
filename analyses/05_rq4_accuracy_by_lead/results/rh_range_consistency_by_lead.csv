@@ -1,0 +1,10 @@
+lead_days,n_cases,n_outside,outside_rate_pct,n_below_forecast_min,n_above_forecast_max,mean_outside_distance_pp,interpretation
+1,1460,31,2.1232876712328768,26,5,0.07397260273972603,mean-RH consistency only; not extrema MAE/RMSE
+2,1459,58,3.9753255654557917,49,9,0.15695681973954764,mean-RH consistency only; not extrema MAE/RMSE
+3,1458,82,5.6241426611796985,69,13,0.20644718792866942,mean-RH consistency only; not extrema MAE/RMSE
+4,1457,104,7.137954701441318,86,18,0.2779684282772821,mean-RH consistency only; not extrema MAE/RMSE
+5,1456,118,8.104395604395604,90,28,0.35645604395604397,mean-RH consistency only; not extrema MAE/RMSE
+6,1455,145,9.965635738831615,106,39,0.5099656357388316,mean-RH consistency only; not extrema MAE/RMSE
+7,1454,181,12.448418156808803,129,52,0.7647867950481431,mean-RH consistency only; not extrema MAE/RMSE
+8,1453,209,14.384033035099794,143,66,0.9442532690984171,mean-RH consistency only; not extrema MAE/RMSE
+9,1451,239,16.471399035148174,154,85,1.0689179875947623,mean-RH consistency only; not extrema MAE/RMSE

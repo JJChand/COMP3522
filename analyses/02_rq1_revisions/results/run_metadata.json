@@ -1,0 +1,55 @@
+{
+  "run_at_utc": "2026-10-02T16:04:53.697337+00:00",
+  "task": "Task 1 / RQ1",
+  "start_inclusive": "2022-01-01",
+  "end_exclusive": "2026-01-01",
+  "read_only": true,
+  "database_modified": false,
+  "quality": {
+    "start_inclusive": "2022-01-01",
+    "end_exclusive": "2026-01-01",
+    "raw_forecast_rows": 50792,
+    "distinct_source_issues": 5658,
+    "canonical_target_time_rows": 50783,
+    "identical_duplicate_rows_removed": 9,
+    "duplicate_target_time_groups": 9,
+    "target_dates_available": 1461,
+    "calendar_target_dates_expected": 1461,
+    "lead_zero_rows_excluded_from_pairs": 2710,
+    "lead_mismatch_rows": 0,
+    "invalid_numeric_ranges": 0,
+    "midnight_source_issues": 990,
+    "titles_without_explicit_hkt_update_time": 0,
+    "null_tmin_rows": 0,
+    "null_tmax_rows": 0,
+    "null_rh_min_rows": 0,
+    "null_rh_max_rows": 0
+  },
+  "source_tables": [
+    "project.hko_forecast_daily",
+    "project.hko_forecast_issue",
+    "project.hko_source_file"
+  ],
+  "query_file": "forecast_query.sql",
+  "query_sha256": "317ec936c7b225892f8f268ce3a181071585bf89e62f3523e4286c4915fcec55",
+  "source_rows_sha256": "8eff3cf73efcaafe3f89c578a6c463aa166692fdbd2e155f24d113367bc2103b",
+  "unique_source_file_count": 5658,
+  "bootstrap_repetitions": 1000,
+  "bootstrap_seed": 3522,
+  "bootstrap_cluster": "valid_date",
+  "bootstrap_interval": "95% percentile; no serial-dependence correction",
+  "pair_counts": {
+    "all_archived_pairs": 46614,
+    "consecutive_le24h": 46607,
+    "daily_latest": 11643
+  },
+  "numeric_change_rule": "exact nonzero Decimal difference at published precision",
+  "primary_gap_limit_hours": 24,
+  "primary_scope": "consecutive_le24h",
+  "python_version": "3.13.5",
+  "package_versions": {
+    "numpy": "2.5.3",
+    "psycopg": "3.3.6",
+    "python-dotenv": "1.2.4"
+  }
+}

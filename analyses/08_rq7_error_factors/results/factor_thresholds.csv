@@ -1,0 +1,5 @@
+metric,outcome_kind,spatial_high_threshold_c,threshold_period,temperature_change_threshold_c
+tmax,absolute_error,8.5,2022 distinct valid dates,2.0
+tmax,absolute_revision,8.5,2022 distinct valid dates,2.0
+tmin,absolute_error,7.299999999999999,2022 distinct valid dates,2.0
+tmin,absolute_revision,7.299999999999999,2022 distinct valid dates,2.0

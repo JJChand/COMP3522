@@ -3,7 +3,7 @@
 **Database:** `course_project`  
 **Primary schema:** `project`  
 **Database engine:** PostgreSQL with PostGIS  
-**Context version:** 2026-09-18  
+**Context version:** 2026-10-04
 **Audience:** COMP3522 project teammates and their coding agents
 
 This is the canonical working guide for querying the course-project database.
@@ -33,6 +33,10 @@ When helping a teammate:
    reproducible provenance.
 9. Treat the interpretation and leakage rules in this guide as mandatory unless
    the project team explicitly changes the research design.
+10. After any authorized database modification, refresh this guide's live-schema
+    snapshot from the committed live catalog and check the import status.
+    Follow `AGENTS.md`; do not mark database work complete with stale schema
+    documentation. Refresh this guide too when meanings or usage rules change.
 
 ## Connection contract
 
@@ -377,6 +381,58 @@ For the main temperature verification target, use:
 
 ## Critical interpretation rules and pitfalls
 
+### Part 1 measurement availability verified 2026-10-04
+
+Read-only inspection of the live observation catalog and 2022–2025 records
+confirmed complete HKO Headquarters daily Tmax/Tmin observations and daily
+**mean** RH (`obs_hko_daily_mean_rh`). The normalized CSV catalog has no daily
+RH extrema series, but this is NOT an absence of extrema in the database.
+All 1,461 retained `hko_multistation_report` JSON reports contain numeric
+`HKOReadingsMinRH` and `HKOReadingsMaxRH` at HKO Headquarters. These fields
+are daily minimum/maximum RH (%) under the
+[HKO API definitions](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf),
+printed pages 36–37. Forecast errors are in percentage points, not percent change.
+
+Join forecast `valid_date` to report `report_date`, verified against
+`ReportTimeInfoDate` (YYYYMMDD), NOT `bulletin_date`. Each report is published
+the next day; 1,456 of 1,461 retained bulletin times are `0015`, with five later
+times. There is one report per observation date across 2022–2025. All endpoints
+pass numeric, 0–100 and min≤max checks; all report temperature extrema match
+the complete CSV temperatures for the same day, and mean RH lies within the
+reported RH extrema on every day. These cross-checks are sanity evidence,
+not proof of finalized RH observations. All retained reports' `NoteDesc3`
+explicitly marks the displayed data as provisional with limited validation.
+JSON reports carry no CSV-style `C` completeness marker: retain that source
+distinction and audit exclusions. These are HKO-point verification targets,
+not a measured territory-wide humidity range.
+Preserve report/source-file provenance; there is no RH CSV series foreign key.
+The reproducible audit is `analyses/05_rq4_accuracy_by_lead/audit_rh_sources.py`.
+
+Mean RH must never substitute for either RH endpoint. Mean-within-forecast-range
+is a separate consistency diagnostic. RH extrema history here begins in 2022:
+the RH seasonal baseline freezes 2022 data and verifies only 2023–2025, unlike
+the temperature 1991–2020 normal. Never score the RH reference on its training year.
+
+Past temperature observations from 1991–2020 support an out-of-study frozen
+climatology. Historical daily-observation publication timestamps are not stored;
+issue-day-minus-1/2 persistence remains a retrospective comparator unless
+publication availability is independently established. Realized target-day
+rainfall, temperature changes and regional spread remain post-event context.
+
+The RQ6 read-only rainfall-report audit also checked all 1,461 daily JSON
+reports. Their only rainfall keys are `HKOReadingsRainfall`,
+`HKOReadingsAccumRainfall` and `HKOReadingsAvgRainfall`. Daily numeric rainfall
+matches the HKO Headquarters point CSV on all 1,223 comparable dates; it is
+not a territorial daily mean. Under the API definitions, accumulated rainfall
+is total since 1 January. The average field has no within-year numeric decreases
+and reaches 2,431.2 mm each year, a cumulative-like calendar profile inconsistent
+with a daily rainfall measure. The exact climatological averaging period is not
+established here. Do not threshold either cumulative field at 10 mm for PSR
+verification or infer territorial coverage from the word "average". See
+`analyses/07_rq6_psr_calibration/audit_rainfall_reports.py` and its aggregate audit.
+The new Part 1 analyses are read-only; the generated live schema snapshot and
+external-model import status below have not been changed by this analysis work.
+
 1. **The forecast is the public HKO 9-day product, not raw numerical weather
    prediction output.** Do not label it as an NWP-model forecast.
 2. **HKO Headquarters Tmax/Tmin is a point-station target.** Do not describe it
@@ -408,6 +464,7 @@ For the main temperature verification target, use:
 | --- | --- |
 | What did a specific forecast bulletin predict? | `hko_forecast_issue` joined to `hko_forecast_daily` |
 | How accurate were forecast Tmax/Tmin values? | Forecast tables plus `v_hko_daily_observation`, filtered to HKO Tmax/Tmin series |
+| How accurate were forecast RH min/max values? | Forecast tables plus validated `hko_multistation_report` HKOReadingsMinRH/MaxRH, joined on report_date, not bulletin_date; no CSV completeness flag |
 | What was the official daily value for a named CSV series? | `v_hko_daily_observation` |
 | Which series/stations/units are available? | `hko_observation_series` |
 | What did the wide daily JSON report contain? | `hko_multistation_report` for lossless JSON; `v_hko_multistation_value` for exploration |
@@ -774,6 +831,31 @@ or that two different series cannot represent related measurements.
 
 ## Maintaining this guide
 
+This guide is the repository's single schema reference. Its generated live-schema
+snapshot is refreshed using
+`data_management/model_forecasts/schema_document.py` after every database
+modification. The GFS import command refreshes it after schema setup and again
+after the import attempt. Human interpretation outside the generated section is
+preserved; original HKO definitions above were inspected on 2026-09-18.
+
+### External-model extension
+
+`project.external_model_source` records downloaded forecast subsets, their UTC
+run times and forecast hours, source URLs, checksums and retrieval metadata.
+`project.external_model_temperature` contains station extractions and joins to
+the source table by `source_id` and `project.hko_station` by `station_code`.
+Column types, keys, constraints and indexes are listed in the live-schema
+snapshot at the end of this guide.
+DDL is maintained in `data_management/model_forecasts/schema.sql`.
+
+For this extension, `TMP`/`2t` is instantaneous 2 m temperature; `TMAX`/`TMIN`
+are extrema over the stored interval, not automatically HKT calendar-day
+extrema. Preserve `step_type`, `interval_start_utc` and `valid_time_utc`.
+The grid-point extraction is nearest point, with its distance recorded; do not
+assume it is a station measurement or a Hong Kong territory average.
+Initialization time and retrieval time do not establish historical publication
+time. Keep the manifests and GRIB files with the database backup.
+
 Update this document whenever a migration changes a table, column, constraint,
 view, index, parsing rule, canonical series mapping, or important analytical
 caveat. Update the context version and source inspection dates, then compare the
@@ -781,3 +863,405 @@ document against the live catalog using the schema-inspection query above.
 
 Do not put passwords, authentication tokens, raw personal credentials, or
 machine-specific secret files in this guide.
+
+<!-- BEGIN GENERATED LIVE SCHEMA -->
+## Live schema snapshot
+
+Live database: `course_project`. Schema: `project`.
+
+Verified at: 2026-10-02T04:22:01+00:00.
+
+Generated by `data_management/model_forecasts/schema_document.py` using
+a read-only connection loaded from the repository-root `.env`.
+This is the committed live catalog, not a list of proposed migrations.
+
+Human definitions, interpretation and safe query patterns are retained
+in the preceding sections of this guide.
+
+Refresh this section after every database modification, including imports.
+
+### Object inventory
+
+| Object | Kind |
+| --- | --- |
+| `project.external_model_source` | table |
+| `project.external_model_temperature` | table |
+| `project.hko_daily_observation` | table |
+| `project.hko_forecast_daily` | table |
+| `project.hko_forecast_issue` | table |
+| `project.hko_multistation_report` | table |
+| `project.hko_nowcast_daily_rainfall_jan_2025` | table |
+| `project.hko_observation_series` | table |
+| `project.hko_source_file` | table |
+| `project.hko_station` | table |
+| `project.v_hko_daily_observation` | view |
+| `project.v_hko_multistation_value` | view |
+
+### External-model import status
+
+| Model | Source subsets | First run (UTC) | Last run (UTC) |
+| --- | ---: | --- | --- |
+| GFS | 5 | 2024-01-01T00:00:00+00:00 | 2024-01-01T00:00:00+00:00 |
+
+Temperature extract rows: **13** (actual count at verification time).
+
+### Live object definitions
+
+#### `project.external_model_source`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `source_id` | `uuid` | No |  |
+| `provider` | `text` | No |  |
+| `model` | `text` | No |  |
+| `product` | `text` | No |  |
+| `run_time_utc` | `timestamp with time zone` | No |  |
+| `forecast_hour` | `integer` | No |  |
+| `source_url` | `text` | No |  |
+| `index_url` | `text` | No |  |
+| `retrieved_at_utc` | `timestamp with time zone` | No |  |
+| `subset_relative_path` | `text` | No |  |
+| `subset_sha256` | `text` | No |  |
+| `subset_size_bytes` | `bigint` | No |  |
+| `manifest` | `jsonb` | No |  |
+| `imported_at_utc` | `timestamp with time zone` | No | now() |
+
+Constraints (including foreign-key join contracts):
+
+- `external_model_source_forecast_hour_check`: `CHECK (forecast_hour >= 0)`
+- `external_model_source_pkey`: `PRIMARY KEY (source_id)`
+- `external_model_source_source_url_subset_sha256_key`: `UNIQUE (source_url, subset_sha256)`
+- `external_model_source_subset_sha256_check`: `CHECK (length(subset_sha256) = 64)`
+- `external_model_source_subset_size_bytes_check`: `CHECK (subset_size_bytes > 0)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX external_model_source_pkey ON project.external_model_source USING btree (source_id);
+CREATE UNIQUE INDEX external_model_source_source_url_subset_sha256_key ON project.external_model_source USING btree (source_url, subset_sha256);
+CREATE INDEX external_model_source_run_time_idx ON project.external_model_source USING btree (model, run_time_utc, forecast_hour);
+```
+
+#### `project.external_model_temperature`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `source_id` | `uuid` | No |  |
+| `station_code` | `text` | No |  |
+| `message_number` | `integer` | No |  |
+| `parameter_id` | `integer` | No |  |
+| `short_name` | `text` | No |  |
+| `parameter_name` | `text` | No |  |
+| `step_type` | `text` | No |  |
+| `interval_start_utc` | `timestamp with time zone` | No |  |
+| `valid_time_utc` | `timestamp with time zone` | No |  |
+| `target_latitude` | `double precision` | No |  |
+| `target_longitude` | `double precision` | No |  |
+| `grid_latitude` | `double precision` | No |  |
+| `grid_longitude` | `double precision` | No |  |
+| `grid_distance_km` | `double precision` | No |  |
+| `extraction_method` | `text` | No |  |
+| `source_value` | `double precision` | No |  |
+| `source_unit` | `text` | No |  |
+| `temperature_c` | `double precision` | No |  |
+
+Constraints (including foreign-key join contracts):
+
+- `external_model_temperature_check`: `CHECK (interval_start_utc <= valid_time_utc)`
+- `external_model_temperature_extraction_method_check`: `CHECK (extraction_method = 'nearest_grid_point'::text)`
+- `external_model_temperature_grid_distance_km_check`: `CHECK (grid_distance_km >= 0::double precision)`
+- `external_model_temperature_message_number_check`: `CHECK (message_number > 0)`
+- `external_model_temperature_pkey`: `PRIMARY KEY (source_id, station_code, message_number)`
+- `external_model_temperature_source_id_fkey`: `FOREIGN KEY (source_id) REFERENCES external_model_source(source_id)`
+- `external_model_temperature_station_code_fkey`: `FOREIGN KEY (station_code) REFERENCES hko_station(station_code)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX external_model_temperature_pkey ON project.external_model_temperature USING btree (source_id, station_code, message_number);
+CREATE INDEX external_model_temperature_valid_time_idx ON project.external_model_temperature USING btree (valid_time_utc, station_code);
+```
+
+#### `project.hko_daily_observation`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `observation_series_id` | `bigint` | No |  |
+| `observation_date` | `date` | No |  |
+| `value_text` | `text` | Yes |  |
+| `value_numeric` | `numeric` | Yes |  |
+| `data_completeness` | `text` | Yes |  |
+
+Constraints (including foreign-key join contracts):
+
+- `hko_daily_observation_observation_series_id_fkey`: `FOREIGN KEY (observation_series_id) REFERENCES hko_observation_series(observation_series_id) ON DELETE CASCADE`
+- `hko_daily_observation_pkey`: `PRIMARY KEY (observation_series_id, observation_date)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX hko_daily_observation_pkey ON project.hko_daily_observation USING btree (observation_series_id, observation_date);
+CREATE INDEX hko_daily_observation_date_idx ON project.hko_daily_observation USING btree (observation_date);
+```
+
+#### `project.hko_forecast_daily`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `forecast_issue_id` | `bigint` | No |  |
+| `valid_date` | `date` | No |  |
+| `lead_days` | `integer` | No |  |
+| `wind` | `text` | Yes |  |
+| `weather` | `text` | Yes |  |
+| `forecast_tmin_c` | `numeric` | Yes |  |
+| `forecast_tmax_c` | `numeric` | Yes |  |
+| `forecast_rh_min_pct` | `numeric` | Yes |  |
+| `forecast_rh_max_pct` | `numeric` | Yes |  |
+| `psr` | `text` | Yes |  |
+
+Constraints (including foreign-key join contracts):
+
+- `hko_forecast_daily_forecast_issue_id_fkey`: `FOREIGN KEY (forecast_issue_id) REFERENCES hko_forecast_issue(forecast_issue_id) ON DELETE CASCADE`
+- `hko_forecast_daily_pkey`: `PRIMARY KEY (forecast_issue_id, valid_date)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX hko_forecast_daily_pkey ON project.hko_forecast_daily USING btree (forecast_issue_id, valid_date);
+CREATE INDEX hko_forecast_daily_valid_date_idx ON project.hko_forecast_daily USING btree (valid_date);
+```
+
+#### `project.hko_forecast_issue`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `forecast_issue_id` | `bigint` | No | identity ALWAYS |
+| `source_file_id` | `bigint` | No |  |
+| `bulletin_time_hkt` | `timestamp without time zone` | No |  |
+| `published_time_utc` | `timestamp with time zone` | Yes |  |
+| `title` | `text` | No |  |
+| `general_situation` | `text` | Yes |  |
+| `raw_description` | `text` | No |  |
+
+Constraints (including foreign-key join contracts):
+
+- `hko_forecast_issue_pkey`: `PRIMARY KEY (forecast_issue_id)`
+- `hko_forecast_issue_source_file_id_fkey`: `FOREIGN KEY (source_file_id) REFERENCES hko_source_file(source_file_id) ON DELETE CASCADE`
+- `hko_forecast_issue_source_file_id_key`: `UNIQUE (source_file_id)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX hko_forecast_issue_pkey ON project.hko_forecast_issue USING btree (forecast_issue_id);
+CREATE UNIQUE INDEX hko_forecast_issue_source_file_id_key ON project.hko_forecast_issue USING btree (source_file_id);
+```
+
+#### `project.hko_multistation_report`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `report_id` | `bigint` | No | identity ALWAYS |
+| `source_file_id` | `bigint` | No |  |
+| `report_date` | `date` | Yes |  |
+| `bulletin_date` | `date` | Yes |  |
+| `bulletin_time` | `text` | Yes |  |
+| `report_json` | `jsonb` | No |  |
+
+Constraints (including foreign-key join contracts):
+
+- `hko_multistation_report_pkey`: `PRIMARY KEY (report_id)`
+- `hko_multistation_report_source_file_id_fkey`: `FOREIGN KEY (source_file_id) REFERENCES hko_source_file(source_file_id) ON DELETE CASCADE`
+- `hko_multistation_report_source_file_id_key`: `UNIQUE (source_file_id)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX hko_multistation_report_pkey ON project.hko_multistation_report USING btree (report_id);
+CREATE UNIQUE INDEX hko_multistation_report_source_file_id_key ON project.hko_multistation_report USING btree (source_file_id);
+CREATE INDEX hko_multistation_report_date_idx ON project.hko_multistation_report USING btree (report_date);
+CREATE INDEX hko_multistation_report_json_idx ON project.hko_multistation_report USING gin (report_json);
+```
+
+#### `project.hko_nowcast_daily_rainfall_jan_2025`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `forecast_date` | `date` | No |  |
+| `rainfall_mm` | `numeric` | No |  |
+| `half_hour_intervals` | `integer` | No |  |
+| `lead_30_min_count` | `integer` | No |  |
+| `lead_60_min_count` | `integer` | No |  |
+| `lead_90_plus_fallback_count` | `integer` | No |  |
+
+Constraints (including foreign-key join contracts):
+
+- `hko_nowcast_daily_rainfall_jan_2025_pkey`: `PRIMARY KEY (forecast_date)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX hko_nowcast_daily_rainfall_jan_2025_pkey ON project.hko_nowcast_daily_rainfall_jan_2025 USING btree (forecast_date);
+```
+
+#### `project.hko_observation_series`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `observation_series_id` | `bigint` | No | identity ALWAYS |
+| `source_file_id` | `bigint` | No |  |
+| `series_code` | `text` | No |  |
+| `title_zh` | `text` | Yes |  |
+| `title_en` | `text` | No |  |
+| `station_name` | `text` | Yes |  |
+| `metric_name` | `text` | No |  |
+| `unit` | `text` | Yes |  |
+
+Constraints (including foreign-key join contracts):
+
+- `hko_observation_series_pkey`: `PRIMARY KEY (observation_series_id)`
+- `hko_observation_series_source_file_id_fkey`: `FOREIGN KEY (source_file_id) REFERENCES hko_source_file(source_file_id) ON DELETE CASCADE`
+- `hko_observation_series_source_file_id_key`: `UNIQUE (source_file_id)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX hko_observation_series_pkey ON project.hko_observation_series USING btree (observation_series_id);
+CREATE UNIQUE INDEX hko_observation_series_source_file_id_key ON project.hko_observation_series USING btree (source_file_id);
+```
+
+#### `project.hko_source_file`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `source_file_id` | `bigint` | No | identity ALWAYS |
+| `dataset_name` | `text` | No |  |
+| `source_kind` | `text` | No |  |
+| `relative_path` | `text` | No |  |
+| `file_extension` | `text` | No |  |
+| `retrieved_at_utc` | `timestamp with time zone` | Yes |  |
+| `sha256_prefix` | `text` | Yes |  |
+| `size_bytes` | `bigint` | No |  |
+| `imported_at` | `timestamp with time zone` | No | now() |
+
+Constraints (including foreign-key join contracts):
+
+- `hko_source_file_pkey`: `PRIMARY KEY (source_file_id)`
+- `hko_source_file_relative_path_key`: `UNIQUE (relative_path)`
+- `hko_source_file_size_bytes_check`: `CHECK (size_bytes >= 0)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX hko_source_file_pkey ON project.hko_source_file USING btree (source_file_id);
+CREATE UNIQUE INDEX hko_source_file_relative_path_key ON project.hko_source_file USING btree (relative_path);
+```
+
+#### `project.hko_station`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `station_code` | `text` | No |  |
+| `source_file_id` | `bigint` | Yes |  |
+| `station_name` | `text` | No |  |
+| `first_operation_date` | `date` | Yes |  |
+| `elevation_m` | `numeric` | Yes |  |
+| `latitude` | `double precision` | No |  |
+| `longitude` | `double precision` | No |  |
+| `geom` | `geometry(Point,4326)` | No |  |
+
+Constraints (including foreign-key join contracts):
+
+- `hko_station_pkey`: `PRIMARY KEY (station_code)`
+- `hko_station_source_file_id_fkey`: `FOREIGN KEY (source_file_id) REFERENCES hko_source_file(source_file_id) ON DELETE SET NULL`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX hko_station_pkey ON project.hko_station USING btree (station_code);
+CREATE INDEX hko_station_geom_idx ON project.hko_station USING gist (geom);
+```
+
+#### `project.v_hko_daily_observation`
+
+Kind: view.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `observation_date` | `date` | Yes |  |
+| `series_code` | `text` | Yes |  |
+| `station_name` | `text` | Yes |  |
+| `metric_name` | `text` | Yes |  |
+| `unit` | `text` | Yes |  |
+| `value_text` | `text` | Yes |  |
+| `value_numeric` | `numeric` | Yes |  |
+| `data_completeness` | `text` | Yes |  |
+| `source_relative_path` | `text` | Yes |  |
+
+View definition:
+
+```sql
+ SELECT o.observation_date,
+    s.series_code,
+    s.station_name,
+    s.metric_name,
+    s.unit,
+    o.value_text,
+    o.value_numeric,
+    o.data_completeness,
+    f.relative_path AS source_relative_path
+   FROM hko_daily_observation o
+     JOIN hko_observation_series s ON s.observation_series_id = o.observation_series_id
+     JOIN hko_source_file f ON f.source_file_id = s.source_file_id;
+```
+
+View nullability is catalog metadata, not proof that joined values are non-null.
+
+#### `project.v_hko_multistation_value`
+
+Kind: view.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `report_id` | `bigint` | Yes |  |
+| `report_date` | `date` | Yes |  |
+| `field_name` | `text` | Yes |  |
+| `value_text` | `text` | Yes |  |
+| `value_numeric` | `numeric` | Yes |  |
+
+View definition:
+
+```sql
+ SELECT r.report_id,
+    r.report_date,
+    e.key AS field_name,
+    e.value AS value_text,
+        CASE
+            WHEN e.value ~ '^[+-]?[0-9]+([.][0-9]+)?$'::text THEN e.value::numeric
+            ELSE NULL::numeric
+        END AS value_numeric
+   FROM hko_multistation_report r
+     CROSS JOIN LATERAL jsonb_each_text(r.report_json) e(key, value);
+```
+
+View nullability is catalog metadata, not proof that joined values are non-null.
+<!-- END GENERATED LIVE SCHEMA -->

@@ -1,0 +1,100 @@
+{
+  "loaded_at_utc": "2026-10-03T17:53:56.874142+00:00",
+  "database_modified": false,
+  "read_only": true,
+  "snapshot_isolation": "REPEATABLE READ",
+  "start_inclusive": "2022-01-01",
+  "end_exclusive": "2026-01-01",
+  "history_start_inclusive": "1991-01-01",
+  "forecast_quality": {
+    "start_inclusive": "2022-01-01",
+    "end_exclusive": "2026-01-01",
+    "raw_forecast_rows": 50792,
+    "distinct_source_issues": 5658,
+    "canonical_target_time_rows": 50783,
+    "identical_duplicate_rows_removed": 9,
+    "duplicate_target_time_groups": 9,
+    "target_dates_available": 1461,
+    "calendar_target_dates_expected": 1461,
+    "lead_zero_rows_excluded_from_pairs": 2710,
+    "lead_mismatch_rows": 0,
+    "invalid_numeric_ranges": 0,
+    "midnight_source_issues": 990,
+    "titles_without_explicit_hkt_update_time": 0,
+    "null_tmin_rows": 0,
+    "null_tmax_rows": 0,
+    "null_rh_min_rows": 0,
+    "null_rh_max_rows": 0
+  },
+  "forecast_rows_sha256": "9e55b2e718918aa5582eaeebae27b1398147b597d1e10f87df69b64b311ceb6b",
+  "observation_rows_sha256": "1eeb40b1a147fb39269f107fb8f612170f4dbefaa0724e8bc0a48bff0e0ad9f1",
+  "rh_report_rows_sha256": "b3c2f90ebc78ee5a3cf0d899a58fcc3eba1ee9105d000e354e97fe72c422239c",
+  "source_query_sha256": {
+    "forecast_query.sql": "4d63a1682133fa67ac235cfa7e393797df08e808453f418ce7e41e078f484746",
+    "observation_query.sql": "61c59b6085da687fbfcc8f0cef8e764714927cb97c3f07380d0552a151045a18",
+    "rh_report_query.sql": "56d2a8ae59a1b7633a475b921876c13330b90ddeb6adf105daadc01c468dcb30"
+  },
+  "observation_rows_loaded": 221802,
+  "bootstrap_repetitions": 1000,
+  "seed": 3522,
+  "python_version": "3.13.5",
+  "package_versions": {
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "psycopg": "3.3.6",
+    "python-dotenv": "1.2.4"
+  },
+  "rh_extrema_series_available": [],
+  "rh_report_validation": {
+    "source_table": "project.hko_multistation_report",
+    "station": "Hong Kong Observatory",
+    "observed_fields": {
+      "rh_min": "HKOReadingsMinRH",
+      "rh_max": "HKOReadingsMaxRH"
+    },
+    "unit": "percent",
+    "error_unit": "percentage_points",
+    "observation_date": "report_date = ReportTimeInfoDate",
+    "official_definition_source": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
+    "documentation_pages": "36\u201337 (printed pages), station/attribute/date definitions",
+    "source_completeness_marker": "not supplied in retained JSON; numeric/date/range validation only",
+    "source_quality_notes": {
+      "The data displayed is provisional. Only limited data validation has been carried out.": 1461
+    },
+    "n_reports": 1461,
+    "n_expected_dates": 1461,
+    "n_valid_dates": 1461,
+    "n_missing_or_rejected_dates": 0,
+    "rejected_by_reason": {},
+    "valid_dates_by_year": {
+      "2022": 365,
+      "2023": 365,
+      "2024": 366,
+      "2025": 365
+    },
+    "bulletin_minus_observation_days": {
+      "1": 1461
+    },
+    "bulletin_times": {
+      "0015": 1456,
+      "0045": 1,
+      "0025": 1,
+      "0020": 1,
+      "0120": 1,
+      "0035": 1
+    },
+    "temperature_crosscheck_matches": {
+      "tmin": 1461,
+      "tmax": 1461
+    },
+    "temperature_crosscheck_mismatches": {},
+    "temperature_crosscheck_missing": {},
+    "mean_rh_crosscheck_n": 1461,
+    "mean_rh_outside_report_extrema_n": 0,
+    "mean_rh_crosscheck_interpretation": "sanity check only; agreement does not establish finalized RH completeness"
+  },
+  "rq": 3,
+  "completed_at_utc": "2026-10-03T17:54:07.366190+00:00",
+  "n_pair_records": 233000,
+  "rh_extrema_usefulness": "scored against validated daily JSON report extrema"
+}

@@ -1,0 +1,22 @@
+{
+  "verified_at_utc": "2026-10-03T18:15:04.560082+00:00",
+  "database_modified": false,
+  "independent_aggregate_checks": 116,
+  "scope": "SQL aggregates RQ2 direction/PSR transitions, RQ3 temperature/RH usefulness, RQ4 temperature/RH accuracy and matched temperature baselines, RQ5 temperature/RH bias. Independently written Python checks RQ4 daily-latest RH matched baselines plus all 732 frozen RH calendar bins; RQ6 all three proxies and all/1-3/4-6/7-9 lead groups: reliability counts/rates/bands, midpoint and endpoint Brier scores, score bounds, all confusion cells/rates, coverage and unique exported grain; RQ7 join/outcome means. No independent CI, FFI, coefficient or SHAP verification.",
+  "verifier_sha256": "213b7858813264ca0e4bdb545061a47ebbbc7b4697a9e4f97ed252fdae9c145a",
+  "source_queries_sha256": "885167b31f3a26259e75e75731fff9ffe31f6ea3af32d731ed949ff296eb20ce",
+  "baseline_query_sha256": "ff0e91f71f58e512c4cf1e55e3535c4630ba883a2929a1faafc444eca1d2ba8f",
+  "forecast_rows_sha256": "9e55b2e718918aa5582eaeebae27b1398147b597d1e10f87df69b64b311ceb6b",
+  "observation_rows_sha256": "1eeb40b1a147fb39269f107fb8f612170f4dbefaa0724e8bc0a48bff0e0ad9f1",
+  "rh_report_rows_sha256": "b3c2f90ebc78ee5a3cf0d899a58fcc3eba1ee9105d000e354e97fe72c422239c",
+  "output_file_sha256": {
+    "direction_by_lead.csv": "e085672badd98ae204b5736e1db58fa452a307cab0a07d93f4664ca981f334bb",
+    "findings.md": "dd6722e158db110b1563f36097c094753925be6d6b3400276499b916ef94c7eb",
+    "flip_flop_by_target_segment.csv": "2c17d836c299da6d8f90187cc1405adc65bcbb9e4e95f9404c7c3fe167e74f31",
+    "flip_flop_summary.csv": "bd417438944d4b34a3970e3a6b562062d64d4e8f8eaa7ef7620abb62545d2f3b",
+    "psr_transition_counts.csv": "fda38868e329fe320768e90370199de0d850fd808bb850b6e1f741073e004aee",
+    "psr_transition_summary.csv": "27cb0775bfccf67d5ba1f42f937ba74df7b245d130525afd8ea72cd766fe08e2",
+    "revision_direction.png": "51a8de4e2f830d8b70b9496a708d6c3a403f67a2c01675e19ff45b7a05b6bdfb",
+    "run_metadata.json": "914d733b91d7526f9655a839a65cc3d8e3ae1e66d74c53de452bb0c24d07a9d8"
+  }
+}

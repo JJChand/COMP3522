@@ -1,0 +1,138 @@
+{
+  "audited_at_utc": "2026-10-03T18:12:38.146249+00:00",
+  "database_modified": false,
+  "period": [
+    "2022-01-01",
+    "2026-01-01"
+  ],
+  "n_reports": 1461,
+  "source_rows_sha256": "1d7726ef50f2b805fe5999387c35380e181094c0f5bd7340710771a530f64577",
+  "query_sha256": "5ee7b054cbd5e0db3289efe3362be1a4966f1ce328761a4a46eafb6b2d69ea8a",
+  "rainfall_key_presence": {
+    "HKOReadingsAccumRainfall": 1461,
+    "HKOReadingsAvgRainfall": 1461,
+    "HKOReadingsRainfall": 1461
+  },
+  "yearly_field_profiles": [
+    {
+      "year": 2022,
+      "field": "rainfall_text",
+      "n_reports": 365,
+      "n_numeric": 313,
+      "minimum": 0.0,
+      "maximum": 165.5,
+      "consecutive_day_decreases": 77
+    },
+    {
+      "year": 2022,
+      "field": "accumulated_text",
+      "n_reports": 365,
+      "n_numeric": 359,
+      "minimum": 0.0,
+      "maximum": 2205.4,
+      "consecutive_day_decreases": 0
+    },
+    {
+      "year": 2022,
+      "field": "average_text",
+      "n_reports": 365,
+      "n_numeric": 364,
+      "minimum": 0.2,
+      "maximum": 2431.2,
+      "consecutive_day_decreases": 0
+    },
+    {
+      "year": 2023,
+      "field": "rainfall_text",
+      "n_reports": 365,
+      "n_numeric": 305,
+      "minimum": 0.0,
+      "maximum": 425.0,
+      "consecutive_day_decreases": 78
+    },
+    {
+      "year": 2023,
+      "field": "accumulated_text",
+      "n_reports": 365,
+      "n_numeric": 365,
+      "minimum": 0.1,
+      "maximum": 2774.5,
+      "consecutive_day_decreases": 0
+    },
+    {
+      "year": 2023,
+      "field": "average_text",
+      "n_reports": 365,
+      "n_numeric": 364,
+      "minimum": 0.2,
+      "maximum": 2431.2,
+      "consecutive_day_decreases": 0
+    },
+    {
+      "year": 2024,
+      "field": "rainfall_text",
+      "n_reports": 366,
+      "n_numeric": 293,
+      "minimum": 0.0,
+      "maximum": 116.2,
+      "consecutive_day_decreases": 77
+    },
+    {
+      "year": 2024,
+      "field": "accumulated_text",
+      "n_reports": 366,
+      "n_numeric": 357,
+      "minimum": 0.0,
+      "maximum": 2309.7,
+      "consecutive_day_decreases": 0
+    },
+    {
+      "year": 2024,
+      "field": "average_text",
+      "n_reports": 366,
+      "n_numeric": 365,
+      "minimum": 0.2,
+      "maximum": 2431.2,
+      "consecutive_day_decreases": 0
+    },
+    {
+      "year": 2025,
+      "field": "rainfall_text",
+      "n_reports": 365,
+      "n_numeric": 312,
+      "minimum": 0.0,
+      "maximum": 368.9,
+      "consecutive_day_decreases": 75
+    },
+    {
+      "year": 2025,
+      "field": "accumulated_text",
+      "n_reports": 365,
+      "n_numeric": 345,
+      "minimum": 0.6,
+      "maximum": 2558.7,
+      "consecutive_day_decreases": 0
+    },
+    {
+      "year": 2025,
+      "field": "average_text",
+      "n_reports": 365,
+      "n_numeric": 364,
+      "minimum": 0.2,
+      "maximum": 2431.2,
+      "consecutive_day_decreases": 0
+    }
+  ],
+  "rainfall_vs_complete_hko_point_csv": {
+    "n_numeric_comparisons": 1223,
+    "n_exact_matches": 1223
+  },
+  "average_field_calendar_comparison": {
+    "n_calendar_dates": 365,
+    "n_calendar_dates_with_multiple_years": 364,
+    "n_multiyear_calendar_dates_with_identical_values": 363
+  },
+  "interpretation": "Profiles test whether fields can supply daily territorial labels. Names alone do not establish spatial coverage or averaging period. The daily rainfall field agrees with the HKO-point CSV on every numeric comparison. Accumulated rainfall is total since 1 January under official API documentation. The average field has a cumulative-like, mostly calendar-repeated annual trajectory, not a daily rainfall trajectory; its precise climatological averaging period is not established by this audit. These fields do not supply the missing daily territorial label. No field is substituted for the declared RQ6 event.",
+  "documentation": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
+  "documentation_printed_pages": "36-37"
+}

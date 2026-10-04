@@ -1,0 +1,23 @@
+observation_series_id,station_code,station_name,cell_area_km2,weight,point_to_land_m
+19,CCH,Cheung Chau,24.928,0.02234389,0.0
+21,HPV,Happy Valley,58.9746,0.05286108,0.0
+20,HKA,Hong Kong International Airport,115.1545,0.10321717,0.0
+7,HKO,Hong Kong Observatory,10.0259,0.00898658,0.0
+24,KSC,Kau Sai Chau,107.9992,0.09680357,0.0
+23,KP,King's Park,16.6167,0.01489418,0.0
+25,LFS,Lau Fau Shan,16.4641,0.01475741,0.0
+26,PEN,Peng Chau,44.5276,0.03991171,0.0
+28,SHA,Sha Tin,58.6817,0.05259853,0.0
+32,SSP,Sham Shui Po,31.8067,0.02850952,0.0
+30,SKW,Shau Kei Wan,34.5518,0.03097008,0.0
+27,SEK,Shek Kong,60.5909,0.05430984,0.0
+31,SSH,Sheung Shui,62.2566,0.05580288,0.0
+34,TKL,Ta Kwu Ling,59.4069,0.05324857,0.0
+29,PLC,Tai Mei Tuk,108.8175,0.09753712,0.0
+35,TMS,Tai Mo Shan,48.6937,0.0436459,0.0
+33,TC,Tate's Cairn,43.8159,0.03927382,0.0
+22,JKB,Tseung Kwan O,37.5124,0.03362371,0.0
+37,TWN,Tsuen Wan,45.6903,0.04095383,0.0
+36,TU1,Tuen Mun Children and Juvenile Home,76.278,0.06837078,0.0
+38,WGL,Waglan Island,8.6637,0.00776559,0.0
+39,WLP,Wetland Park,44.1957,0.03961422,0.0

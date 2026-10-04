@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-10-03T18:15:04.571906+00:00",
+  "database_modified": false,
+  "independent_aggregate_checks": 111,
+  "scope": "SQL aggregates RQ2 direction/PSR transitions, RQ3 temperature/RH usefulness, RQ4 temperature/RH accuracy and matched temperature baselines, RQ5 temperature/RH bias. Independently written Python checks RQ4 daily-latest RH matched baselines plus all 732 frozen RH calendar bins; RQ6 all three proxies and all/1-3/4-6/7-9 lead groups: reliability counts/rates/bands, midpoint and endpoint Brier scores, score bounds, all confusion cells/rates, coverage and unique exported grain; RQ7 join/outcome means. No independent CI, FFI, coefficient or SHAP verification.",
+  "verifier_sha256": "213b7858813264ca0e4bdb545061a47ebbbc7b4697a9e4f97ed252fdae9c145a",
+  "source_queries_sha256": "885167b31f3a26259e75e75731fff9ffe31f6ea3af32d731ed949ff296eb20ce",
+  "baseline_query_sha256": "ff0e91f71f58e512c4cf1e55e3535c4630ba883a2929a1faafc444eca1d2ba8f",
+  "forecast_rows_sha256": "9e55b2e718918aa5582eaeebae27b1398147b597d1e10f87df69b64b311ceb6b",
+  "observation_rows_sha256": "1eeb40b1a147fb39269f107fb8f612170f4dbefaa0724e8bc0a48bff0e0ad9f1",
+  "rh_report_rows_sha256": "b3c2f90ebc78ee5a3cf0d899a58fcc3eba1ee9105d000e354e97fe72c422239c",
+  "output_file_sha256": {
+    "brier_scores.csv": "7f5e4a3353d4fe9a34752a3ffc1b943cb0296e075fa09affff49e30a99a5a9d5",
+    "contingency_tables.csv": "b3268266d8cf44ec93e9f31904e4f552b26895c7ce7f017660cf7125a9bc164c",
+    "findings.md": "8b79a0f4a11116f2a4fd74af41add2c8304422692696df9f07b1e52b8b0a2401",
+    "psr_reliability.png": "3a9ee4f8fe1229591eef94685036cd4bcdbfdabbb77850993391f558e9732774",
+    "rainfall_report_audit.json": "4dd823ed39f8307d844b8038dc6e539d71fd55e2913a0347acda8d05b478e18c",
+    "reliability.csv": "7241c5dd2737aa6f0d52ab714075dd52d5fbfba0a46914ba41d6b630249799bd",
+    "run_metadata.json": "0271aab83d5ef7e531687262ead239d4e9552b9de930886c71af66ebebbfb571",
+    "target_coverage.csv": "221d2b46d6dad027986e817daacc5ee8cf8f19c48943803729ccdc83c4d00d02",
+    "validated_area_weights.csv": "77737294dcf50a4208982142dd82307883a1e23537acf0af6099fbe55c65a193"
+  }
+}

@@ -1,0 +1,5 @@
+metric,outcome_kind,eligible_cases,matched_cases,excluded_cases,matched_dates,source_dates
+tmax,absolute_error,13103,7639,5464,850,1460
+tmax,absolute_revision,11643,6789,4854,849,1459
+tmin,absolute_error,13103,7648,5455,851,1460
+tmin,absolute_revision,11643,6797,4846,850,1459

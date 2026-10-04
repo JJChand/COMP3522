@@ -1,0 +1,9 @@
+scope,metric,source_series,n_candidate_pairs,n_unmatched_or_null,n_matched_pairs
+consecutive_le24h,tmin,obs_hko_daily_tmin,46607,0,46607
+consecutive_le24h,tmax,obs_hko_daily_tmax,46607,0,46607
+consecutive_le24h,rh_min,HKOReadingsMinRH,46607,0,46607
+consecutive_le24h,rh_max,HKOReadingsMaxRH,46607,0,46607
+daily_latest,tmin,obs_hko_daily_tmin,11643,0,11643
+daily_latest,tmax,obs_hko_daily_tmax,11643,0,11643
+daily_latest,rh_min,HKOReadingsMinRH,11643,0,11643
+daily_latest,rh_max,HKOReadingsMaxRH,11643,0,11643
