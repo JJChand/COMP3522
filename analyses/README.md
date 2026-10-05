@@ -16,6 +16,7 @@ analyses/
   06_rq5_bias/                     # RQ5: signed bias, season and year
   07_rq6_psr_calibration/          # RQ6: PSR calibration and event verification
   08_rq7_error_factors/            # RQ7: conditions associated with errors
+  09_hq_grid_nowcast/              # supplementary Task 1: short-term rainfall proxy
     README.md
     run_analysis.py
     results/
@@ -67,3 +68,8 @@ daily JSON reports, not the mean-RH CSV; see the RQ4 source audit and canonical
 guide for the validated mapping and the absent CSV-style completeness flag.
 Exact territorial PSR calibration remains unproven; accepting the research
 proxy changes that question's operational definition and needs team agreement.
+
+## Supplementary short-term rainfall track
+
+[HQ Grid 2025](09_hq_grid_nowcast/README.md) contains preliminary findings, reviewed daily/monthly results and the annual figure.
+This supplementary track is separate from nine-day PSR calibration.

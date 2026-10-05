@@ -176,3 +176,10 @@ Independent live SQL covers RQ2 directions/PSR counts, RQ3 temperature/RH useful
 The previously reported RH-extrema gap was a catalog-only inference: the daily JSON reports already contained matching endpoints. The read-only source audit now validates all 1,461 dates and the analysis scores them. No database import was needed. Daily mean RH was never substituted for the endpoints. The guide documents the corrected mapping and its missing-completeness-flag caveat.
 
 Exact territorial PSR calibration needs the official realized event label or an agreed research definition accepting the documented spatial proxy. Operational persistence requires historical publication-availability evidence. These gaps are distinct from successful script execution.
+
+## Supplementary HQ Grid rainfall track (2025)
+
+See the [preliminary findings](09_hq_grid_nowcast/results/findings.md) and [dataset note](09_hq_grid_nowcast/README.md).
+There are 360 complete forecast days and 308 numeric common cases.
+Five coverage gaps and the retained May source spike constrain interpretation.
+This is a mixed-horizon daily spatial proxy.
