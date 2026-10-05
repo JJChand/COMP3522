@@ -1,0 +1,11 @@
+{
+  "derived_from": "analysis/geographic-representativeness/results/station_geography.csv",
+  "source_sha256": "c5f9af0dcceaeea7eb0d5edb27e8a2b675839b8d85af95c2081bf4657f54c5ee",
+  "coast": "Nearest official marine-water polygon boundary; EPSG:2326; <=500 m, >500–2000 m, >2000 m. Snapshot 2026-10-04, not historical reconstruction.",
+  "region": "Four categories: HKI (4 administrative districts), KL (5), NT (8), Islands District (1). The analysis overrides original NT labels where islands_district=True. Physical islands outside Islands District are not automatically reassigned.",
+  "sources": [
+    "https://www.hko.gov.hk/en/cis/stn.htm"
+  ],
+  "note": "Curated station metadata only. No temperature observations or credentials in this input.",
+  "map_land": "Offline map land outline reused from analysis/station-inventory/results/inventory.json; geographical display only, not used to compute forecast metrics."
+}

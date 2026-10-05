@@ -1,0 +1,1703 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="720pt" viewBox="0 0 936 720" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-06T00:01:42.004995</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 720
+L 936 720
+L 936 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 99.04649 685.379643
+L 459.915061 685.379643
+L 459.915061 42.843005
+L 99.04649 42.843005
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 99.04649 72.049216
+L 217.400746 72.049216
+L 217.400746 87.730403
+L 99.04649 87.730403
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 99.04649 91.6507
+L 213.786423 91.6507
+L 213.786423 107.331887
+L 99.04649 107.331887
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 99.04649 111.252183
+L 244.581194 111.252183
+L 244.581194 126.93337
+L 99.04649 126.93337
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 99.04649 130.853667
+L 227.822942 130.853667
+L 227.822942 146.534854
+L 99.04649 146.534854
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 99.04649 150.455151
+L 207.402477 150.455151
+L 207.402477 166.136338
+L 99.04649 166.136338
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 99.04649 170.056635
+L 231.724264 170.056635
+L 231.724264 185.737822
+L 99.04649 185.737822
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #6558a6"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 99.04649 189.658119
+L 442.730844 189.658119
+L 442.730844 205.339306
+L 99.04649 205.339306
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #6558a6"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 99.04649 209.259602
+L 220.345385 209.259602
+L 220.345385 224.940789
+L 99.04649 224.940789
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #6558a6"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 99.04649 228.861086
+L 232.414447 228.861086
+L 232.414447 244.542273
+L 99.04649 244.542273
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #6558a6"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 99.04649 248.46257
+L 250.213503 248.46257
+L 250.213503 264.143757
+L 99.04649 264.143757
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 99.04649 268.064054
+L 210.322523 268.064054
+L 210.322523 283.745241
+L 99.04649 283.745241
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 99.04649 287.665537
+L 222.539069 287.665537
+L 222.539069 303.346724
+L 99.04649 303.346724
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 99.04649 307.267021
+L 236.150912 307.267021
+L 236.150912 322.948208
+L 99.04649 322.948208
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 99.04649 326.868505
+L 239.573089 326.868505
+L 239.573089 342.549692
+L 99.04649 342.549692
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 99.04649 346.469989
+L 242.379721 346.469989
+L 242.379721 362.151176
+L 99.04649 362.151176
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 99.04649 366.071472
+L 230.902433 366.071472
+L 230.902433 381.752659
+L 99.04649 381.752659
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 99.04649 385.672956
+L 228.624065 385.672956
+L 228.624065 401.354143
+L 99.04649 401.354143
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 99.04649 405.27444
+L 275.22113 405.27444
+L 275.22113 420.955627
+L 99.04649 420.955627
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 99.04649 424.875924
+L 246.013144 424.875924
+L 246.013144 440.557111
+L 99.04649 440.557111
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 99.04649 444.477407
+L 273.095588 444.477407
+L 273.095588 460.158594
+L 99.04649 460.158594
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 99.04649 464.078891
+L 219.278846 464.078891
+L 219.278846 479.760078
+L 99.04649 479.760078
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 99.04649 483.680375
+L 220.370617 483.680375
+L 220.370617 499.361562
+L 99.04649 499.361562
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 99.04649 503.281859
+L 328.992622 503.281859
+L 328.992622 518.963046
+L 99.04649 518.963046
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 99.04649 522.883342
+L 274.113653 522.883342
+L 274.113653 538.564529
+L 99.04649 538.564529
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 99.04649 542.484826
+L 222.130082 542.484826
+L 222.130082 558.166013
+L 99.04649 558.166013
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 99.04649 562.08631
+L 243.482896 562.08631
+L 243.482896 577.767497
+L 99.04649 577.767497
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 99.04649 581.687794
+L 261.590398 581.687794
+L 261.590398 597.368981
+L 99.04649 597.368981
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 99.04649 601.289277
+L 222.551695 601.289277
+L 222.551695 616.970464
+L 99.04649 616.970464
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 99.04649 620.890761
+L 301.967958 620.890761
+L 301.967958 636.571948
+L 99.04649 636.571948
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 99.04649 640.492245
+L 309.11741 640.492245
+L 309.11741 656.173432
+L 99.04649 656.173432
+z
+" clip-path="url(#pa95f907ab4)" style="fill: #a6446b"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 99.04649 685.379643
+L 99.04649 42.843005
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m36bed9fc08" d="M 0 0
+L 0 3.5
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m36bed9fc08" x="99.04649" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="99.04649" y="701.28101" transform="rotate(-0 99.04649 701.28101)">0.0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 144.137839 685.379643
+L 144.137839 42.843005
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="144.137839" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="144.137839" y="701.28101" transform="rotate(-0 144.137839 701.28101)">0.5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 189.229188 685.379643
+L 189.229188 42.843005
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="189.229188" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="189.229188" y="701.28101" transform="rotate(-0 189.229188 701.28101)">1.0</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 234.320537 685.379643
+L 234.320537 42.843005
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="234.320537" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="234.320537" y="701.28101" transform="rotate(-0 234.320537 701.28101)">1.5</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 279.411886 685.379643
+L 279.411886 42.843005
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="279.411886" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="279.411886" y="701.28101" transform="rotate(-0 279.411886 701.28101)">2.0</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 324.503235 685.379643
+L 324.503235 42.843005
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="324.503235" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="324.503235" y="701.28101" transform="rotate(-0 324.503235 701.28101)">2.5</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 369.594584 685.379643
+L 369.594584 42.843005
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="369.594584" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="369.594584" y="701.28101" transform="rotate(-0 369.594584 701.28101)">3.0</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_15">
+      <path d="M 414.685933 685.379643
+L 414.685933 42.843005
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="414.685933" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="414.685933" y="701.28101" transform="rotate(-0 414.685933 701.28101)">3.5</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_17">
+      <path d="M 459.777282 685.379643
+L 459.777282 42.843005
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="459.777282" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="459.777282" y="701.28101" transform="rotate(-0 459.777282 701.28101)">4.0</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="279.480776" y="715.28101" transform="rotate(-0 279.480776 715.28101)">逐站 MAE (°C)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_19">
+      <path d="M 99.04649 79.889809
+L 459.915061 79.889809
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <defs>
+       <path id="m1b6387c11e" d="M 0 0
+L -3.5 0
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="79.889809" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="83.450356" transform="rotate(-0 92.04649 83.450356)">HKP 香港公園</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_21">
+      <path d="M 99.04649 99.491293
+L 459.915061 99.491293
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="99.491293" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="103.05184" transform="rotate(-0 92.04649 103.05184)">HKS 黃竹坑</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_23">
+      <path d="M 99.04649 119.092777
+L 459.915061 119.092777
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="119.092777" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="122.653324" transform="rotate(-0 92.04649 122.653324)">HPV 跑馬地</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_25">
+      <path d="M 99.04649 138.694261
+L 459.915061 138.694261
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="138.694261" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="142.254808" transform="rotate(-0 92.04649 142.254808)">SKW 筲箕灣</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_27">
+      <path d="M 99.04649 158.295745
+L 459.915061 158.295745
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="158.295745" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="161.856291" transform="rotate(-0 92.04649 161.856291)">STY 赤柱</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_29">
+      <path d="M 99.04649 177.897228
+L 459.915061 177.897228
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="177.897228" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="181.457775" transform="rotate(-0 92.04649 181.457775)">CCH 長洲</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_31">
+      <path d="M 99.04649 197.498712
+L 459.915061 197.498712
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="197.498712" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="201.059259" transform="rotate(-0 92.04649 201.059259)">NGP 昂坪</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_33">
+      <path d="M 99.04649 217.100196
+L 459.915061 217.100196
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="217.100196" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="220.660743" transform="rotate(-0 92.04649 220.660743)">PEN 坪洲</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_35">
+      <path d="M 99.04649 236.70168
+L 459.915061 236.70168
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="236.70168" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="240.262226" transform="rotate(-0 92.04649 240.262226)">WGL 橫瀾島</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_37">
+      <path d="M 99.04649 256.303163
+L 459.915061 256.303163
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="256.303163" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="259.86371" transform="rotate(-0 92.04649 259.86371)">KLT 九龍城</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_39">
+      <path d="M 99.04649 275.904647
+L 459.915061 275.904647
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="275.904647" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="279.465194" transform="rotate(-0 92.04649 279.465194)">KP 京士柏</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_41">
+      <path d="M 99.04649 295.506131
+L 459.915061 295.506131
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="295.506131" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="299.066678" transform="rotate(-0 92.04649 299.066678)">KTG 觀塘</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_43">
+      <path d="M 99.04649 315.107615
+L 459.915061 315.107615
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="315.107615" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="318.668161" transform="rotate(-0 92.04649 318.668161)">SSP 深水埗</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_45">
+      <path d="M 99.04649 334.709098
+L 459.915061 334.709098
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="334.709098" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="338.269645" transform="rotate(-0 92.04649 338.269645)">WTS 黃大仙</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_47">
+      <path d="M 99.04649 354.310582
+L 459.915061 354.310582
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="354.310582" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="357.871129" transform="rotate(-0 92.04649 357.871129)">CWB 清水灣</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_49">
+      <path d="M 99.04649 373.912066
+L 459.915061 373.912066
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="373.912066" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="377.472613" transform="rotate(-0 92.04649 377.472613)">JKB 將軍澳</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_51">
+      <path d="M 99.04649 393.51355
+L 459.915061 393.51355
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_52">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="393.51355" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="397.074096" transform="rotate(-0 92.04649 397.074096)">KSC 滘西洲</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_53">
+      <path d="M 99.04649 413.115033
+L 459.915061 413.115033
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_54">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="413.115033" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="416.67558" transform="rotate(-0 92.04649 416.67558)">LFS 流浮山</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_55">
+      <path d="M 99.04649 432.716517
+L 459.915061 432.716517
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_56">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="432.716517" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="436.277064" transform="rotate(-0 92.04649 436.277064)">PLC 大美督</text>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_57">
+      <path d="M 99.04649 452.318001
+L 459.915061 452.318001
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_58">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="452.318001" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_30">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="455.878548" transform="rotate(-0 92.04649 455.878548)">SEK 石崗</text>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_59">
+      <path d="M 99.04649 471.919485
+L 459.915061 471.919485
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_60">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="471.919485" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="475.480032" transform="rotate(-0 92.04649 475.480032)">SHA 沙田</text>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_61">
+      <path d="M 99.04649 491.520968
+L 459.915061 491.520968
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_62">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="491.520968" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="495.081515" transform="rotate(-0 92.04649 495.081515)">SKG 西貢</text>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_63">
+      <path d="M 99.04649 511.122452
+L 459.915061 511.122452
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_64">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="511.122452" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_33">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="514.682999" transform="rotate(-0 92.04649 514.682999)">SSH 上水</text>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_65">
+      <path d="M 99.04649 530.723936
+L 459.915061 530.723936
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_66">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="530.723936" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_34">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="534.284483" transform="rotate(-0 92.04649 534.284483)">TKL 打鼓嶺</text>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_67">
+      <path d="M 99.04649 550.32542
+L 459.915061 550.32542
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_68">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="550.32542" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_35">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="553.885967" transform="rotate(-0 92.04649 553.885967)">TU1 屯門兒童及青少年院</text>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_69">
+      <path d="M 99.04649 569.926903
+L 459.915061 569.926903
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_70">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="569.926903" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_36">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="573.48745" transform="rotate(-0 92.04649 573.48745)">TW 荃灣城門谷</text>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_71">
+      <path d="M 99.04649 589.528387
+L 459.915061 589.528387
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_72">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="589.528387" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_37">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="593.088934" transform="rotate(-0 92.04649 593.088934)">TWN 荃灣</text>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_73">
+      <path d="M 99.04649 609.129871
+L 459.915061 609.129871
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_74">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="609.129871" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_38">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="612.690418" transform="rotate(-0 92.04649 612.690418)">TY1 新青衣站</text>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_75">
+      <path d="M 99.04649 628.731355
+L 459.915061 628.731355
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_76">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="628.731355" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_39">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="632.291902" transform="rotate(-0 92.04649 632.291902)">WLP 濕地公園</text>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_77">
+      <path d="M 99.04649 648.332839
+L 459.915061 648.332839
+" clip-path="url(#pa95f907ab4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_78">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="99.04649" y="648.332839" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_40">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="92.04649" y="651.893385" transform="rotate(-0 92.04649 651.893385)">YLP 元朗公園</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_33">
+    <path d="M 99.04649 685.379643
+L 99.04649 42.843005
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 99.04649 685.379643
+L 459.915061 685.379643
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 12px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="279.480776" y="36.843005" transform="rotate(-0 279.480776 36.843005)">D3 Tmax</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_35">
+    <path d="M 572.131189 685.379643
+L 932.99976 685.379643
+L 932.99976 42.843005
+L 572.131189 42.843005
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_36">
+    <path d="M 572.131189 72.049216
+L 645.758835 72.049216
+L 645.758835 87.730403
+L 572.131189 87.730403
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_37">
+    <path d="M 572.131189 91.6507
+L 657.599628 91.6507
+L 657.599628 107.331887
+L 572.131189 107.331887
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_38">
+    <path d="M 572.131189 111.252183
+L 647.440428 111.252183
+L 647.440428 126.93337
+L 572.131189 126.93337
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_39">
+    <path d="M 572.131189 130.853667
+L 655.068408 130.853667
+L 655.068408 146.534854
+L 572.131189 146.534854
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_40">
+    <path d="M 572.131189 150.455151
+L 645.202974 150.455151
+L 645.202974 166.136338
+L 572.131189 166.136338
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #187e89"/>
+   </g>
+   <g id="patch_41">
+    <path d="M 572.131189 170.056635
+L 679.382647 170.056635
+L 679.382647 185.737822
+L 572.131189 185.737822
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #6558a6"/>
+   </g>
+   <g id="patch_42">
+    <path d="M 572.131189 189.658119
+L 915.815542 189.658119
+L 915.815542 205.339306
+L 572.131189 205.339306
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #6558a6"/>
+   </g>
+   <g id="patch_43">
+    <path d="M 572.131189 209.259602
+L 649.809659 209.259602
+L 649.809659 224.940789
+L 572.131189 224.940789
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #6558a6"/>
+   </g>
+   <g id="patch_44">
+    <path d="M 572.131189 228.861086
+L 651.343766 228.861086
+L 651.343766 244.542273
+L 572.131189 244.542273
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #6558a6"/>
+   </g>
+   <g id="patch_45">
+    <path d="M 572.131189 248.46257
+L 665.403145 248.46257
+L 665.403145 264.143757
+L 572.131189 264.143757
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_46">
+    <path d="M 572.131189 268.064054
+L 648.258773 268.064054
+L 648.258773 283.745241
+L 572.131189 283.745241
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_47">
+    <path d="M 572.131189 287.665537
+L 661.195994 287.665537
+L 661.195994 303.346724
+L 572.131189 303.346724
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_48">
+    <path d="M 572.131189 307.267021
+L 648.07606 307.267021
+L 648.07606 322.948208
+L 572.131189 322.948208
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_49">
+    <path d="M 572.131189 326.868505
+L 652.81731 326.868505
+L 652.81731 342.549692
+L 572.131189 342.549692
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #c18b2a"/>
+   </g>
+   <g id="patch_50">
+    <path d="M 572.131189 346.469989
+L 666.787995 346.469989
+L 666.787995 362.151176
+L 572.131189 362.151176
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_51">
+    <path d="M 572.131189 366.071472
+L 683.686446 366.071472
+L 683.686446 381.752659
+L 572.131189 381.752659
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_52">
+    <path d="M 572.131189 385.672956
+L 714.224156 385.672956
+L 714.224156 401.354143
+L 572.131189 401.354143
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_53">
+    <path d="M 572.131189 405.27444
+L 694.359888 405.27444
+L 694.359888 420.955627
+L 572.131189 420.955627
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_54">
+    <path d="M 572.131189 424.875924
+L 676.657818 424.875924
+L 676.657818 440.557111
+L 572.131189 440.557111
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_55">
+    <path d="M 572.131189 444.477407
+L 713.974855 444.477407
+L 713.974855 460.158594
+L 572.131189 460.158594
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_56">
+    <path d="M 572.131189 464.078891
+L 674.945357 464.078891
+L 674.945357 479.760078
+L 572.131189 479.760078
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_57">
+    <path d="M 572.131189 483.680375
+L 655.00321 483.680375
+L 655.00321 499.361562
+L 572.131189 499.361562
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_58">
+    <path d="M 572.131189 503.281859
+L 693.211045 503.281859
+L 693.211045 518.963046
+L 572.131189 518.963046
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_59">
+    <path d="M 572.131189 522.883342
+L 751.926968 522.883342
+L 751.926968 538.564529
+L 572.131189 538.564529
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_60">
+    <path d="M 572.131189 542.484826
+L 658.21327 542.484826
+L 658.21327 558.166013
+L 572.131189 558.166013
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_61">
+    <path d="M 572.131189 562.08631
+L 708.146308 562.08631
+L 708.146308 577.767497
+L 572.131189 577.767497
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_62">
+    <path d="M 572.131189 581.687794
+L 741.427063 581.687794
+L 741.427063 597.368981
+L 572.131189 597.368981
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_63">
+    <path d="M 572.131189 601.289277
+L 659.98835 601.289277
+L 659.98835 616.970464
+L 572.131189 616.970464
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_64">
+    <path d="M 572.131189 620.890761
+L 691.511932 620.890761
+L 691.511932 636.571948
+L 572.131189 636.571948
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="patch_65">
+    <path d="M 572.131189 640.492245
+L 695.438304 640.492245
+L 695.438304 656.173432
+L 572.131189 656.173432
+z
+" clip-path="url(#p0a92bb00fc)" style="fill: #a6446b"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_10">
+     <g id="line2d_79">
+      <path d="M 572.131189 685.379643
+L 572.131189 42.843005
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_80">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="572.131189" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="572.131189" y="701.28101" transform="rotate(-0 572.131189 701.28101)">0</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_81">
+      <path d="M 645.144703 685.379643
+L 645.144703 42.843005
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_82">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="645.144703" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="645.144703" y="701.28101" transform="rotate(-0 645.144703 701.28101)">1</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_83">
+      <path d="M 718.158217 685.379643
+L 718.158217 42.843005
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_84">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="718.158217" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_44">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="718.158217" y="701.28101" transform="rotate(-0 718.158217 701.28101)">2</text>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_85">
+      <path d="M 791.171732 685.379643
+L 791.171732 42.843005
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_86">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="791.171732" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_45">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="791.171732" y="701.28101" transform="rotate(-0 791.171732 701.28101)">3</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_87">
+      <path d="M 864.185246 685.379643
+L 864.185246 42.843005
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_88">
+      <g>
+       <use xlink:href="#m36bed9fc08" x="864.185246" y="685.379643" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_46">
+      <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="864.185246" y="701.28101" transform="rotate(-0 864.185246 701.28101)">4</text>
+     </g>
+    </g>
+    <g id="text_47">
+     <text style="font-size: 10px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="752.565474" y="715.28101" transform="rotate(-0 752.565474 715.28101)">逐站 MAE (°C)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_31">
+     <g id="line2d_89">
+      <path d="M 572.131189 79.889809
+L 932.99976 79.889809
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_90">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="79.889809" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_48">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="83.450356" transform="rotate(-0 565.131189 83.450356)">HKP 香港公園</text>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_91">
+      <path d="M 572.131189 99.491293
+L 932.99976 99.491293
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_92">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="99.491293" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_49">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="103.05184" transform="rotate(-0 565.131189 103.05184)">HKS 黃竹坑</text>
+     </g>
+    </g>
+    <g id="ytick_33">
+     <g id="line2d_93">
+      <path d="M 572.131189 119.092777
+L 932.99976 119.092777
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_94">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="119.092777" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_50">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="122.653324" transform="rotate(-0 565.131189 122.653324)">HPV 跑馬地</text>
+     </g>
+    </g>
+    <g id="ytick_34">
+     <g id="line2d_95">
+      <path d="M 572.131189 138.694261
+L 932.99976 138.694261
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_96">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="138.694261" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_51">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="142.254808" transform="rotate(-0 565.131189 142.254808)">SKW 筲箕灣</text>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_97">
+      <path d="M 572.131189 158.295745
+L 932.99976 158.295745
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_98">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="158.295745" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_52">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="161.856291" transform="rotate(-0 565.131189 161.856291)">STY 赤柱</text>
+     </g>
+    </g>
+    <g id="ytick_36">
+     <g id="line2d_99">
+      <path d="M 572.131189 177.897228
+L 932.99976 177.897228
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_100">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="177.897228" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_53">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="181.457775" transform="rotate(-0 565.131189 181.457775)">CCH 長洲</text>
+     </g>
+    </g>
+    <g id="ytick_37">
+     <g id="line2d_101">
+      <path d="M 572.131189 197.498712
+L 932.99976 197.498712
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_102">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="197.498712" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_54">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="201.059259" transform="rotate(-0 565.131189 201.059259)">NGP 昂坪</text>
+     </g>
+    </g>
+    <g id="ytick_38">
+     <g id="line2d_103">
+      <path d="M 572.131189 217.100196
+L 932.99976 217.100196
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_104">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="217.100196" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_55">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="220.660743" transform="rotate(-0 565.131189 220.660743)">PEN 坪洲</text>
+     </g>
+    </g>
+    <g id="ytick_39">
+     <g id="line2d_105">
+      <path d="M 572.131189 236.70168
+L 932.99976 236.70168
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_106">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="236.70168" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_56">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="240.262226" transform="rotate(-0 565.131189 240.262226)">WGL 橫瀾島</text>
+     </g>
+    </g>
+    <g id="ytick_40">
+     <g id="line2d_107">
+      <path d="M 572.131189 256.303163
+L 932.99976 256.303163
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_108">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="256.303163" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_57">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="259.86371" transform="rotate(-0 565.131189 259.86371)">KLT 九龍城</text>
+     </g>
+    </g>
+    <g id="ytick_41">
+     <g id="line2d_109">
+      <path d="M 572.131189 275.904647
+L 932.99976 275.904647
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_110">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="275.904647" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_58">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="279.465194" transform="rotate(-0 565.131189 279.465194)">KP 京士柏</text>
+     </g>
+    </g>
+    <g id="ytick_42">
+     <g id="line2d_111">
+      <path d="M 572.131189 295.506131
+L 932.99976 295.506131
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_112">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="295.506131" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_59">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="299.066678" transform="rotate(-0 565.131189 299.066678)">KTG 觀塘</text>
+     </g>
+    </g>
+    <g id="ytick_43">
+     <g id="line2d_113">
+      <path d="M 572.131189 315.107615
+L 932.99976 315.107615
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_114">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="315.107615" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_60">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="318.668161" transform="rotate(-0 565.131189 318.668161)">SSP 深水埗</text>
+     </g>
+    </g>
+    <g id="ytick_44">
+     <g id="line2d_115">
+      <path d="M 572.131189 334.709098
+L 932.99976 334.709098
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_116">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="334.709098" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_61">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="338.269645" transform="rotate(-0 565.131189 338.269645)">WTS 黃大仙</text>
+     </g>
+    </g>
+    <g id="ytick_45">
+     <g id="line2d_117">
+      <path d="M 572.131189 354.310582
+L 932.99976 354.310582
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_118">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="354.310582" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_62">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="357.871129" transform="rotate(-0 565.131189 357.871129)">CWB 清水灣</text>
+     </g>
+    </g>
+    <g id="ytick_46">
+     <g id="line2d_119">
+      <path d="M 572.131189 373.912066
+L 932.99976 373.912066
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_120">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="373.912066" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_63">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="377.472613" transform="rotate(-0 565.131189 377.472613)">JKB 將軍澳</text>
+     </g>
+    </g>
+    <g id="ytick_47">
+     <g id="line2d_121">
+      <path d="M 572.131189 393.51355
+L 932.99976 393.51355
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_122">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="393.51355" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_64">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="397.074096" transform="rotate(-0 565.131189 397.074096)">KSC 滘西洲</text>
+     </g>
+    </g>
+    <g id="ytick_48">
+     <g id="line2d_123">
+      <path d="M 572.131189 413.115033
+L 932.99976 413.115033
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_124">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="413.115033" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_65">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="416.67558" transform="rotate(-0 565.131189 416.67558)">LFS 流浮山</text>
+     </g>
+    </g>
+    <g id="ytick_49">
+     <g id="line2d_125">
+      <path d="M 572.131189 432.716517
+L 932.99976 432.716517
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_126">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="432.716517" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_66">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="436.277064" transform="rotate(-0 565.131189 436.277064)">PLC 大美督</text>
+     </g>
+    </g>
+    <g id="ytick_50">
+     <g id="line2d_127">
+      <path d="M 572.131189 452.318001
+L 932.99976 452.318001
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_128">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="452.318001" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_67">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="455.878548" transform="rotate(-0 565.131189 455.878548)">SEK 石崗</text>
+     </g>
+    </g>
+    <g id="ytick_51">
+     <g id="line2d_129">
+      <path d="M 572.131189 471.919485
+L 932.99976 471.919485
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_130">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="471.919485" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_68">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="475.480032" transform="rotate(-0 565.131189 475.480032)">SHA 沙田</text>
+     </g>
+    </g>
+    <g id="ytick_52">
+     <g id="line2d_131">
+      <path d="M 572.131189 491.520968
+L 932.99976 491.520968
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_132">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="491.520968" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_69">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="495.081515" transform="rotate(-0 565.131189 495.081515)">SKG 西貢</text>
+     </g>
+    </g>
+    <g id="ytick_53">
+     <g id="line2d_133">
+      <path d="M 572.131189 511.122452
+L 932.99976 511.122452
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_134">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="511.122452" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_70">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="514.682999" transform="rotate(-0 565.131189 514.682999)">SSH 上水</text>
+     </g>
+    </g>
+    <g id="ytick_54">
+     <g id="line2d_135">
+      <path d="M 572.131189 530.723936
+L 932.99976 530.723936
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_136">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="530.723936" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_71">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="534.284483" transform="rotate(-0 565.131189 534.284483)">TKL 打鼓嶺</text>
+     </g>
+    </g>
+    <g id="ytick_55">
+     <g id="line2d_137">
+      <path d="M 572.131189 550.32542
+L 932.99976 550.32542
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_138">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="550.32542" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_72">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="553.885967" transform="rotate(-0 565.131189 553.885967)">TU1 屯門兒童及青少年院</text>
+     </g>
+    </g>
+    <g id="ytick_56">
+     <g id="line2d_139">
+      <path d="M 572.131189 569.926903
+L 932.99976 569.926903
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_140">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="569.926903" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_73">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="573.48745" transform="rotate(-0 565.131189 573.48745)">TW 荃灣城門谷</text>
+     </g>
+    </g>
+    <g id="ytick_57">
+     <g id="line2d_141">
+      <path d="M 572.131189 589.528387
+L 932.99976 589.528387
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_142">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="589.528387" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_74">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="593.088934" transform="rotate(-0 565.131189 593.088934)">TWN 荃灣</text>
+     </g>
+    </g>
+    <g id="ytick_58">
+     <g id="line2d_143">
+      <path d="M 572.131189 609.129871
+L 932.99976 609.129871
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_144">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="609.129871" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_75">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="612.690418" transform="rotate(-0 565.131189 612.690418)">TY1 新青衣站</text>
+     </g>
+    </g>
+    <g id="ytick_59">
+     <g id="line2d_145">
+      <path d="M 572.131189 628.731355
+L 932.99976 628.731355
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_146">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="628.731355" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_76">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="632.291902" transform="rotate(-0 565.131189 632.291902)">WLP 濕地公園</text>
+     </g>
+    </g>
+    <g id="ytick_60">
+     <g id="line2d_147">
+      <path d="M 572.131189 648.332839
+L 932.99976 648.332839
+" clip-path="url(#p0a92bb00fc)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_148">
+      <g>
+       <use xlink:href="#m1b6387c11e" x="572.131189" y="648.332839" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_77">
+      <text style="font-size: 8px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: end" x="565.131189" y="651.893385" transform="rotate(-0 565.131189 651.893385)">YLP 元朗公園</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_66">
+    <path d="M 572.131189 685.379643
+L 572.131189 42.843005
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_67">
+    <path d="M 572.131189 685.379643
+L 932.99976 685.379643
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_78">
+    <text style="font-size: 12px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="752.565474" y="36.843005" transform="rotate(-0 752.565474 36.843005)">D3 Tmin</text>
+   </g>
+  </g>
+  <g id="text_79">
+   <text style="font-size: 15px; font-family: 'Microsoft JhengHei', 'DejaVu Sans'; text-anchor: middle" x="468" y="16.352291" transform="rotate(-0 468 16.352291)">全部 30 個主分析站｜各站使用全部有效配對日期</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa95f907ab4">
+   <rect x="99.04649" y="42.843005" width="360.868571" height="642.536638"/>
+  </clipPath>
+  <clipPath id="p0a92bb00fc">
+   <rect x="572.131189" y="42.843005" width="360.868571" height="642.536638"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,8 @@
+﻿factor,group,n_stations,stations,selection,strict_common_dates
+coast,near,10,CCH;CWB;KSC;LFS;PEN;SKG;SKW;STY;TY1;WGL,ALL eligible stations; no top-N,24
+coast,transition,15,HKP;HKS;HPV;JKB;KLT;KP;KTG;PLC;SHA;SSP;TU1;TW;TWN;WLP;WTS,ALL eligible stations; no top-N,24
+coast,inland,5,NGP;SEK;SSH;TKL;YLP,ALL eligible stations; no top-N,24
+region,HKI,5,HKP;HKS;HPV;SKW;STY,ALL eligible stations; no top-N,24
+region,KL,5,KLT;KP;KTG;SSP;WTS,ALL eligible stations; no top-N,24
+region,NT,16,CWB;JKB;KSC;LFS;PLC;SEK;SHA;SKG;SSH;TKL;TU1;TW;TWN;TY1;WLP;YLP,ALL eligible stations; no top-N,24
+region,Islands,4,CCH;NGP;PEN;WGL,ALL eligible stations; no top-N,24

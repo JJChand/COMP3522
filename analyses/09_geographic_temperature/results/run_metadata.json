@@ -1,0 +1,107 @@
+{
+  "period": [
+    "2022-01-01",
+    "2025-12-31"
+  ],
+  "calendar_days": 1461,
+  "leads": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "variables": [
+    "Tmax",
+    "Tmin"
+  ],
+  "excluded_codes": [
+    "TC",
+    "TMS"
+  ],
+  "all_candidate_stations": [
+    "CCH",
+    "CWB",
+    "HKP",
+    "HKS",
+    "HPV",
+    "JKB",
+    "KLT",
+    "KP",
+    "KSC",
+    "KTG",
+    "LFS",
+    "NGP",
+    "PEN",
+    "PLC",
+    "SEK",
+    "SHA",
+    "SKG",
+    "SKW",
+    "SSH",
+    "SSP",
+    "STY",
+    "TKL",
+    "TU1",
+    "TW",
+    "TWN",
+    "TY1",
+    "WGL",
+    "WLP",
+    "WTS",
+    "YLP"
+  ],
+  "selection": "ALL 30 eligible complete-period AWS; never top-N. C quality and missingness still apply.",
+  "strict_common_dates": 24,
+  "station_equal_weighting": "MAE=mean station MAE; RMSE=sqrt(mean station MSE); Bias=mean station Bias. Also report pooled station-day MAE explicitly.",
+  "designs": {
+    "all_available": "Every valid station/date/lead/variable pair; no cross-station date dropping. Dates differ, so group differences remain descriptive.",
+    "strict_common": "All 30 stations, Tmax/Tmin and all D1–D9 on exactly the same target dates. No imputation.",
+    "lowland_available": "All eligible stations below 300 m; descriptive sensitivity, not primary."
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "block_calendar_days": 14,
+    "seed": 3522,
+    "scope": "Time sampling conditional on fixed sites and missingness; same day resampled together. No multiple-comparison correction. Does not fix unequal date support or short common panel."
+  },
+  "forecast_selection": "Latest archived bulletin per target date and issue calendar date; HKT day difference; D0 excluded.",
+  "geography_time": "Contemporary coastline/admin classification, not historical reconstruction.",
+  "exported_pair_rows": 670865,
+  "sources": [
+    {
+      "name": "forecasts.csv",
+      "sha256": "67eb1d32230b731690250a97c519ee45165fd6be6bb13c9e41c41c19a82e5c72",
+      "bytes": 34537024
+    },
+    {
+      "name": "observations.csv",
+      "sha256": "1a754e1ceeed4de705109db7e1b9467f435b77f8173b4d7d022e8736a1fc1a76",
+      "bytes": 5819518
+    },
+    {
+      "name": "stations.csv",
+      "sha256": "7355516e45d64a388e89d6c077d7d58b897af5f94079905cf9cfc9470495b438",
+      "bytes": 5556
+    },
+    {
+      "name": "series.csv",
+      "sha256": "426f67f24ec8c9ffce001787064f885e8397a824c859877a228f99319f4768fa",
+      "bytes": 30387
+    },
+    {
+      "name": "station_geography.csv",
+      "sha256": "0e1eed2495407ed868e3377e53adeddc8397ec18118d20299435cbe066e54e59",
+      "bytes": 4929
+    }
+  ],
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "pandas": "3.0.1"
+  }
+}
