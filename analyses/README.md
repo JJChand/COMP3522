@@ -71,5 +71,5 @@ proxy changes that question's operational definition and needs team agreement.
 
 ## Supplementary short-term rainfall track
 
-[HQ Grid 2025](09_hq_grid_nowcast/README.md) contains preliminary findings, reviewed daily/monthly results and the annual figure.
+[HQ Grid 2025](09_hq_grid_nowcast/README.md) contains dataset and method explanations, selected preliminary findings and the annual figure.
 This supplementary track is separate from nine-day PSR calibration.
