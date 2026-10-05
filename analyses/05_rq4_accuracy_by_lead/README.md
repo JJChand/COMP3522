@@ -51,3 +51,17 @@ fingerprints and software versions. The cross-RQ verifier writes
 statistical verification. Synthetic tests check method edge cases. Shared source
 SQL is in `../common/`. Database definitions remain solely in
 `DATABASE_AGENT_GUIDE.md`.
+
+## Regional RH interval sensitivity (preliminary, 2025)
+
+A separate documentation supplement compares this public forecast with sampled
+multi-station RH envelopes. See [the metric and execution protocol](REGIONAL_RH_METHOD.md)
+and [the preliminary regional findings](results/regional_rh_findings.md).
+It uses 26 acquired station sources, with a paired 20-versus-26 comparison on
+89 complete dates. These regional references have different spatial and sampling
+semantics from the Headquarters daily-report track above.
+
+This supplement records an analysis already executed in a companion workspace.
+It contains method and findings documents only; regional raw inputs and analysis
+scripts are not included in this update. The existing `run_analysis.py` does not
+reproduce this supplement. No database import or schema change is part of it.
