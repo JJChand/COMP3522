@@ -1,0 +1,38 @@
+﻿station_code,name_zh,station_type,latitude,longitude,elevation_m,temperature_candidate,primary_aws,coast_distance_m,coast_group,district_zh,district_en,region_group,islands_district
+CCH,長洲,automatic,22.20111111,114.02666667,72,True,True,151.8442009740987,near,離島區,Islands District,NT,True
+CWB,清水灣,automatic,22.26333333,114.29972222,66,True,True,78.51490876322906,near,西貢區,Sai Kung District,NT,False
+HKP,香港公園,automatic,22.27833333,114.16222222,26,True,True,661.6514021069097,transition,中西區,Central and Western District,HKI,False
+HKS,黃竹坑,automatic,22.24777778,114.17361111,5,True,True,679.1688573991594,transition,南區,Southern District,HKI,False
+HPV,跑馬地,automatic,22.27055556,114.18361111,5,True,True,1301.9048456560383,transition,灣仔區,Wan Chai District,HKI,False
+JKB,將軍澳,automatic,22.31583333,114.25555556,38,True,True,1213.1458084893184,transition,西貢區,Sai Kung District,NT,False
+KLT,九龍城,automatic,22.335,114.18472222,92,True,True,1952.9079141216407,transition,九龍城區,Kowloon City District,KL,False
+KP,京士柏,automatic,22.31194444,114.17277778,65,True,True,1324.9186781409642,transition,油尖旺區,Yau Tsim Mong District,KL,False
+KSC,滘西洲,automatic,22.37027778,114.3125,39,True,True,449.4879495499639,near,西貢區,Sai Kung District,NT,False
+KTG,觀塘,automatic,22.31861111,114.22472222,90,True,True,1082.871444071899,transition,觀塘區,Kwun Tong District,KL,False
+LFS,流浮山,automatic,22.46888889,113.98361111,31,True,True,48.88179590629285,near,元朗區,Yuen Long District,NT,False
+NGP,昂坪,automatic,22.25861111,113.91277778,593,True,True,2826.4545146433666,inland,離島區,Islands District,NT,True
+PEN,坪洲,automatic,22.29111111,114.04333333,34,True,True,92.87459238465642,near,離島區,Islands District,NT,True
+PLC,大美督,automatic,22.47527778,114.2375,51,True,True,682.5948938867648,transition,大埔區,Tai Po District,NT,False
+SE1,啟德跑道公園,automatic,22.305,114.21694444,4,False,True,16.720059562890096,near,九龍城區,Kowloon City District,KL,False
+SEK,石崗,automatic,22.43611111,114.08472222,16,True,True,7230.249201881864,inland,元朗區,Yuen Long District,NT,False
+SHA,沙田,automatic,22.4025,114.21,6,True,True,859.5279756575032,transition,沙田區,Sha Tin District,NT,False
+SKG,西貢,automatic,22.37555556,114.27444444,4,True,True,13.747187912804575,near,西貢區,Sai Kung District,NT,False
+SKW,筲箕灣,automatic,22.28166667,114.23611111,53,True,True,88.86716357599389,near,東區,Eastern District,HKI,False
+SSH,上水,automatic,22.50194444,114.11111111,10,True,True,6437.834046787894,inland,北區,North District,NT,False
+SSP,深水埗,automatic,22.33583333,114.13694444,11,True,True,654.3884452809498,transition,深水埗區,Sham Shui Po District,KL,False
+STY,赤柱,automatic,22.21416667,114.21861111,31,True,True,245.32203467796256,near,南區,Southern District,HKI,False
+TC,大老山,automatic,22.35777778,114.21777778,572,True,True,3389.0392736497843,inland,黃大仙區,Wong Tai Sin District,KL,False
+TKL,打鼓嶺,automatic,22.52861111,114.15666667,15,True,True,5276.256579113307,inland,北區,North District,NT,False
+TMS,大帽山,automatic,22.41055556,114.12444444,955,True,True,4690.068649547339,inland,荃灣區,Tsuen Wan District,NT,False
+TU1,屯門兒童及青少年院,automatic,22.38583333,113.96416667,28,True,True,891.1370720795143,transition,屯門區,Tuen Mun District,NT,False
+TW,荃灣城門谷,automatic,22.37555556,114.12666667,35,True,True,1889.8719140533328,transition,荃灣區,Tsuen Wan District,NT,False
+TWN,荃灣,automatic,22.38361111,114.10777778,142,True,True,1304.2922876475925,transition,荃灣區,Tsuen Wan District,NT,False
+TY1,新青衣站,automatic,22.34416667,114.11,8,True,True,315.313893818033,near,葵青區,Kwai Tsing District,NT,False
+WGL,橫瀾島,automatic,22.18222222,114.30333333,56,True,True,66.36083166512472,near,離島區,Islands District,NT,True
+WLP,濕地公園,automatic,22.46666667,114.00888889,4,True,True,807.5973802708185,transition,元朗區,Yuen Long District,NT,False
+WTS,黃大仙,automatic,22.33944444,114.20527778,21,True,True,1970.1013786147955,transition,黃大仙區,Wong Tai Sin District,KL,False
+YCT,大埔(元洲仔公園),automatic,22.44833333,114.17722222,6,False,True,35.66505838572458,near,大埔區,Tai Po District,NT,False
+YLP,元朗公園,automatic,22.44083333,114.01833333,8,True,True,3581.9087582389207,inland,元朗區,Yuen Long District,NT,False
+HKA,香港國際機場,manned,22.30944444,113.92194444,6,True,False,1675.289664470583,transition,離島區,Islands District,NT,True
+HKO,天文台,manned,22.30194444,114.17416667,32,True,False,678.6908775571716,transition,油尖旺區,Yau Tsim Mong District,KL,False
+TPO,大埔(自然環境保護研究中心),terminated,22.44611111,114.17888889,15,False,False,12.732266368167808,near,大埔區,Tai Po District,NT,False
