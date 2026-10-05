@@ -1,0 +1,58 @@
+{
+  "scope": "Reviewed daily result export; no new full raw acquisition or database import.",
+  "quality": {
+    "raw_snapshots": 8754,
+    "snapshot_rows": 35016,
+    "canonical_rows": 35016,
+    "raw_content_duplicates": 0,
+    "duplicate_vintage_rows": 0,
+    "extreme_half_hour_rows": 2
+  },
+  "annual_days": 365,
+  "complete_forecast_days": 360,
+  "missing_minutes": 396.0,
+  "trace_days": 53,
+  "numeric_days": 308,
+  "h1_identical_days": 181,
+  "raw_sha_and_reextraction_verified_snapshots": 8754,
+  "database_import_finished_utc": "2026-10-04T16:02:09.273406+00:00",
+  "database_import_validated": true,
+  "database_tables": {
+    "project.hko_grid_nowcast_hq_2025": 35016,
+    "project.hko_grid_nowcast_hq_daily_2025": 365
+  },
+  "bootstrap": "2000 circular 7-calendar-day blocks; numeric/QC-C cases; seed=3522",
+  "all_complete_day_trace_bounds": {
+    "days": 360,
+    "mae_bounds_mm": [
+      4.823083333333333,
+      4.829938888888888
+    ],
+    "rmse_bounds_mm": [
+      25.568371290630846,
+      25.568477223374533
+    ],
+    "bias_bounds_mm": [
+      -0.9971611111111109,
+      -0.989938888888889
+    ],
+    "note": "Trace upper limit 0.05 is exclusive; ranges are conservative envelopes, not CI"
+  },
+  "dominant_squared_error_share": 0.6364321836891834,
+  "posthoc_excluding_largest_error_day": {
+    "days": 307,
+    "mae_mm": 4.335543973941368,
+    "rmse_mm": 16.69323359849557,
+    "bias_mm": -2.4859543973941367,
+    "interpretation": "Influence diagnostic only; primary result retains all valid cases."
+  },
+  "export_sha256": {
+    "coverage_gaps.csv": "a22ec3db5c0d065c058b2fd92e979c98a5e36c500308c292aaf5a4fe23c61d05",
+    "daily_comparison.csv": "c0c8ed39b13f25200f6a5e0d265efc6f8fb4aa9f56f2c35e1426fccaa01ff8e6",
+    "daily_comparison.png": "b7e84b5541fe0d651ea845f9998c8374dd737c196caac4dee91ad3f0e9a68625",
+    "largest_daily_errors.csv": "5a1448940ca2a7aa2dc246856f771c571e555c76bbff257f37f97c9e9f1e6988",
+    "monthly_summary.csv": "7a58cea7b201ac8689bfd3724ac1bbdab228e5e2a68a74161d6b8b12e3387e9e",
+    "overall_scores.csv": "0d4e7b4e8a2b2628dba4eec0dd576995791350320c6caa81cb4b22d9b6612860",
+    "source_spike_evidence.json": "5c438fdb53c6c77d05b3bfe9c938dcc1eb7893b8ecc16fd1f184e5a39c0caa2d"
+  }
+}

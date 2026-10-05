@@ -864,6 +864,25 @@ document against the live catalog using the schema-inspection query above.
 Do not put passwords, authentication tokens, raw personal credentials, or
 machine-specific secret files in this guide.
 
+### HQ Grid nowcast extension (2026-10-05 HKT)
+
+Two imported tables support the supplementary [HQ Grid rainfall track](analyses/09_hq_grid_nowcast/README.md).
+Native windows have 35,016 rows; daily results have 365 rows.
+These counts and the definitions below come from the committed post-import catalog receipt.
+The receipt finished at 2026-10-04T16:02:09Z, equivalent to 2026-10-05 HKT.
+
+`available_time_utc` is a conservative archive-capture proxy.
+`issue_time_utc` is the forecast update time.
+`retrieval_time_utc` records the later historical download.
+The native primary key is `(available_time_utc, valid_end_utc)`.
+The daily primary key is `date_hkt`.
+These tables have no foreign-key joins to the original forecast tables.
+
+The daily table includes matched point-gauge observations and Trace bounds.
+Incomplete composites remain NULL; five dates lack 396 minutes.
+Join other daily observations on the same HKT date and explicitly selected station/series.
+Do not treat the mixed-horizon composite as a day-ahead forecast or PSR probability.
+
 <!-- BEGIN GENERATED LIVE SCHEMA -->
 ## Live schema snapshot
 
@@ -880,6 +899,9 @@ in the preceding sections of this guide.
 
 Refresh this section after every database modification, including imports.
 
+HQ Grid definitions below use the post-import live catalog receipt from 2026-10-04T16:02:09Z.
+Other objects retain their original snapshot date; they were not refreshed during this result-publication task.
+
 ### Object inventory
 
 | Object | Kind |
@@ -889,6 +911,8 @@ Refresh this section after every database modification, including imports.
 | `project.hko_daily_observation` | table |
 | `project.hko_forecast_daily` | table |
 | `project.hko_forecast_issue` | table |
+| `project.hko_grid_nowcast_hq_2025` | table |
+| `project.hko_grid_nowcast_hq_daily_2025` | table |
 | `project.hko_multistation_report` | table |
 | `project.hko_nowcast_daily_rainfall_jan_2025` | table |
 | `project.hko_observation_series` | table |
@@ -1065,6 +1089,84 @@ Indexes:
 CREATE UNIQUE INDEX hko_forecast_issue_pkey ON project.hko_forecast_issue USING btree (forecast_issue_id);
 CREATE UNIQUE INDEX hko_forecast_issue_source_file_id_key ON project.hko_forecast_issue USING btree (source_file_id);
 ```
+
+#### `project.hko_grid_nowcast_hq_2025`
+
+Kind: table. Verified imported rows: 35016.
+
+| Column | PostgreSQL type | Nullable |
+|---|---|---|
+| `source` | `text` | NO |
+| `product` | `text` | NO |
+| `product_track` | `text` | NO |
+| `model_or_product_version` | `text` | NO |
+| `issue_time_utc` | `timestamp with time zone` | NO |
+| `available_time_utc` | `timestamp with time zone` | NO |
+| `valid_start_utc` | `timestamp with time zone` | NO |
+| `valid_end_utc` | `timestamp with time zone` | NO |
+| `lead_to_end_minutes` | `numeric` | NO |
+| `rainfall_mm` | `numeric` | NO |
+| `retrieval_time_utc` | `timestamp with time zone` | NO |
+| `latitude` | `numeric` | NO |
+| `longitude` | `numeric` | NO |
+| `variable` | `text` | NO |
+| `unit` | `text` | NO |
+| `available_time_basis` | `text` | NO |
+| `raw_source_uri` | `text` | NO |
+| `raw_source_path` | `text` | NO |
+| `retrieval_hash` | `text` | NO |
+| `raw_row_count` | `numeric` | NO |
+| `method_version` | `text` | NO |
+| `qa_extreme_half_hour_value` | `boolean` | NO |
+
+Constraints:
+
+- `hko_grid_nowcast_hq_2025_pkey`: `PRIMARY KEY (available_time_utc, valid_end_utc)`
+
+The primary key supplies a unique index.
+Separate index definitions were not exported in this receipt.
+
+#### `project.hko_grid_nowcast_hq_daily_2025`
+
+Kind: table. Verified imported rows: 365.
+
+| Column | PostgreSQL type | Nullable |
+|---|---|---|
+| `date_hkt` | `date` | NO |
+| `daily_composite_mm` | `numeric` | YES |
+| `covered_minutes` | `numeric` | NO |
+| `missing_minutes` | `numeric` | NO |
+| `coverage_complete` | `boolean` | NO |
+| `segment_count` | `numeric` | NO |
+| `contains_extreme_source_value` | `boolean` | NO |
+| `prorated_segments` | `numeric` | NO |
+| `lead_30_minutes` | `numeric` | NO |
+| `lead_60_minutes` | `numeric` | NO |
+| `lead_90_minutes` | `numeric` | NO |
+| `lead_120_minutes` | `numeric` | NO |
+| `observed_original` | `text` | NO |
+| `observed_mm` | `numeric` | YES |
+| `observed_lower_mm` | `numeric` | NO |
+| `observed_upper_mm` | `numeric` | NO |
+| `observation_completeness` | `text` | NO |
+| `difference_mm` | `numeric` | YES |
+| `difference_lower_mm` | `numeric` | YES |
+| `difference_upper_mm` | `numeric` | YES |
+| `latitude` | `numeric` | NO |
+| `longitude` | `numeric` | NO |
+| `truth_station` | `text` | NO |
+| `daily_window_basis` | `text` | NO |
+| `within_window_allocation` | `text` | NO |
+| `method_version` | `text` | NO |
+| `observation_source_path` | `text` | NO |
+| `observation_sha256` | `text` | NO |
+
+Constraints:
+
+- `hko_grid_nowcast_hq_daily_2025_pkey`: `PRIMARY KEY (date_hkt)`
+
+The primary key supplies a unique index.
+Separate index definitions were not exported in this receipt.
 
 #### `project.hko_multistation_report`
 
