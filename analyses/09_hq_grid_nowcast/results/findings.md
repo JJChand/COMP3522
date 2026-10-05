@@ -36,24 +36,11 @@ Including Trace bounds across all 360 complete days gives MAE [4.823, 4.830] mm.
 This is a censoring envelope, not a confidence interval.
 Its population differs from the 308-day numeric-only result.
 
-## Monthly exploratory results
+## Monthly exploratory pattern
 
-| Month | Complete days | Numeric cases | Trace days | MAE mm | RMSE mm | Bias mm |
-|---|---:|---:|---:|---:|---:|---:|
-| 2025-01 | 31/31 | 26 | 5 | 0.117 | 0.440 | +0.068 |
-| 2025-02 | 28/28 | 20 | 8 | 0.749 | 3.085 | -0.658 |
-| 2025-03 | 31/31 | 24 | 7 | 1.629 | 5.104 | +0.602 |
-| 2025-04 | 30/30 | 25 | 5 | 1.028 | 2.302 | -0.624 |
-| 2025-05 | 31/31 | 23 | 8 | 19.581 | 81.088 | +16.294 |
-| 2025-06 | 30/30 | 28 | 2 | 4.456 | 9.900 | -1.618 |
-| 2025-07 | 31/31 | 30 | 1 | 11.376 | 25.506 | -6.090 |
-| 2025-08 | 31/31 | 31 | 0 | 13.874 | 40.284 | -13.376 |
-| 2025-09 | 28/30 | 26 | 2 | 8.766 | 19.865 | -4.323 |
-| 2025-10 | 30/31 | 23 | 8 | 1.797 | 3.142 | +0.685 |
-| 2025-11 | 30/30 | 25 | 5 | 0.428 | 1.347 | -0.050 |
-| 2025-12 | 29/31 | 27 | 2 | 0.322 | 0.920 | +0.078 |
-
-July and August show larger errors than the dry winter months.
+July MAE is 11.376 mm across 30 numeric cases.
+August MAE is 13.874 mm across 31 numeric cases.
+January MAE is 0.117 mm across 26 numeric cases.
 These exploratory comparisons do not control weather difficulty or rainfall amount.
 They do not establish a causal seasonal effect.
 
@@ -104,7 +91,6 @@ Five pipeline checks passed.
 Database observations matched the official CSV on all 365 dates.
 Committed table counts, keys, date bounds and timestamps were checked.
 
-The [verification receipt](verification.json) states the scope and source fingerprints.
 These are preliminary descriptive findings, not a finalized benchmark.
 
 ## Annual comparison figure
