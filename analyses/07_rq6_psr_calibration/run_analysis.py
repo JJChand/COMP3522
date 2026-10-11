@@ -12,6 +12,15 @@ from common.task1 import (ANALYSES, PSR_BANDS, PSR_CATEGORIES, cli, csv_output, 
 from common.plotting import COLORS, panels, save
 
 WEIGHTS_FILE = ANALYSES / '01_rainfall/results/psr_area_weights.csv'
+RAIN_EVENT_THRESHOLD_MM = 10.
+EVENT_DEFINITION = dict(
+    primary_proxy='area_weighted_22', threshold_mm=RAIN_EVENT_THRESHOLD_MM,
+    aggregation='area-weighted mean of daily rainfall on the fixed 22-station panel',
+    required_station_count=22, completeness='all 22 records marked C; numeric or Trace',
+    trace_interval_mm='[0,0.05)', ambiguous_threshold_policy='exclude',
+    weights_reference='analyses/01_rainfall/results/psr_area_weights.csv',
+    approved_on_hkt='2026-10-04', approval='user selected 22-station rainfall proxy',
+    official_territorial_equivalence='not established')
 
 
 def rainfall_interval(row):
@@ -62,15 +71,15 @@ def rainfall_targets(snapshot):
         for kind, wmap in (('area_weighted_22',weight_map), ('station_mean_22',dict.fromkeys(weight_map,1/len(weights)))):
             lower = sum(wmap[k]*v[0] for k,v in readings.items())
             upper = sum(wmap[k]*v[1] for k,v in readings.items())
-            if lower < 10 <= upper:
+            if lower < RAIN_EVENT_THRESHOLD_MM <= upper:
                 counts['n_area_trace_ambiguous' if kind=='area_weighted_22' else 'n_mean_trace_ambiguous'] += 1
                 continue
-            targets[kind][target] = int(lower >= 10)
+            targets[kind][target] = int(lower >= RAIN_EVENT_THRESHOLD_MM)
     for row in snapshot.observations:
         if row['series_code'] == 'obs_hko_daily_rainfall':
             bounds = rainfall_interval(row)
-            if bounds and not bounds[0] < 10 <= bounds[1]:
-                targets['hko_point'][row['observation_date']] = int(bounds[0] >= 10)
+            if bounds and not bounds[0] < RAIN_EVENT_THRESHOLD_MM <= bounds[1]:
+                targets['hko_point'][row['observation_date']] = int(bounds[0] >= RAIN_EVENT_THRESHOLD_MM)
     return targets, counts, weights
 
 
@@ -154,18 +163,19 @@ def analyze(snapshot):
     primary = [r for r in reliability if r['proxy']=='area_weighted_22' and r['lead_group']=='all']
     bs = next(r for r in scores if r['proxy']=='area_weighted_22' and r['lead_group']=='all')
     out_of_band = [r['category'] for r in primary if not r['rate_within_band']]
-    findings = f"The area-weighted proxy has {len(targets['area_weighted_22']):,} usable target days. "
+    findings = f"The agreed 22-station area-weighted rainfall proxy has {len(targets['area_weighted_22']):,} usable target days. "
     findings += f"Observed frequencies fall outside the published bands for: {', '.join(out_of_band) if out_of_band else 'none of the five categories'}. "
     findings += f"Midpoint-coded Brier score is {bs['midpoint_bs']:.4f}; the compatible per-case probability-band bounds are "
     findings += f"[{bs['bs_lower_bound']:.4f}, {bs['bs_upper_bound']:.4f}], which are not confidence intervals. "
     findings += 'These results concern the defined rainfall proxy, so they do not alone establish calibration or miscalibration of the exact HKO event.'
-    report(6,'PSR calibration and event verification',findings,
+    report(6,'PSR calibration against the agreed 22-station rainfall proxy',findings,
            table(primary,['category','n_forecasts','event_rate','forecast_band_low','forecast_band_high','ci95_low','ci95_high']) +
            '\n\n### Categorical alarm verification (area proxy)\n\n'+table(
                [r for r in contingencies if r['proxy']=='area_weighted_22' and r['lead_group']=='all'],
                ['alarm_rule','tp','fp','fn','tn','hit_rate','false_alarm_ratio']),
            'HKO defines significant rain using daily rainfall reaching 10 mm broadly across Hong Kong and publishes five probability bands. '
            '[HKO product definitions](https://www.hko.gov.hk/en/wxinfo/currwx/fnd.htm?tablenote=true). '
+           'On 2026-10-04 (Hong Kong date), the user accepted the 22-station rainfall proxy as the project research event. '
            'Primary proxy: weighted daily station mean ≥10 mm, using the existing 22-station land-clipped Voronoi weights. '
            'Their IDs/names/codes and weight sum are verified against the live catalog; the weight file checksum is saved. '
            'Only days with all 22 complete numeric/Trace records qualify. Trace is [0,0.05) mm; ambiguous threshold outcomes are excluded, '
@@ -183,7 +193,8 @@ def analyze(snapshot):
            'daily JSON rainfall matches the HKO-point CSV on all 1,223 numeric comparisons. Accumulated rainfall is year-to-date, '
            'and the average field has a cumulative-like annual trajectory, not daily rainfall. Neither is a valid daily territorial substitute.')
     save_metadata(6,snapshot,{'rainfall_quality':quality,'probability_coding':'continuous band midpoint',
-                             'rainfall_targets':'area weighted, station mean, HKO point separately'})
+                             'rainfall_targets':'area weighted primary; station mean and HKO point sensitivities',
+                             'event_definition':EVENT_DEFINITION})
 
 
 if __name__ == '__main__':

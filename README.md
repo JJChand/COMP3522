@@ -5,14 +5,15 @@ Observatory (HKO) forecasts. Each analysis direction lives in its own folder
 under `analyses/`, together with a `results/` folder for its generated CSVs and
 plots.
 
-Task 1 is being investigated in RQ order; Task 2 is currently on hold.
+Task 1 RQ1–RQ7 have executed results and findings reports; Task 2 is currently on hold.
 See [`analyses/README.md`](analyses/README.md) for the folder map and progress,
 and [`analyses/02_rq1_revisions/README.md`](analyses/02_rq1_revisions/README.md)
 for the first completed revision analysis.
 The [Part 1 findings index](analyses/PART1_FINDINGS.md) brings together executed
-RQ1–RQ7 results and their remaining evidence gaps. Temperature and validated
+RQ1–RQ7 results and their interpretation limits. Temperature and validated
 daily-report RH results are available; PSR calibration uses a disclosed
-rainfall research proxy, not verified official territorial event labels.
+22-station area-weighted rainfall research proxy, accepted by the user on
+2026-10-04, not verified official territorial event labels.
 
 ## First database feasibility check
 

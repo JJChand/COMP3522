@@ -1,10 +1,10 @@
-# RQ6: PSR calibration and event verification
+# RQ6: PSR calibration against the agreed 22-station rainfall proxy
 
 Target dates: 2022-01-01–2025-12-31. Task 1 only.
 
 ## Findings
 
-The area-weighted proxy has 1,255 usable target days. Observed frequencies fall outside the published bands for: Medium, Medium Low. Midpoint-coded Brier score is 0.0923; the compatible per-case probability-band bounds are [0.0551, 0.1651], which are not confidence intervals. These results concern the defined rainfall proxy, so they do not alone establish calibration or miscalibration of the exact HKO event.
+The agreed 22-station area-weighted rainfall proxy has 1,255 usable target days. Observed frequencies fall outside the published bands for: Medium, Medium Low. Midpoint-coded Brier score is 0.0923; the compatible per-case probability-band bounds are [0.0551, 0.1651], which are not confidence intervals. These results concern the defined rainfall proxy, so they do not alone establish calibration or miscalibration of the exact HKO event.
 
 ## Concrete results
 
@@ -26,7 +26,7 @@ The area-weighted proxy has 1,255 usable target days. Observed frequencies fall 
 
 ## Methods and source evidence
 
-HKO defines significant rain using daily rainfall reaching 10 mm broadly across Hong Kong and publishes five probability bands. [HKO product definitions](https://www.hko.gov.hk/en/wxinfo/currwx/fnd.htm?tablenote=true). Primary proxy: weighted daily station mean ≥10 mm, using the existing 22-station land-clipped Voronoi weights. Their IDs/names/codes and weight sum are verified against the live catalog; the weight file checksum is saved. Only days with all 22 complete numeric/Trace records qualify. Trace is [0,0.05) mm; ambiguous threshold outcomes are excluded, not filled with invented measurements. Station-mean and HKO-point sensitivities are separate. Brier score = mean((p−event)²); category midpoints are an explicit coding assumption. Lower/upper endpoint codings and infimum/supremum bounds over unpublished per-case probabilities are exported. Alarms are categorical thresholds, not claims that every Medium forecast has p≥0.5. Hit rate=TP/(TP+FN); false alarm ratio=FP/(TP+FP), distinct from false-positive rate=FP/(FP+TN).
+HKO defines significant rain using daily rainfall reaching 10 mm broadly across Hong Kong and publishes five probability bands. [HKO product definitions](https://www.hko.gov.hk/en/wxinfo/currwx/fnd.htm?tablenote=true). On 2026-10-04 (Hong Kong date), the user accepted the 22-station rainfall proxy as the project research event. Primary proxy: weighted daily station mean ≥10 mm, using the existing 22-station land-clipped Voronoi weights. Their IDs/names/codes and weight sum are verified against the live catalog; the weight file checksum is saved. Only days with all 22 complete numeric/Trace records qualify. Trace is [0,0.05) mm; ambiguous threshold outcomes are excluded, not filled with invented measurements. Station-mean and HKO-point sensitivities are separate. Brier score = mean((p−event)²); category midpoints are an explicit coding assumption. Lower/upper endpoint codings and infimum/supremum bounds over unpublished per-case probabilities are exported. Alarms are categorical thresholds, not claims that every Medium forecast has p≥0.5. Hit rate=TP/(TP+FN); false alarm ratio=FP/(TP+FP), distinct from false-positive rate=FP/(FP+TN).
 
 ## Limitations
 

@@ -1,6 +1,8 @@
 # RQ6: PSR calibration
 
-Executed against disclosed rainfall proxies; exact territorial calibration is not identified by the local observations.
+Completed against the **22-station area-weighted daily rainfall ≥10 mm research proxy**,
+accepted by the user on 2026-10-04 (Hong Kong date). Unweighted-station and
+HKO-point targets remain sensitivities. This is not exact HKO territorial calibration.
 
 Start with [the executed findings](results/findings.md). Detailed definitions,
 limitations and concrete estimates are in that report, beside its aggregate CSVs

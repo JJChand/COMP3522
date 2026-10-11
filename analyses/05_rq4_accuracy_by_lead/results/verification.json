@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-10-03T18:15:04.565626+00:00",
+  "verified_at_utc": "2026-10-04T02:02:28.610419+00:00",
   "database_modified": false,
   "independent_aggregate_checks": 912,
   "scope": "SQL aggregates RQ2 direction/PSR transitions, RQ3 temperature/RH usefulness, RQ4 temperature/RH accuracy and matched temperature baselines, RQ5 temperature/RH bias. Independently written Python checks RQ4 daily-latest RH matched baselines plus all 732 frozen RH calendar bins; RQ6 all three proxies and all/1-3/4-6/7-9 lead groups: reliability counts/rates/bands, midpoint and endpoint Brier scores, score bounds, all confusion cells/rates, coverage and unique exported grain; RQ7 join/outcome means. No independent CI, FFI, coefficient or SHAP verification.",

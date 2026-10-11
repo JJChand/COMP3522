@@ -1,9 +1,11 @@
 """Synthetic method checks; deliberately separate from live-data verification."""
 from datetime import date, datetime, timedelta
+import csv
 import importlib.util
 from pathlib import Path
 import sys
 import unittest
+from types import SimpleNamespace
 import numpy as np
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
@@ -27,6 +29,38 @@ def row(i,dt,target=date(2024,1,10),value=20):
 
 
 class Methods(unittest.TestCase):
+    def rain_panel(self,value=10.):
+        with rq6.WEIGHTS_FILE.open(encoding='utf-8',newline='') as handle:
+            weights=list(csv.DictReader(handle))
+        series=[dict(observation_series_id=int(w['observation_series_id']),station_name=w['station_name'],
+                     series_code='obs_spatial_daily_rainfall') for w in weights]
+        stations=[dict(station_code=w['station_code'],station_name=w['station_name']) for w in weights]
+        observations=[dict(observation_series_id=r['observation_series_id'],series_code=r['series_code'],
+                           observation_date=date(2024,1,1),data_completeness='C',value_numeric=value,
+                           value_text=str(value)) for r in series]
+        return SimpleNamespace(series=series,stations=stations,observations=observations)
+
+    def test_agreed_rainfall_event_definition(self):
+        self.assertEqual(rq6.EVENT_DEFINITION['primary_proxy'],'area_weighted_22')
+        self.assertEqual(rq6.EVENT_DEFINITION['threshold_mm'],10.)
+        self.assertEqual(rq6.EVENT_DEFINITION['required_station_count'],22)
+        self.assertEqual(rq6.EVENT_DEFINITION['approved_on_hkt'],'2026-10-04')
+        self.assertEqual(rq6.EVENT_DEFINITION['official_territorial_equivalence'],'not established')
+
+    def test_complete_panel_at_ten_mm_is_event(self):
+        targets,quality,_=rq6.rainfall_targets(self.rain_panel())
+        self.assertEqual(quality['n_complete_panel_days'],1)
+        self.assertEqual(targets['area_weighted_22'],{date(2024,1,1):1})
+        self.assertEqual(targets['station_mean_22'],{date(2024,1,1):1})
+
+    def test_missing_panel_station_does_not_impute(self):
+        snapshot=self.rain_panel(20.)
+        snapshot.observations.pop()
+        targets,quality,_=rq6.rainfall_targets(snapshot)
+        self.assertEqual(quality['n_complete_panel_days'],0)
+        self.assertEqual(targets['area_weighted_22'],{})
+        self.assertEqual(targets['station_mean_22'],{})
+
     def rh_report(self,**changes):
         target=date(2022,1,1)
         return dict(report_date=target,source_observation_date='20220101',observed_rh_min_text='50',observed_rh_max_text='80',

@@ -1,8 +1,8 @@
-# Part 1: executed findings and remaining evidence gaps
+# Part 1: executed findings
 
 Target dates: 2022-01-01–2025-12-31. Local database, read-only. Task 2 remains on hold.
 
-All RQ folders contain executed concrete results and a findings report. This is **not a claim that every originally named verification component is complete**: PSR verification uses spatial proxies, and their equivalence to the official territorial event is not established. RH daily-report endpoints are now validated and scored; they are explicitly provisional and have no CSV completeness flag.
+RQ1–RQ7 have executed concrete results and findings reports. RQ6 uses the 22-station area-weighted daily rainfall ≥10 mm research proxy, accepted by the user on 2026-10-04 (Hong Kong date). This completes the research analysis under that agreed event definition, not exact HKO territorial verification. RH daily-report endpoints are validated and scored; they remain explicitly provisional and have no CSV completeness flag.
 
 ## Coverage and report index
 
@@ -13,7 +13,7 @@ All RQ folders contain executed concrete results and a findings report. This is 
 | RQ3 | Executed: temperature and validated daily-report RH revision usefulness | [RQ3 report](04_rq3_revision_usefulness/results/findings.md) |
 | RQ4 | Executed: temperature/RH accuracy and matched reference skill | [RQ4 report](05_rq4_accuracy_by_lead/results/findings.md) |
 | RQ5 | Executed: temperature/RH bias by lead, season and year | [RQ5 report](06_rq5_bias/results/findings.md) |
-| RQ6 | All named metrics executed against disclosed rainfall proxies, not exact HKO territorial labels | [RQ6 report](07_rq6_psr_calibration/results/findings.md) |
+| RQ6 | Completed against the agreed 22-station area-weighted rainfall proxy; two target sensitivities | [RQ6 report](07_rq6_psr_calibration/results/findings.md) |
 | RQ7 | All named factor directions executed for temperature errors and revisions; post-event context | [RQ7 report](08_rq7_error_factors/results/findings.md) |
 
 ## RQ2: back-and-forth revisions
@@ -171,15 +171,8 @@ Each folder’s README gives the run command. `run_metadata.json` records input 
 
 Independent live SQL covers RQ2 directions/PSR counts, RQ3 temperature/RH usefulness, RQ4 temperature/RH accuracy and matched temperature baselines, and RQ5 temperature/RH bias. Separately written Python checks daily-latest RH reference scores and all 732 frozen RH calendar bins (included in the RQ4 count). RQ6 checks cover all three proxies and all/1–3/4–6/7–9 lead groups: reliability counts/rates/bands, all Brier codings and bounds, confusion cells, hit rate, false alarm ratio, false-positive rate, coverage and unique exported grain. RQ7 checks cover joins/outcome means. These checks do not independently prove bootstrap intervals, FFI summaries, coefficient uncertainty or SHAP rankings; synthetic tests check representative method edge cases. Figures were visually inspected, including the corrected RQ3 legend/sample labels and aligned RQ4/RQ5 scales.
 
-## What is needed to close the remaining scope?
+## Agreed scope and retained limitations
 
 The previously reported RH-extrema gap was a catalog-only inference: the daily JSON reports already contained matching endpoints. The read-only source audit now validates all 1,461 dates and the analysis scores them. No database import was needed. Daily mean RH was never substituted for the endpoints. The guide documents the corrected mapping and its missing-completeness-flag caveat.
 
 Exact territorial PSR calibration needs the official realized event label or an agreed research definition accepting the documented spatial proxy. Operational persistence requires historical publication-availability evidence. These gaps are distinct from successful script execution.
-
-## Supplementary HQ Grid rainfall track (2025)
-
-See the [preliminary findings](09_hq_grid_nowcast/results/findings.md) and [dataset note](09_hq_grid_nowcast/README.md).
-There are 360 complete forecast days and 308 numeric common cases.
-Five coverage gaps and the retained May source spike constrain interpretation.
-This is a mixed-horizon daily spatial proxy.

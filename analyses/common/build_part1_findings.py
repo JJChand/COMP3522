@@ -32,18 +32,22 @@ def read(rq,name):
 
 
 def main():
+    rq6_metadata=json.loads((ANALYSES/FOLDERS[6]/'results/run_metadata.json').read_text(encoding='utf-8'))
+    event_definition=rq6_metadata.get('event_definition',{})
+    if event_definition.get('primary_proxy')!='area_weighted_22' or event_definition.get('approved_on_hkt')!='2026-10-04':
+        raise ValueError('RQ6 results do not record the agreed research event; rerun RQ6')
     statuses={2:'Executed: temperature/RH revisions and PSR categories',
               3:'Executed: temperature and validated daily-report RH revision usefulness',
               4:'Executed: temperature/RH accuracy and matched reference skill',
               5:'Executed: temperature/RH bias by lead, season and year',
-              6:'All named metrics executed against disclosed rainfall proxies, not exact HKO territorial labels',
+              6:'Completed against the agreed 22-station area-weighted rainfall proxy; two target sensitivities',
               7:'All named factor directions executed for temperature errors and revisions; post-event context'}
-    body=['# Part 1: executed findings and remaining evidence gaps','',
+    body=['# Part 1: executed findings','',
           'Target dates: 2022-01-01–2025-12-31. Local database, read-only. Task 2 remains on hold.','',
-          'All RQ folders contain executed concrete results and a findings report. This is **not a claim that '
-          'every originally named verification component is complete**: PSR verification uses spatial proxies, '
-          'and their equivalence to the official territorial event is not established. RH daily-report endpoints '
-          'are now validated and scored; they are explicitly provisional and have no CSV completeness flag.','',
+          'RQ1–RQ7 have executed concrete results and findings reports. RQ6 uses the 22-station '
+          'area-weighted daily rainfall ≥10 mm research proxy, accepted by the user on 2026-10-04 (Hong Kong date). '
+          'This completes the research analysis under that agreed event definition, not exact HKO territorial verification. '
+          'RH daily-report endpoints are validated and scored; they remain explicitly provisional and have no CSV completeness flag.','',
           '## Coverage and report index','',
           '| RQ | Status | Findings report |','| --- | --- | --- |',
           '| RQ1 | Previously executed and independently verified | [Revision size/frequency](02_rq1_revisions/results/findings.md) |']
@@ -128,14 +132,18 @@ def main():
            'summaries, coefficient uncertainty or SHAP rankings; synthetic tests check representative method '
            'edge cases. Figures were visually inspected, including the corrected RQ3 legend/sample labels '
            'and aligned RQ4/RQ5 scales.','',
-           '## What is needed to close the remaining scope?','',
+           '## Agreed scope and retained limitations','',
            'The previously reported RH-extrema gap was a catalog-only inference: the daily JSON reports already contained '
            'matching endpoints. The read-only source audit now validates all 1,461 dates and the analysis scores them. '
            'No database import was needed. Daily mean RH was never substituted for the endpoints. The guide documents '
            'the corrected mapping and its missing-completeness-flag caveat.','',
-           'Exact territorial PSR calibration needs the official realized event label or an agreed research '
-           'definition accepting the documented spatial proxy. Operational persistence requires historical '
-           'publication-availability evidence. These gaps are distinct from successful script execution.','']
+           'The user accepted the 22-station area-weighted daily-mean rainfall ≥10 mm proxy on 2026-10-04. '
+           'It requires all 22 complete usable station records, uses the saved normalized land-clipped Voronoi weights, '
+           'preserves Trace bounds and excludes ambiguous threshold cases. Unweighted and HKO-point targets remain '
+           'sensitivities, not interchangeable verification labels. Exact official territorial calibration is outside '
+           'this agreed research definition. Persistence is reported as a retrospective comparator; any future '
+           'operational-availability claim needs historical publication evidence. RQ7 explains associations in '
+           'temperature errors/revisions, not causal mechanisms or issuance-time prediction.','']
     path=ANALYSES/'PART1_FINDINGS.md'
     path.write_text('\n'.join(body),encoding='utf-8')
     print('Part 1 summary:',path)

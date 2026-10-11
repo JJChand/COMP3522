@@ -42,10 +42,10 @@ Existing rainfall files are preserved rather than moved or copied.
 | RQ3 | `04_rq3_revision_usefulness` | Executed: temperature and validated daily-report RH revision usefulness |
 | RQ4 | `05_rq4_accuracy_by_lead` | Executed: temperature/RH accuracy and matched reference skill |
 | RQ5 | `06_rq5_bias` | Executed: temperature/RH bias, season/year/lead and bootstrap intervals |
-| RQ6 | `07_rq6_psr_calibration` | Executed: proxy reliability, coded Brier bounds, hit rate/FAR; not exact territorial verification |
+| RQ6 | `07_rq6_psr_calibration` | Completed: agreed 22-station area-weighted proxy reliability, coded Brier bounds, hit rate/FAR |
 | RQ7 | `08_rq7_error_factors` | Executed: all named factor directions, stratified contrasts, regression and linear SHAP |
 
-Start with [the Part 1 findings and remaining gaps](PART1_FINDINGS.md). Every RQ
+Start with [the Part 1 findings](PART1_FINDINGS.md). Every RQ
 has a `results/findings.md`; run instructions are
 in its README. Shared dependencies are in `requirements.txt`; the connection
 uses the repository-root `.env` and is enforced read-only. Analysis work does
@@ -68,8 +68,3 @@ daily JSON reports, not the mean-RH CSV; see the RQ4 source audit and canonical
 guide for the validated mapping and the absent CSV-style completeness flag.
 Exact territorial PSR calibration remains unproven; accepting the research
 proxy changes that question's operational definition and needs team agreement.
-
-## Supplementary short-term rainfall track
-
-[HQ Grid 2025](09_hq_grid_nowcast/README.md) contains dataset and method explanations, selected preliminary findings and the annual figure.
-This supplementary track is separate from nine-day PSR calibration.

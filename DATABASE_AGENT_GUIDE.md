@@ -430,6 +430,22 @@ with a daily rainfall measure. The exact climatological averaging period is not
 established here. Do not threshold either cumulative field at 10 mm for PSR
 verification or infer territorial coverage from the word "average". See
 `analyses/07_rq6_psr_calibration/audit_rainfall_reports.py` and its aggregate audit.
+
+### Agreed Part 1 PSR research event (2026-10-04)
+
+The user accepted the **22-station area-weighted daily-mean rainfall ≥10 mm
+proxy** for RQ6 on 2026-10-04 (Hong Kong date). Use the fixed panel and saved
+land-clipped Voronoi weights in `analyses/01_rainfall/results/psr_area_weights.csv`;
+verify IDs/names/codes against the catalog and normalize only after the tight
+weight-sum check. Require all 22 records to be marked `C` and numeric or `Trace`.
+Preserve Trace as [0,0.05) mm; exclude cases whose weighted bounds straddle the
+10 mm threshold. Do not impute missing stations or change panel membership.
+Unweighted 22-station and HKO-point labels are separately reported sensitivities.
+This is an agreed research definition, not an official territorial event label.
+PSR is still categorical: midpoint-coded Brier scores retain their coding
+assumption, and compatible probability-band bounds are not confidence intervals.
+The RQ6 run metadata records this decision and the source weight checksum.
+
 The new Part 1 analyses are read-only; the generated live schema snapshot and
 external-model import status below have not been changed by this analysis work.
 
