@@ -5,7 +5,10 @@ Observatory (HKO) forecasts. Each analysis direction lives in its own folder
 under `analyses/`, together with a `results/` folder for its generated CSVs and
 plots.
 
-Task 1 RQ1–RQ7 have executed results and findings reports; Task 2 is currently on hold.
+Task 1 RQ1–RQ7 have executed results and findings reports. Task 2 now has a
+[small GFS fairness pilot](benchmark/README.md): 14 diagnostic cases from one
+existing run, with daily-window and historical-availability blockers documented.
+It is not yet a validated full-period benchmark or a model ranking.
 See [`analyses/README.md`](analyses/README.md) for the folder map and progress,
 and [`analyses/02_rq1_revisions/README.md`](analyses/02_rq1_revisions/README.md)
 for the first completed revision analysis.

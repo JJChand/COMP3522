@@ -3,7 +3,7 @@
 **Database:** `course_project`  
 **Primary schema:** `project`  
 **Database engine:** PostgreSQL with PostGIS  
-**Context version:** 2026-10-04
+**Context version:** 2026-10-23
 **Audience:** COMP3522 project teammates and their coding agents
 
 This is the canonical working guide for querying the course-project database.
@@ -899,12 +899,76 @@ Incomplete composites remain NULL; five dates lack 396 minutes.
 Join other daily observations on the same HKT date and explicitly selected station/series.
 Do not treat the mixed-horizon composite as a day-ahead forecast or PSR probability.
 
+### GFS fairness pilot (2026-10-23 HKT)
+
+The reproducible method and Chinese findings are in `benchmark/README.md`;
+execute `benchmark/run_pilot.py` for a read-only rerun. Only `--persist` writes
+derived diagnostics. It automatically refreshes this guide after committing.
+No new weather downloads are needed: the pilot reuses the 65 GFS subsets and
+193 HKO-point extracts for 2024-01-01 00 UTC, validating all file hashes and
+re-decoding all 193 values against the database.
+
+`project.benchmark_gfs_pilot_case` has one row per benchmark version, target
+date, variable (`tmax` or `tmin`) and station. Its 14 diagnostic cases cover
+2024-01-02 through 2024-01-08, with separate Tmax/Tmin rows. They compare the
+fixed GFS 00 UTC run with the latest same-date HKO bulletin whose bulletin and
+RSS publication timestamps precede the chosen 20:00 HKT cutoff (issue 2821,
+2024-01-01 19:50 HKT). This is an exploratory fixed-cycle comparison, not a
+verified latest-available operational benchmark. No interval score is a
+sampling confidence interval, and there is only one independent model run.
+
+Important joins and field interpretation:
+
+- `(forecast_issue_id, valid_date)` references `hko_forecast_daily`;
+  `(observation_series_id, valid_date)` references
+  `hko_daily_observation(observation_series_id, observation_date)`.
+  Only the Headquarters `obs_hko_daily_tmax/tmin` series with `C` and numeric
+  values are accepted. `station_code` references `hko_station`.
+- `source_ids` is the UUID array of contributing original GFS subsets. Join
+  `external_model_source.source_id = ANY(case.source_ids)` when needed.
+  Array elements have no SQL foreign key; the writer obtains them from a
+  validated live input snapshot. Expanding them multiplies case rows: aggregate
+  provenance separately before scoring. Original messages are identified by
+  source ID, station code and message number in `external_model_temperature`.
+- `window_start_utc/window_end_utc` represent the same HKT calendar day:
+  previous-date 16:00 UTC to target-date 16:00 UTC. Inner extrema intervals
+  cover only 21 hours; the union of overlapping intervals covers 24 hours.
+  Overlap duration is never summed twice. Partial intervals cannot be split
+  or subtracted as if extrema were additive quantities.
+- `gfs_lower_c/gfs_upper_c` are conditional reconstruction envelopes for a
+  single daily endpoint, not the daily Tmin-to-Tmax temperature range. Tmax
+  uses contained-interval maxima for its lower edge and overlapping-interval
+  maxima for its upper edge; Tmin uses the reverse sets. Each message gets
+  padding of `max(0.02 C, one inspected GRIB quantization step)` (0.02 or
+  0.1 C here). This is a disclosed numerical sensitivity allowance, not a
+  certified packing-error bound. GRIB fields must represent consistent
+  interval extrema for this interpretation; nested checks pass after padding.
+- `gfs_sampled_c` is a separate approximation using eight instantaneous `2t`
+  samples per HKT day (02, 05, 08, 11, 14, 17, 20, 23 HKT). Do not score it
+  as a fully observed model daily extremum. `hko_forecast_c/observed_c` retain
+  their original published/observed precision, with all temperatures in C.
+- `diagnostics` stores the case's error envelopes, timing, numerical allowance,
+  method/source fingerprint and frozen selection rule. `input_sha256` covers
+  the bounded input snapshot including inspected packing steps; the script
+  hash identifies the implementation. Negative paired error difference means
+  GFS has smaller absolute error. All pilot rows have
+  `gfs_availability_verified=false` and `primary_eligible=false`, enforced by
+  constraints; do not promote them into a definitive ranking.
+
+Historical GFS publication times remain unknown. The 4/6/8/12-hour release-lag
+scenarios are assumptions, not observed availability. Run/retrieval timestamps
+must not replace publication time. The extracted grid is 22.25 N, 114.25 E,
+9.708 km from HKO Headquarters; model land/sea mask and orography remain
+unchecked. The result is a product comparison at one reference station, not
+a territory-wide or agency-wide comparison. Types, nullability, primary and
+foreign keys, checks and indexes are generated below from the committed catalog.
+
 <!-- BEGIN GENERATED LIVE SCHEMA -->
 ## Live schema snapshot
 
 Live database: `course_project`. Schema: `project`.
 
-Verified at: 2026-10-11T08:00:54+00:00.
+Verified at: 2026-10-23T15:33:05+00:00.
 
 Generated by `data_management/model_forecasts/schema_document.py` using
 a read-only connection loaded from the repository-root `.env`.
@@ -919,6 +983,7 @@ Refresh this section after every database modification, including imports.
 
 | Object | Kind |
 | --- | --- |
+| `project.benchmark_gfs_pilot_case` | table |
 | `project.external_model_source` | table |
 | `project.external_model_temperature` | table |
 | `project.hko_daily_observation` | table |
@@ -942,7 +1007,71 @@ Refresh this section after every database modification, including imports.
 
 Temperature extract rows: **193** (actual count at verification time).
 
+### GFS benchmark pilot status
+
+Derived diagnostic cases only; primary eligibility is deliberately false.
+
+| Benchmark | Variable | Cases | First target date | Last target date | Primary eligible |
+| --- | --- | ---: | --- | --- | ---: |
+| gfs_hko_fairness_pilot_v1 | tmax | 7 | 2024-01-02 | 2024-01-08 | 0 |
+| gfs_hko_fairness_pilot_v1 | tmin | 7 | 2024-01-02 | 2024-01-08 | 0 |
+
 ### Live object definitions
+
+#### `project.benchmark_gfs_pilot_case`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `benchmark_id` | `text` | No |  |
+| `valid_date` | `date` | No |  |
+| `variable` | `text` | No |  |
+| `station_code` | `text` | No |  |
+| `gfs_run_time_utc` | `timestamp with time zone` | No |  |
+| `cutoff_utc` | `timestamp with time zone` | No |  |
+| `lead_days` | `integer` | No |  |
+| `forecast_issue_id` | `bigint` | No |  |
+| `observation_series_id` | `bigint` | No |  |
+| `window_start_utc` | `timestamp with time zone` | No |  |
+| `window_end_utc` | `timestamp with time zone` | No |  |
+| `inner_coverage_hours` | `double precision` | No |  |
+| `outer_coverage_hours` | `double precision` | No |  |
+| `gfs_lower_c` | `double precision` | No |  |
+| `gfs_upper_c` | `double precision` | No |  |
+| `gfs_sampled_c` | `double precision` | No |  |
+| `hko_forecast_c` | `double precision` | No |  |
+| `observed_c` | `double precision` | No |  |
+| `source_ids` | `uuid[]` | No |  |
+| `gfs_availability_verified` | `boolean` | No |  |
+| `primary_eligible` | `boolean` | No |  |
+| `input_sha256` | `text` | No |  |
+| `diagnostics` | `jsonb` | No |  |
+| `computed_at_utc` | `timestamp with time zone` | No | now() |
+
+Constraints (including foreign-key join contracts):
+
+- `benchmark_gfs_pilot_case_check`: `CHECK (gfs_lower_c <= gfs_upper_c)`
+- `benchmark_gfs_pilot_case_check1`: `CHECK ((window_end_utc - window_start_utc) = '24:00:00'::interval)`
+- `benchmark_gfs_pilot_case_check2`: `CHECK (gfs_run_time_utc <= cutoff_utc AND cutoff_utc < window_start_utc)`
+- `benchmark_gfs_pilot_case_forecast_issue_id_valid_date_fkey`: `FOREIGN KEY (forecast_issue_id, valid_date) REFERENCES hko_forecast_daily(forecast_issue_id, valid_date)`
+- `benchmark_gfs_pilot_case_gfs_availability_verified_check`: `CHECK (NOT gfs_availability_verified)`
+- `benchmark_gfs_pilot_case_inner_coverage_hours_check`: `CHECK (inner_coverage_hours >= 0::double precision AND inner_coverage_hours <= 24::double precision)`
+- `benchmark_gfs_pilot_case_input_sha256_check`: `CHECK (length(input_sha256) = 64)`
+- `benchmark_gfs_pilot_case_lead_days_check`: `CHECK (lead_days >= 1 AND lead_days <= 7)`
+- `benchmark_gfs_pilot_case_observation_series_id_valid_date_fkey`: `FOREIGN KEY (observation_series_id, valid_date) REFERENCES hko_daily_observation(observation_series_id, observation_date)`
+- `benchmark_gfs_pilot_case_outer_coverage_hours_check`: `CHECK (outer_coverage_hours = 24::double precision)`
+- `benchmark_gfs_pilot_case_pkey`: `PRIMARY KEY (benchmark_id, valid_date, variable, station_code)`
+- `benchmark_gfs_pilot_case_primary_eligible_check`: `CHECK (NOT primary_eligible)`
+- `benchmark_gfs_pilot_case_source_ids_check`: `CHECK (cardinality(source_ids) > 0)`
+- `benchmark_gfs_pilot_case_station_code_fkey`: `FOREIGN KEY (station_code) REFERENCES hko_station(station_code)`
+- `benchmark_gfs_pilot_case_variable_check`: `CHECK (variable = ANY (ARRAY['tmax'::text, 'tmin'::text]))`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX benchmark_gfs_pilot_case_pkey ON project.benchmark_gfs_pilot_case USING btree (benchmark_id, valid_date, variable, station_code);
+```
 
 #### `project.external_model_source`
 

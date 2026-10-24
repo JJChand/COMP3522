@@ -31,8 +31,10 @@ Its requested research CSVs and plots are aggregate outputs in
 
 ## Task 1 sequence
 
-Task 2 (RQ8–RQ9, external-model comparison) is on hold. Work through the Task 1
-questions one at a time; each folder owns its method note, scripts and results.
+Task 2 (RQ8–RQ9, external-model comparison) has an initial
+[GFS fairness pilot](../benchmark/README.md), with 14 diagnostic cases and
+explicit daily-window and availability limitations. Full-period ranking remains
+pending. Each Task 1 folder owns its method note, scripts and results.
 Existing rainfall files are preserved rather than moved or copied.
 
 | RQ | Directory | Status |

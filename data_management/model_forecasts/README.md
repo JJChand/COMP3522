@@ -165,6 +165,15 @@ ORDER BY s.run_time_utc, t.valid_time_utc, t.station_code, t.message_number;
 
 ## 5. Expand after the pilot
 
+**2026-10-23 fairness gate:** the [executed benchmark pilot](../../benchmark/README.md)
+found that contained GFS extreme intervals cover only 21 hours of each HKT day,
+and historical per-file availability remains unknown. Resolve or explicitly
+scope these limitations before the bulk examples below; more runs do not fix
+them. The existing complete 65-file run measures 161,668,798 GRIB bytes, or
+161.67 MB. Multiplying this one run by 731 gives about 118.18 GB before sidecars
+and buffers, updating the earlier five-file planning extrapolation above.
+The pilot itself downloaded no new weather data.
+
 Example: one month, all four daily GFS cycles, three-hourly data to hour 192:
 
 ```powershell

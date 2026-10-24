@@ -79,6 +79,19 @@ def refresh_schema_document(destination=None):
         if "external_model_temperature" in names:
             count = connection.execute("SELECT count(*) FROM project.external_model_temperature").fetchone()[0]
             lines.extend(["", f"Temperature extract rows: **{count:,}** (actual count at verification time)."])
+        if "benchmark_gfs_pilot_case" in names:
+            lines.extend(["", "### GFS benchmark pilot status", "",
+                          "Derived diagnostic cases only; primary eligibility is deliberately false.", "",
+                          "| Benchmark | Variable | Cases | First target date | Last target date | Primary eligible |",
+                          "| --- | --- | ---: | --- | --- | ---: |"])
+            pilot_rows = connection.execute("""
+                SELECT benchmark_id, variable, count(*), min(valid_date), max(valid_date),
+                       count(*) FILTER (WHERE primary_eligible)
+                FROM project.benchmark_gfs_pilot_case
+                GROUP BY benchmark_id, variable ORDER BY benchmark_id, variable
+            """).fetchall()
+            for row in pilot_rows:
+                lines.append("| " + " | ".join(cell(v) for v in row) + " |")
         lines.extend(["", "### Live object definitions", ""])
         for oid, name, kind in objects:
             columns = connection.execute("""
