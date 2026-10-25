@@ -1,0 +1,65 @@
+{
+  "year": 2025,
+  "method": "raw; no offset; general common forecast hypothesis",
+  "stations": 26,
+  "group_counts": {
+    "near": 11,
+    "transition": 11,
+    "inland": 4
+  },
+  "common_days": 89,
+  "bootstrap": {
+    "reps": 2000,
+    "block_days": 7,
+    "seed": 3522,
+    "fixed_stations": true,
+    "multiple_comparisons_adjusted": false
+  },
+  "primary_C": "absolute gap of pair-averaged group means; legacy pairwise absolute-gap metric also retained separately",
+  "images": [
+    "humidity_overview_rh_min.png",
+    "humidity_validity_rh_min.png",
+    "humidity_usefulness_rh_min.png",
+    "humidity_overview_rh_max.png",
+    "humidity_validity_rh_max.png",
+    "humidity_usefulness_rh_max.png"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\humidity\\station_inventory.csv",
+      "sha256": "5623c2d4ddae4a22eae11dc5ab8c4aded167f65007258db4a1e308d1bee40ca8"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\humidity\\daily_observations.csv",
+      "sha256": "f6e8b5eb2ea4564e15121db19efa5f14b397704254a588acd4ae3263021db909"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\humidity\\forecast_daily_latest.csv",
+      "sha256": "75ff5d450a5553a559ae6898907c830c6200192eed88da804e578b50c650e48d"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\humidity\\analysis_arrays.npz",
+      "sha256": "0e953ad3acfed6ee859a8051cbdfb50e0591b27d25653c363338de4c3ff73719"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\humidity\\paired_contrasts.csv",
+      "sha256": "5179b41dce84d096658544dddd7e49de43ab7fce48541eca5f8d53a5f58dc296"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\HUMIDITY_PLAN.md",
+      "sha256": "4e31a0feb476b30faf5363d35dcbab1781fad4bf181a42a8ba4a167c7635aa7f"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\build_humidity.py",
+      "sha256": "9f395753731f60a532e0c20a42a5aa0c73383668a3065ece749609d9f04fa813"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\humidity\\verification.json",
+      "sha256": "0a3cca4daacf9fd094a36e5375427cccb1a5006b9fdfefe4997b5e350b9dfcd8"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\04_rq3_revision_usefulness\\run_analysis.py",
+      "sha256": "cbd5e2ce1a8d9f9c285dfd3ff926d63a1735a48600611cdbd7ab6c31060ff780"
+    }
+  ]
+}

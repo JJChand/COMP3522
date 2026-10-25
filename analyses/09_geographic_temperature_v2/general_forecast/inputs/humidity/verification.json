@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "monthly_archives_hashed": 48,
+  "coefficient_values_checked": 5616,
+  "group_mae_rows": 252,
+  "group_revision_rows": 448,
+  "pair_metrics_checked": 4968,
+  "raw_archive_sample_keys_checked": 1293,
+  "figures": 16,
+  "scope": "Independent point-value reconstruction from daily observations/forecast CSVs; three raw dates at three stations checked against canonical SQLite; all local links checked. Bootstrap not independently reimplemented; not all raw capture keys independently reprocessed."
+}
