@@ -1,0 +1,172 @@
+{
+  "common_days": 13,
+  "common_first": "2025-01-18",
+  "common_last": "2025-12-26",
+  "n_stations": 30,
+  "choices": {
+    "Tmax": "monthly_mean",
+    "Tmin": "monthly_median"
+  },
+  "date_panel": "All 30 stations, both variables, all D1-D9; same issue and target year 2025",
+  "forecast_scope": "All available daily latest forecasts, not changed-revision events",
+  "hko_reference": {
+    "latitude": 22.30194444,
+    "longitude": 114.17416667
+  },
+  "hko_distance": "WGS84 ellipsoidal geodesic via pyproj.Geod",
+  "thresholds": [
+    {
+      "label": "0.25/1.5",
+      "lower_km": 0.25,
+      "upper_km": 1.5,
+      "counts": {
+        "near": 8,
+        "transition": 14,
+        "inland": 8
+      }
+    },
+    {
+      "label": "0.25/2.0",
+      "lower_km": 0.25,
+      "upper_km": 2.0,
+      "counts": {
+        "near": 8,
+        "transition": 17,
+        "inland": 5
+      }
+    },
+    {
+      "label": "0.25/2.5",
+      "lower_km": 0.25,
+      "upper_km": 2.5,
+      "counts": {
+        "near": 8,
+        "transition": 17,
+        "inland": 5
+      }
+    },
+    {
+      "label": "0.50/1.5",
+      "lower_km": 0.5,
+      "upper_km": 1.5,
+      "counts": {
+        "near": 10,
+        "transition": 12,
+        "inland": 8
+      }
+    },
+    {
+      "label": "0.50/2.0",
+      "lower_km": 0.5,
+      "upper_km": 2.0,
+      "counts": {
+        "near": 10,
+        "transition": 15,
+        "inland": 5
+      }
+    },
+    {
+      "label": "0.50/2.5",
+      "lower_km": 0.5,
+      "upper_km": 2.5,
+      "counts": {
+        "near": 10,
+        "transition": 15,
+        "inland": 5
+      }
+    },
+    {
+      "label": "0.75/1.5",
+      "lower_km": 0.75,
+      "upper_km": 1.5,
+      "counts": {
+        "near": 14,
+        "transition": 8,
+        "inland": 8
+      }
+    },
+    {
+      "label": "0.75/2.0",
+      "lower_km": 0.75,
+      "upper_km": 2.0,
+      "counts": {
+        "near": 14,
+        "transition": 11,
+        "inland": 5
+      }
+    },
+    {
+      "label": "0.75/2.5",
+      "lower_km": 0.75,
+      "upper_km": 2.5,
+      "counts": {
+        "near": 14,
+        "transition": 11,
+        "inland": 5
+      }
+    }
+  ],
+  "bootstrap": {
+    "reps": 2000,
+    "calendar_block_days": 14,
+    "seed": 3522,
+    "fixed_stations_and_coefficients": true
+  },
+  "sources": [
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\initial-reliability\\all-data\\stations.csv",
+      "sha256": "7355516e45d64a388e89d6c077d7d58b897af5f94079905cf9cfc9470495b438"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\initial-reliability\\all-data\\series.csv",
+      "sha256": "426f67f24ec8c9ffce001787064f885e8397a824c859877a228f99319f4768fa"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\initial-reliability\\all-data\\observations.csv",
+      "sha256": "1a754e1ceeed4de705109db7e1b9467f435b77f8173b4d7d022e8736a1fc1a76"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\initial-reliability\\all-data\\forecasts.csv",
+      "sha256": "67eb1d32230b731690250a97c519ee45165fd6be6bb13c9e41c41c19a82e5c72"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\proposal-direction\\sources\\hot.dat",
+      "sha256": "9b62c605756a123d17182c8ca3f593714567f32c5e6412c79a2d4bf214b65598"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-review\\analyses\\09_geographic_temperature\\paired_geography_2025\\results\\station_inventory.csv",
+      "sha256": "c50c9c8045de9da26b318dd32be480dca6b3d3386653f5a29d9cf5558d117e9b"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-review\\analyses\\09_geographic_temperature_v2\\PLAN.md",
+      "sha256": "3b9b405dd9e61aab91e74dd496c48d509b8a31268ff0d2b4d434d48ef4a66c01"
+    }
+  ],
+  "extra_sources": [
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-review\\analyses\\09_geographic_temperature_v2\\DISTANCE_PLAN.md",
+      "sha256": "07834311d003f7de0cab846d8d1cc3ceda639d80e3a1b67a525b173958e6bfb8"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-review\\analyses\\09_geographic_temperature_v2\\results\\training_offsets.csv",
+      "sha256": "d8155c4908e722b86348da4e799fd8511c39eda778e19e82c6322234bac16df5"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-review\\analyses\\09_geographic_temperature_v2\\results\\station_inventory.csv",
+      "sha256": "c50c9c8045de9da26b318dd32be480dca6b3d3386653f5a29d9cf5558d117e9b"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-review\\analyses\\09_geographic_temperature_v2\\run_distance.py",
+      "sha256": "d5163ebf2a9aef0a5fd00ac757d60ef7f713b38ddc264951b3069988eb1add79"
+    }
+  ],
+  "station_metric_rows": 1080,
+  "pair_metric_rows": 15660,
+  "contrast_rows": 1944,
+  "slope_rows": 216,
+  "case_rows": 7020,
+  "primary_sample": "pairwise_available",
+  "common_panel_status": "insufficient_support",
+  "relative_score": "Mean signed same-day MAE difference against the other 29 fixed stations; not absolute MAE",
+  "plan_amendment": "Primary switched after coverage check found 13 days; all-intersection retained; no offset or threshold selection changed"
+}

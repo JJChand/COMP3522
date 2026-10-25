@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "pair_rows": 81216,
+  "geographic_rows": 1296,
+  "method_difference_rows": 3888,
+  "scope": "Independent stdlib recomputation from raw C observations, independently verified event versions and training offsets; all pair support/MAE/RMSE/Bias/benefit/usefulness/worsening values and all group point estimates checked. CI classifications checked but bootstrap algorithm not independently replicated."
+}
