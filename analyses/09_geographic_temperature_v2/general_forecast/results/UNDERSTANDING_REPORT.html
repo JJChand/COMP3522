@@ -1,0 +1,502 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><title>General Hong Kong forecast — 理解用</title><style>body{font:17px/1.75 system-ui;max-width:1250px;margin:35px auto;padding:0 24px;color:#24323c}img{width:100%}section{border-top:1px solid #ccd7dc;margin-top:40px;padding-top:20px}table{border-collapse:collapse;font-size:13px;display:block;overflow:auto}td,th{border:1px solid #ccd7dc;padding:6px;white-space:nowrap}a{color:#168493}</style><body><p><a href="#humidity-general">跳至濕度general forecast：RHmin／RHmax</a> · <a href="HUMIDITY_REPORT.html">濕度完整數據與限制</a></p><h1>把九天預報視為香港共同預報：地方validity與revision usefulness</h1><p>私人理解用版本。研究假設：共同預報面向香港地區，不假設以尖沙咀為目標。也不把它自行定義成全港平均、人口加權平均或全港各站極值。主分析完全不加offset，不使用距HKO的容忍額度。</p><h2>可以回答甚麼？</h2><p>「同一份預報對哪些站群較吻合？同一次更新對哪些站群較有用？更新是否縮小地理組間的誤差差距？」不是比較不同地區自己的預報。general定位也不代表應消除所有地域溫差；本版本保留這些差異，將它們視為共同產品地方適用性的部分。</p><h2>主要發現：相同修訂事件</h2><ul><li><b>Tmax：</b>同修訂事件中，更新後內陸比近岸的MAE仍高 1.035 [0.885, 1.180]°C。兩組U：近岸 0.183 [0.116, 0.245]、內陸 0.236 [0.180, 0.290]°C。差距縮小量 0.053 [0.006, 0.102]°C：支持正方向。</li><li><b>Tmin：</b>同修訂事件中，更新後內陸比近岸的MAE仍高 1.254 [1.010, 1.489]°C。兩組U：近岸 0.224 [0.114, 0.327]、內陸 0.219 [0.111, 0.323]°C。差距縮小量 -0.006 [-0.029, 0.015]°C：證據不足。</li></ul><p>氣溫較不吻合與修訂較沒有用是兩個不同結論。以下圖表保留全部lead和三個海岸對比，不只展示內陸／近岸。</p><h2>如何公平比較？</h2><ol><li>保留30站：近岸10、過渡15、內陸5；NGP保留，TMS/TC按既定範圍排除。有效C觀測，不補缺值。</li><li>2025年、每日最後存檔版本，HKT日曆lead。全年validity D1–D9；修訂用相鄰發布日D(k+1)→Dk。</li><li>跨組兩站必須同一天都有觀測，評分同一預報版本；同修訂分析的舊新MAE、U與C完全同事件。先站對平均，再跨組站對等權。</li><li>主修訂分析只算該變數確有改動事件；全部相鄰版本另作敏感度。Tmax與Tmin的changed事件不同，不能直接把兩者U大小作完全同事件比較。</li><li>沿用2000次14日循環日期區塊bootstrap，seed3522；同日所有站與事件一起重抽。固定站群、未校正多重比較；區間不等於因果證明。</li></ol><p>本版重用已審計的raw結果，重新核對站對彙總，沒有重新擬合模型。只改變研究問題的解讀，原始F−O與U計算沒有因假設改變。2025已被研究過，是回溯分析。</p><h2>指標與組員方法對齊</h2><p>Validity使用MAE、RMSE、Bias（F−O；正值偏高）。Reliability在本輪具體指revision usefulness：U=|F_old−O|−|F_new−O|，改善率為U&gt;0的比例；與組員RQ3一致。使用daily_latest配對，並非組員consecutive_le24h主情境。因所有站收到相同預報，不能說內陸本身有更多修訂；MAR/FFI/修訂頻率應整體報告，本輪沒有重算。此處亦不是機率校準reliability。</p><p>同一組在不同對比中的MAE略有不同是因為配對日期不同，不應將不同對比的數字拼成一條通用地區MAE線。所有彙總使用相同的該對比事件；all是站對內事件平均，不是lead等權平均。</p><section id="overview-Tmax"><h2>Tmax：三組顏色固定，一起理解validity與revision usefulness</h2><img src="group_overview_Tmax.png"><p><b>為何選這組圖：</b>讓「誤差剩多少」與「更新改善多少」分開看，避免將內陸較不準等同於修訂沒用。藍綠近岸、橙色過渡、紫紅內陸；三欄依次比較近岸／過渡、近岸／內陸、過渡／內陸，保留全部站點，不是挑三個站。</p><p><b>上排讀法：</b>X只有舊、新兩個預報版本，連線向下代表更新後MAE下降；Y為MAE（°C），越低越吻合。不是把所有舊預報日與所有新預報日各自平均，而是逐事件評分同一目標日的兩個版本，再站對等權。數字是描述性均值，沒有用線條高度代替組差區間。</p><p><b>下排讀法：</b>X是兩個地理組，Y=U=舊絕對誤差−新絕對誤差，點越高表示平均改善越多；誤差棒為95%區間。點高於零不代表每次修訂都改善；兩根誤差棒是否重疊也不能代替配對U差的區間檢定。</p><p><b>實際發現：</b>Tmax內陸MAE由2.874降至2.638°C，仍高於近岸的1.603°C；但內陸減少0.236°C，比近岸0.183°C略多。 內陸−近岸的U差 0.053 [0.006, 0.102]°C；地域差距縮小C 0.053 [0.006, 0.102]°C，支持正方向。</p><p><b>資料範圍與假設：</b>2025年未修正共同預報、changed-only修訂，D9→D8至D2→D1全部彙總；不是單一D9結果，也不是八個lead等權。每一欄的兩組、舊新和U完全使用同一批配對事件；不同欄的日期交集略不同，因此同組數字可不同，不能跨欄相減。圖中沒有將三組強行拼成同一日期樣本。完整逐lead結果保留於後文。</p></section><section id="overview-Tmin"><h2>Tmin：三組顏色固定，一起理解validity與revision usefulness</h2><img src="group_overview_Tmin.png"><p><b>為何選這組圖：</b>讓「誤差剩多少」與「更新改善多少」分開看，避免將內陸較不準等同於修訂沒用。藍綠近岸、橙色過渡、紫紅內陸；三欄依次比較近岸／過渡、近岸／內陸、過渡／內陸，保留全部站點，不是挑三個站。</p><p><b>上排讀法：</b>X只有舊、新兩個預報版本，連線向下代表更新後MAE下降；Y為MAE（°C），越低越吻合。不是把所有舊預報日與所有新預報日各自平均，而是逐事件評分同一目標日的兩個版本，再站對等權。數字是描述性均值，沒有用線條高度代替組差區間。</p><p><b>下排讀法：</b>X是兩個地理組，Y=U=舊絕對誤差−新絕對誤差，點越高表示平均改善越多；誤差棒為95%區間。點高於零不代表每次修訂都改善；兩根誤差棒是否重疊也不能代替配對U差的區間檢定。</p><p><b>實際發現：</b>Tmin內陸更新後MAE仍為2.727°C，高於近岸的1.473°C；然而兩組U接近：內陸0.219、近岸0.224°C。兩者有用性差的區間跨零，不能說內陸修訂較沒用。 內陸−近岸的U差 -0.006 [-0.029, 0.015]°C；地域差距縮小C -0.006 [-0.029, 0.015]°C，證據不足。</p><p><b>資料範圍與假設：</b>2025年未修正共同預報、changed-only修訂，D9→D8至D2→D1全部彙總；不是單一D9結果，也不是八個lead等權。每一欄的兩組、舊新和U完全使用同一批配對事件；不同欄的日期交集略不同，因此同組數字可不同，不能跨欄相減。圖中沒有將三組強行拼成同一日期樣本。完整逐lead結果保留於後文。</p></section><section id="why-pair"><h2>為甚麼經常pair，而不是各站獨立計算？</h2><p><b>「各自計算」可以做；「統計上獨立」則不能直接假設。</b>各站的MAE是有用的描述，但若近岸與內陸缺測日期不同，組間差可能同時反映不同季節、寒潮或其他難預報天氣。兩者又共用同一份預報及大範圍天氣，同日誤差有依賴性。</p><h3>這裡其實有兩種pair</h3><ol><li><b>預報修訂配對：</b>同一站、同一目標日、同一實測值，對比舊／新預報。這才回答「這一次修訂令同一件事改善多少」。若新舊預報來自不同目標日，就混入天氣難度。</li><li><b>地理站點配對：</b>近岸站A與內陸站B只用兩站同日都有實測的日期，評分同一版本。先計各日的誤差差，再平均，減少日期組成不一致。這不是只挑一對站：近岸10×內陸5=50對，近岸×過渡150對、過渡×內陸75對，對比內站對等權。</li></ol><h3>一個假設例子（不是本研究實測）</h3><table><tr><th>日期</th><th>近岸絕對誤差</th><th>內陸絕對誤差</th></tr><tr><td>較易預報日</td><td>1°C</td><td>1°C</td></tr><tr><td>較難預報日</td><td>缺測</td><td>4°C</td></tr></table><p>各自平均會得到近岸1°C、內陸2.5°C；但共同那一天兩站都是1°C。不能從不一致的日期直接說內陸天生較差。配對只顯示已觀測共同日沒有差異，仍不能知道近岸在缺測日的誤差；不能宣稱已解決全部缺測偏差。</p><h3>甚麼時候不用逐站pair也可以？</h3><ul><li>純粹描述各站在其可用日期的表現，可以獨立算MAE，但清楚標示不同樣本，不用來直接判斷地理差異。</li><li>若各站使用完全相同的日期、版本及權重，直接比較組平均與對應的平均差可一致；逐站pair不是唯一方法。</li><li>可採所有站的共同日期，先每天算各組平均，再同日比組；或另建控制日期／天氣因素的模型。本次沿用站對交集，因全部30站×兩變數×D1–D9的嚴格交集只有13日。按單一變數／lead取交集可有更多日，不能把13日當所有方案的共同天數。</li></ul><p><b>Pair不會製造獨立樣本：</b>50個內陸／近岸站對會重用同一站與同一天，不能當50個獨立實驗。所以現有區間按目標日區塊一起重抽所有站及事件，而不是把每條站對記錄獨立重抽。不同站對仍有不同日期、站群小、未控制海拔與建成環境，結論仍限於目前樣本。</p><h3>為甚麼內陸較不準，但修訂不一定較沒用？</h3><p>MAE衡量<b>剩餘誤差的水平</b>，U衡量<b>這一次更新的改善量</b>。例如一組誤差3.0→2.7°C（改善0.3），另一組1.5→1.3°C（改善0.2），前者更新後仍較不準，卻改善更多。這是算術例子，不代表內陸一定有較大改善空間；真正方向仍由同事件U差的區間判斷。</p></section><section><h2>Tmax validity：共同預報較貼近哪一組？</h2><img src="validity_Tmax.png"><p><b>目的／選軸：</b>X=預報lead 1–9，顯示地方吻合度是否隨時效不同；Y=圖例前一組減後一組的同日MAE差，正值表示前一組較不吻合，負值相反。此圖是組差，不是各組MAE，零也不是零預報誤差。</p><p><b>資料如何得來：</b>全部有效預報日，兩站使用同一版本同一天；先在各站對的共同有效日平均絕對誤差差，再對跨組站對等權。三條線分別為過渡−近岸、內陸−近岸、內陸−過渡；陰影95%日期區塊bootstrap區間。</p><p><b>發現：</b>過渡−近岸 D9差 0.091°C [-0.009, 0.205]；證據不足；內陸−近岸 D9差 1.118°C [0.970, 1.266]；支持正方向；內陸−過渡 D9差 1.019°C [0.892, 1.141]；支持正方向。</p><p><b>假設／限制：</b>每對交集不同，缺測組成仍可能影響；三條線也不一定可相減得到另一條。距海門檻是研究選擇，不是官方分區。不能據此把general預報判定為官方逐站失準，亦不能與下圖changed-only事件的MAE直接相減。</p></section><section><h2>Tmax：內陸與近岸，同一修訂是否都有用？</h2><img src="matched_Tmax.png"><p><b>目的：</b>將validity與revision usefulness限制在完全同一修訂事件，以免把不同樣本的表現誤當改善。這個內陸／近岸對比保留50個跨組站對；其他對比完整結果另列。</p><p><b>X軸：</b>新版本lead k，k=1代表D2→D1，k=8代表D9→D8；沒有D10資料，所以沒有D10→D9。<b>左Y：</b>相同事件上的絕對MAE，虛線舊／實線新；藍綠近岸，紫紅內陸，越低越好。<b>右Y：</b>U=舊絕對誤差−新絕對誤差；高於零才代表平均改善，陰影為95%區間。</p><p><b>數據：</b>每站對先平均有效changed-only事件，再站對等權。同一對比的兩組、舊新及U完全同事件。彙總所有轉換時，近岸MAE 1.787→1.603°C、內陸 2.874→2.638°C；近岸U 0.183 [0.116, 0.245]、內陸U 0.236 [0.180, 0.290]°C。改善率各為 57.2%、59.7%；這是誤差變小的事件比例，不是預報準確率。</p><p><b>發現及限制：</b>內陸原本較不吻合，不表示更新一定較沒用。平均U與改善率也不同：少數大幅惡化可抵消多次小改善。all彙總按各站對事件平均，不是八個lead等權，亦不保證每個lead都有足夠改善證據。此為事後有用性，不是機率預報的校準reliability。</p></section><section><h2>Tmax：誰獲益更多？地域差距有縮小嗎？</h2><img src="gap_Tmax.png"><p><b>為何需要兩張：</b>兩組都改善，不代表差距縮小。左Y=U_B−U_A，正值表示圖例前一組獲益更多；右Y=C=|G_old|−|G_new|，正值表示兩組MAE絕對差距縮小。X為新版本lead，三色對應三個跨組比較，陰影是95%區間。</p><p><b>數據與讀法：</b>兩張圖均使用上一節相同的站對同事件方法，但每條對比線有自己的交集。若G不轉號，U差與C可相同；若接近零或重抽時轉號，兩者區間可以不同。因此不能用左圖支持正方向就自動宣稱右圖差距顯著縮小。</p><p><b>全部轉換彙總發現：</b>過渡−近岸：U差 0.043 [0.011, 0.081]°C（支持正方向）；差距縮小量C 0.043 [-0.038, 0.080]°C（證據不足）；內陸−近岸：U差 0.053 [0.006, 0.102]°C（支持正方向）；差距縮小量C 0.053 [0.006, 0.102]°C（支持正方向）；內陸−過渡：U差 0.011 [-0.027, 0.046]°C（證據不足）；差距縮小量C 0.011 [-0.027, 0.046]°C（證據不足）。</p><p><b>限制：</b>彙總結果不等於每個lead的結果；跨零只能說方向證據不足，不能說毫無影響。C使用先站對等權形成的組間gap，不是各站對|gap|縮小量的平均。全相鄰版本敏感度另見表，不以changed-only改善率代表所有預報日。</p></section><section><h2>Tmin validity：共同預報較貼近哪一組？</h2><img src="validity_Tmin.png"><p><b>目的／選軸：</b>X=預報lead 1–9，顯示地方吻合度是否隨時效不同；Y=圖例前一組減後一組的同日MAE差，正值表示前一組較不吻合，負值相反。此圖是組差，不是各組MAE，零也不是零預報誤差。</p><p><b>資料如何得來：</b>全部有效預報日，兩站使用同一版本同一天；先在各站對的共同有效日平均絕對誤差差，再對跨組站對等權。三條線分別為過渡−近岸、內陸−近岸、內陸−過渡；陰影95%日期區塊bootstrap區間。</p><p><b>發現：</b>過渡−近岸 D9差 0.115°C [0.057, 0.174]；支持正方向；內陸−近岸 D9差 1.227°C [1.003, 1.461]；支持正方向；內陸−過渡 D9差 1.112°C [0.917, 1.307]；支持正方向。</p><p><b>假設／限制：</b>每對交集不同，缺測組成仍可能影響；三條線也不一定可相減得到另一條。距海門檻是研究選擇，不是官方分區。不能據此把general預報判定為官方逐站失準，亦不能與下圖changed-only事件的MAE直接相減。</p></section><section><h2>Tmin：內陸與近岸，同一修訂是否都有用？</h2><img src="matched_Tmin.png"><p><b>目的：</b>將validity與revision usefulness限制在完全同一修訂事件，以免把不同樣本的表現誤當改善。這個內陸／近岸對比保留50個跨組站對；其他對比完整結果另列。</p><p><b>X軸：</b>新版本lead k，k=1代表D2→D1，k=8代表D9→D8；沒有D10資料，所以沒有D10→D9。<b>左Y：</b>相同事件上的絕對MAE，虛線舊／實線新；藍綠近岸，紫紅內陸，越低越好。<b>右Y：</b>U=舊絕對誤差−新絕對誤差；高於零才代表平均改善，陰影為95%區間。</p><p><b>數據：</b>每站對先平均有效changed-only事件，再站對等權。同一對比的兩組、舊新及U完全同事件。彙總所有轉換時，近岸MAE 1.697→1.473°C、內陸 2.946→2.727°C；近岸U 0.224 [0.114, 0.327]、內陸U 0.219 [0.111, 0.323]°C。改善率各為 58.9%、58.7%；這是誤差變小的事件比例，不是預報準確率。</p><p><b>發現及限制：</b>內陸原本較不吻合，不表示更新一定較沒用。平均U與改善率也不同：少數大幅惡化可抵消多次小改善。all彙總按各站對事件平均，不是八個lead等權，亦不保證每個lead都有足夠改善證據。此為事後有用性，不是機率預報的校準reliability。</p></section><section><h2>Tmin：誰獲益更多？地域差距有縮小嗎？</h2><img src="gap_Tmin.png"><p><b>為何需要兩張：</b>兩組都改善，不代表差距縮小。左Y=U_B−U_A，正值表示圖例前一組獲益更多；右Y=C=|G_old|−|G_new|，正值表示兩組MAE絕對差距縮小。X為新版本lead，三色對應三個跨組比較，陰影是95%區間。</p><p><b>數據與讀法：</b>兩張圖均使用上一節相同的站對同事件方法，但每條對比線有自己的交集。若G不轉號，U差與C可相同；若接近零或重抽時轉號，兩者區間可以不同。因此不能用左圖支持正方向就自動宣稱右圖差距顯著縮小。</p><p><b>全部轉換彙總發現：</b>過渡−近岸：U差 0.022 [-0.004, 0.053]°C（證據不足）；差距縮小量C 0.022 [-0.004, 0.053]°C（證據不足）；內陸−近岸：U差 -0.006 [-0.029, 0.015]°C（證據不足）；差距縮小量C -0.006 [-0.029, 0.015]°C（證據不足）；內陸−過渡：U差 -0.027 [-0.059, 0.005]°C（證據不足）；差距縮小量C -0.027 [-0.059, 0.005]°C（證據不足）。</p><p><b>限制：</b>彙總結果不等於每個lead的結果；跨零只能說方向證據不足，不能說毫無影響。C使用先站對等權形成的組間gap，不是各站對|gap|縮小量的平均。全相鄰版本敏感度另見表，不以changed-only改善率代表所有預報日。</p></section><h2>相同修訂事件的全部海岸彙總</h2><p>前組／後組依「對比」順序；例如內陸−近岸，前組是內陸。數值單位°C，方括號為95%區間。</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>變數</th>
+      <th>對比</th>
+      <th>新MAE差</th>
+      <th>後組U</th>
+      <th>前組U</th>
+      <th>U差</th>
+      <th>差距縮小C</th>
+      <th>C判讀</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tmax</td>
+      <td>過渡−近岸</td>
+      <td>0.032 [-0.065, 0.137]</td>
+      <td>0.177 [0.109, 0.240]</td>
+      <td>0.220 [0.153, 0.284]</td>
+      <td>0.043 [0.011, 0.081]</td>
+      <td>0.043 [-0.038, 0.080]</td>
+      <td>證據不足</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>內陸−近岸</td>
+      <td>1.035 [0.885, 1.180]</td>
+      <td>0.183 [0.116, 0.245]</td>
+      <td>0.236 [0.180, 0.290]</td>
+      <td>0.053 [0.006, 0.102]</td>
+      <td>0.053 [0.006, 0.102]</td>
+      <td>支持正方向</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>內陸−過渡</td>
+      <td>1.000 [0.879, 1.109]</td>
+      <td>0.220 [0.156, 0.281]</td>
+      <td>0.231 [0.176, 0.286]</td>
+      <td>0.011 [-0.027, 0.046]</td>
+      <td>0.011 [-0.027, 0.046]</td>
+      <td>證據不足</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>過渡−近岸</td>
+      <td>0.088 [0.025, 0.155]</td>
+      <td>0.219 [0.114, 0.318]</td>
+      <td>0.241 [0.148, 0.333]</td>
+      <td>0.022 [-0.004, 0.053]</td>
+      <td>0.022 [-0.004, 0.053]</td>
+      <td>證據不足</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>內陸−近岸</td>
+      <td>1.254 [1.010, 1.489]</td>
+      <td>0.224 [0.114, 0.327]</td>
+      <td>0.219 [0.111, 0.323]</td>
+      <td>-0.006 [-0.029, 0.015]</td>
+      <td>-0.006 [-0.029, 0.015]</td>
+      <td>證據不足</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>內陸−過渡</td>
+      <td>1.165 [0.972, 1.346]</td>
+      <td>0.246 [0.152, 0.335]</td>
+      <td>0.220 [0.115, 0.318]</td>
+      <td>-0.027 [-0.059, 0.005]</td>
+      <td>-0.027 [-0.059, 0.005]</td>
+      <td>證據不足</td>
+    </tr>
+  </tbody>
+</table><h2>全部相鄰版本敏感度</h2><p>以下同時保留沒有改動的事件；這些事件U=0。分母與changed-only不同，改善率會不同，不能混稱同一指標。</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable</th>
+      <th>factor</th>
+      <th>contrast</th>
+      <th>benefit_difference_all_pairs</th>
+      <th>benefit_difference_changed_only</th>
+      <th>benefit_difference_direction_all_pairs</th>
+      <th>benefit_difference_direction_changed_only</th>
+      <th>absolute_gap_reduction_all_pairs</th>
+      <th>absolute_gap_reduction_changed_only</th>
+      <th>absolute_gap_reduction_direction_all_pairs</th>
+      <th>absolute_gap_reduction_direction_changed_only</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tmax</td>
+      <td>coast</td>
+      <td>inland minus near</td>
+      <td>0.017134</td>
+      <td>0.052678</td>
+      <td>positive</td>
+      <td>positive</td>
+      <td>0.017134</td>
+      <td>0.052678</td>
+      <td>positive</td>
+      <td>positive</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>coast</td>
+      <td>inland minus transition</td>
+      <td>0.003486</td>
+      <td>0.010988</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>0.003486</td>
+      <td>0.010988</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>coast</td>
+      <td>transition minus near</td>
+      <td>0.014043</td>
+      <td>0.043278</td>
+      <td>positive</td>
+      <td>positive</td>
+      <td>0.014043</td>
+      <td>0.043278</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>region</td>
+      <td>Islands minus HKI</td>
+      <td>0.000834</td>
+      <td>0.002363</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>0.000834</td>
+      <td>0.002363</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>region</td>
+      <td>Islands minus KL</td>
+      <td>-0.027052</td>
+      <td>-0.082962</td>
+      <td>negative</td>
+      <td>negative</td>
+      <td>-0.027052</td>
+      <td>-0.082962</td>
+      <td>negative</td>
+      <td>negative</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>region</td>
+      <td>Islands minus NT</td>
+      <td>-0.021709</td>
+      <td>-0.066383</td>
+      <td>negative</td>
+      <td>negative</td>
+      <td>-0.021709</td>
+      <td>-0.066383</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>region</td>
+      <td>KL minus HKI</td>
+      <td>0.027611</td>
+      <td>0.085161</td>
+      <td>positive</td>
+      <td>positive</td>
+      <td>0.027611</td>
+      <td>0.085161</td>
+      <td>positive</td>
+      <td>positive</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>region</td>
+      <td>NT minus HKI</td>
+      <td>0.022727</td>
+      <td>0.069806</td>
+      <td>positive</td>
+      <td>positive</td>
+      <td>0.022727</td>
+      <td>0.069806</td>
+      <td>positive</td>
+      <td>positive</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>region</td>
+      <td>NT minus KL</td>
+      <td>-0.004283</td>
+      <td>-0.013123</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>-0.004283</td>
+      <td>-0.013123</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>coast</td>
+      <td>inland minus near</td>
+      <td>-0.001517</td>
+      <td>-0.005816</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>-0.001517</td>
+      <td>-0.005816</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>coast</td>
+      <td>inland minus transition</td>
+      <td>-0.006258</td>
+      <td>-0.026608</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>-0.006258</td>
+      <td>-0.026608</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>coast</td>
+      <td>transition minus near</td>
+      <td>0.005101</td>
+      <td>0.022344</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>0.005101</td>
+      <td>0.022344</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>region</td>
+      <td>Islands minus HKI</td>
+      <td>0.000544</td>
+      <td>0.002932</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>0.000544</td>
+      <td>0.002932</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>region</td>
+      <td>Islands minus KL</td>
+      <td>-0.009997</td>
+      <td>-0.042158</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>-0.009997</td>
+      <td>-0.042158</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>region</td>
+      <td>Islands minus NT</td>
+      <td>-0.002413</td>
+      <td>-0.009792</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>-0.002413</td>
+      <td>-0.009792</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>region</td>
+      <td>KL minus HKI</td>
+      <td>0.011721</td>
+      <td>0.05129</td>
+      <td>positive</td>
+      <td>positive</td>
+      <td>0.011721</td>
+      <td>0.05129</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>region</td>
+      <td>NT minus HKI</td>
+      <td>0.002542</td>
+      <td>0.011318</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>0.002542</td>
+      <td>0.011318</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>region</td>
+      <td>NT minus KL</td>
+      <td>-0.007336</td>
+      <td>-0.031962</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+      <td>-0.007336</td>
+      <td>-0.031962</td>
+      <td>insufficient</td>
+      <td>insufficient</td>
+    </tr>
+  </tbody>
+</table><h2>四區附錄與完整資料</h2><p>四區依行政區：港島、九龍、新界、離島；不是都市化程度。所有四區對比及區間保存在下列完整CSV，海岸為本次主圖。四區結果僅作補充探索。</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable</th>
+      <th>contrast</th>
+      <th>new_gap</th>
+      <th>new_gap_ci_low</th>
+      <th>new_gap_ci_high</th>
+      <th>benefit_difference</th>
+      <th>benefit_difference_ci_low</th>
+      <th>benefit_difference_ci_high</th>
+      <th>absolute_gap_reduction</th>
+      <th>absolute_gap_reduction_ci_low</th>
+      <th>absolute_gap_reduction_ci_high</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tmax</td>
+      <td>KL minus HKI</td>
+      <td>0.154</td>
+      <td>0.061</td>
+      <td>0.256</td>
+      <td>0.085</td>
+      <td>0.043</td>
+      <td>0.128</td>
+      <td>0.085</td>
+      <td>0.043</td>
+      <td>0.128</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>NT minus HKI</td>
+      <td>0.438</td>
+      <td>0.344</td>
+      <td>0.527</td>
+      <td>0.070</td>
+      <td>0.027</td>
+      <td>0.111</td>
+      <td>0.070</td>
+      <td>0.027</td>
+      <td>0.111</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>Islands minus HKI</td>
+      <td>0.680</td>
+      <td>0.520</td>
+      <td>0.842</td>
+      <td>0.002</td>
+      <td>-0.035</td>
+      <td>0.039</td>
+      <td>0.002</td>
+      <td>-0.035</td>
+      <td>0.039</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>NT minus KL</td>
+      <td>0.273</td>
+      <td>0.230</td>
+      <td>0.318</td>
+      <td>-0.013</td>
+      <td>-0.029</td>
+      <td>0.002</td>
+      <td>-0.013</td>
+      <td>-0.029</td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>Islands minus KL</td>
+      <td>0.522</td>
+      <td>0.313</td>
+      <td>0.719</td>
+      <td>-0.083</td>
+      <td>-0.140</td>
+      <td>-0.027</td>
+      <td>-0.083</td>
+      <td>-0.140</td>
+      <td>-0.027</td>
+    </tr>
+    <tr>
+      <td>Tmax</td>
+      <td>Islands minus NT</td>
+      <td>0.233</td>
+      <td>0.025</td>
+      <td>0.431</td>
+      <td>-0.066</td>
+      <td>-0.115</td>
+      <td>-0.018</td>
+      <td>-0.066</td>
+      <td>-0.112</td>
+      <td>0.028</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>KL minus HKI</td>
+      <td>0.048</td>
+      <td>-0.033</td>
+      <td>0.126</td>
+      <td>0.051</td>
+      <td>0.027</td>
+      <td>0.075</td>
+      <td>0.051</td>
+      <td>-0.023</td>
+      <td>0.074</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>NT minus HKI</td>
+      <td>0.678</td>
+      <td>0.518</td>
+      <td>0.836</td>
+      <td>0.011</td>
+      <td>-0.028</td>
+      <td>0.048</td>
+      <td>0.011</td>
+      <td>-0.028</td>
+      <td>0.048</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>Islands minus HKI</td>
+      <td>0.957</td>
+      <td>0.815</td>
+      <td>1.093</td>
+      <td>0.003</td>
+      <td>-0.048</td>
+      <td>0.050</td>
+      <td>0.003</td>
+      <td>-0.048</td>
+      <td>0.050</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>NT minus KL</td>
+      <td>0.617</td>
+      <td>0.471</td>
+      <td>0.769</td>
+      <td>-0.032</td>
+      <td>-0.068</td>
+      <td>0.002</td>
+      <td>-0.032</td>
+      <td>-0.068</td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>Islands minus KL</td>
+      <td>0.901</td>
+      <td>0.812</td>
+      <td>0.985</td>
+      <td>-0.042</td>
+      <td>-0.093</td>
+      <td>0.004</td>
+      <td>-0.042</td>
+      <td>-0.093</td>
+      <td>0.004</td>
+    </tr>
+    <tr>
+      <td>Tmin</td>
+      <td>Islands minus NT</td>
+      <td>0.261</td>
+      <td>0.082</td>
+      <td>0.428</td>
+      <td>-0.010</td>
+      <td>-0.041</td>
+      <td>0.016</td>
+      <td>-0.010</td>
+      <td>-0.040</td>
+      <td>0.017</td>
+    </tr>
+  </tbody>
+</table><h2>仍不足以說甚麼？</h2><ul><li>不能證明海岸距離導致誤差；海拔、建成環境等可混雜。內陸5站不能代表所有內陸位置。</li><li>未確認官方general預報的空間統計定義；本輪是站群適用性評估，不能直接取代官方準確率。</li><li>配對沒有完全解決不同站對的日期／季節組成及非隨機缺測；單一年、探索性多重對比。</li><li>修訂有用不表示最終預報已足夠準確；需要另定用途容許誤差。誤差較大也不等於修訂較沒用。</li><li>本版沒有雨量分析；濕度另見新增章節。沒有將general假設證明為事實；沒有因結果刪站。</li></ul><h2>完整輸出與來源</h2><p><a href="station_inventory.csv">station_inventory</a> · <a href="all_forecast_validity.csv">all_forecast_validity</a> · <a href="all_forecast_pairs.csv">all_forecast_pairs</a> · <a href="matched_revision_contrasts.csv">matched_revision_contrasts</a> · <a href="matched_revision_pairs.csv">matched_revision_pairs</a> · <a href="station_revision_metrics.csv">station_revision_metrics</a> · <a href="headline_all_transitions.csv">headline_all_transitions</a> · <a href="denominator_sensitivity.csv">denominator_sensitivity</a> · <a href="group_overview_values.csv">group_overview_values</a></p><p><a href="../PLAN.md">固定解讀與方法</a> · <a href="metadata.json">來源hash</a> · <a href="verification.json">核對範圍</a></p><section id="humidity-general"><h2>新增：濕度general forecast、不加offset</h2><p>RHmin/RHmax、26站、三個海岸組。完整資料及全部圖見<a href="HUMIDITY_REPORT.html">濕度理解報告</a>。</p><ul><li>RHmin同changed事件彙總：近岸新MAE 7.965、內陸 10.526 pp；近岸U 1.073 [0.778, 1.368]、內陸U 1.500 [1.113, 1.879] pp；U差 0.427 [0.090, 0.758] pp（支持正方向）；C 0.427 [0.090, 0.758] pp（支持正方向）。</li><li>RHmax同changed事件彙總：近岸新MAE 7.327、內陸 8.901 pp；近岸U 1.250 [0.873, 1.600]、內陸U 0.950 [0.533, 1.369] pp；U差 -0.301 [-0.585, -0.015] pp（支持負方向）；C -0.301 [-0.585, -0.015] pp（支持負方向）。</li></ul><section><h2>RHmin：同事件validity與revision usefulness</h2><img src="humidity_overview_rh_min.png"><p><b>為何做這圖：</b>不假設尖沙咀為目標，直接檢查共同預報的地方吻合度與更新效益。上排X=舊／新版本，Y=MAE（pp），越低越吻合；下排X=地理組，Y=平均U，越高改善越多，誤差棒為95%區間。近岸藍綠、過渡橙、內陸紫紅，三欄各用自己的完全同事件樣本。</p><p><b>資料與讀法：</b>每站對只用同目標日、同兩個版本，先平均事件，再跨組站對等權；26站全部保留，跨組共209站對。彙總D9→D8至D2→D1的changed-only事件，不是單一D9或八個lead等權。兩根U誤差棒的重疊不代替配對U差區間。</p><p><b>內陸／近岸發現：</b>近岸MAE 9.038→7.965 pp；內陸 12.025→10.526 pp。更新後組差 2.560 [1.576, 3.478] pp（支持正方向）。近岸U 1.073 [0.778, 1.368]、內陸U 1.500 [1.113, 1.879] pp；U差 0.427 [0.090, 0.758] pp（支持正方向）。差距縮小C 0.427 [0.090, 0.758] pp（支持正方向）。</p><p><b>限制：</b>每欄日期不同，同一組可有略不同數字，不能跨欄相減。所有指標都是對取樣RH極值的事後評分；general不是已確認的區域極值預報。MAE衡量剩餘誤差，U衡量改善量，所以原本較不吻合的組也可能獲益更多。這是探索性固定站群區間，不是因果結論。</p></section><section><h2>RHmin：全部lead的地方吻合度</h2><img src="humidity_validity_rh_min.png"><p><b>左圖：</b>X=lead1–9、Y=絕對MAE，三種顏色直接代表三組。每站同樣89個日期，每站先平均，再組內等站權；全年日曆只覆蓋89日，僅描述性，月份覆蓋見CSV。此圖沒有以缺測站偷偷改變組成。</p><p><b>右圖：</b>X同樣lead，Y是B−A配對MAE差，線色代表對比而非單一組；正值表示前一組較不吻合。使用每站對所有可配對日期，保留更多資料；陰影為95%區間。不能把左圖的組差與右圖要求完全一致，因日期不同。</p><p><b>D9主要配對發現：</b>內陸−近岸差 2.627 [1.620, 3.607] pp，支持正方向；各站對有265–324個有效日。所有lead和三組對比均保存，沒有只抽D9作分析。</p><p><b>假設／限制：</b>共同預報不加offset、不按離HKO遠近放寬誤差。不同站對日期交集仍不同、缺測非隨機、每十分鐘取樣可能漏掉真實極值；此處的RHmin/RHmax不是日平均，也不是概率預報區間。</p></section><section><h2>RHmin：更新的效益是否各lead一樣？</h2><img src="humidity_usefulness_rh_min.png"><p><b>選軸與目的：</b>X是新版本lead k=1–8，表示D(k+1)→Dk；Y為平均U（pp）。三組顏色固定，分欄以相同事件對比，避免all彙總掩蓋時效差異。高於零表示平均改善，陰影跨零表示該組該lead的方向證據不足；不能從線的上下順序判定兩組差異顯著。</p><p><b>數據：</b>僅確有改動事件、同一目標日實測，站對等權。D9沒有D10舊版可配，不能補造D10→D9修訂。RHmin與RHmax的changed事件各自定義，所以兩變數圖不是完全同一批事件。</p><p><b>發現：</b>內陸／近岸比較中，近岸有7/8個lead的U區間高於零，內陸有7/8個；內陸−近岸U差有1個支持正方向、0個支持負方向、7個證據不足。這些lead互相關聯，不能算作八次獨立驗證。</p><p><b>限制：</b>彙總U不是每個lead保證改善。逐lead區間、改善率、惡化率與平均惡化幅度完整保存在contrasts及pairs CSV；採用同日區塊重抽，不能把重複站對當獨立事件。改善率與平均改善量是兩個不同指標。</p></section><section><h2>RHmax：同事件validity與revision usefulness</h2><img src="humidity_overview_rh_max.png"><p><b>為何做這圖：</b>不假設尖沙咀為目標，直接檢查共同預報的地方吻合度與更新效益。上排X=舊／新版本，Y=MAE（pp），越低越吻合；下排X=地理組，Y=平均U，越高改善越多，誤差棒為95%區間。近岸藍綠、過渡橙、內陸紫紅，三欄各用自己的完全同事件樣本。</p><p><b>資料與讀法：</b>每站對只用同目標日、同兩個版本，先平均事件，再跨組站對等權；26站全部保留，跨組共209站對。彙總D9→D8至D2→D1的changed-only事件，不是單一D9或八個lead等權。兩根U誤差棒的重疊不代替配對U差區間。</p><p><b>內陸／近岸發現：</b>近岸MAE 8.578→7.327 pp；內陸 9.850→8.901 pp。更新後組差 1.573 [0.900, 2.213] pp（支持正方向）。近岸U 1.250 [0.873, 1.600]、內陸U 0.950 [0.533, 1.369] pp；U差 -0.301 [-0.585, -0.015] pp（支持負方向）。差距縮小C -0.301 [-0.585, -0.015] pp（支持負方向）。</p><p><b>限制：</b>每欄日期不同，同一組可有略不同數字，不能跨欄相減。所有指標都是對取樣RH極值的事後評分；general不是已確認的區域極值預報。MAE衡量剩餘誤差，U衡量改善量，所以原本較不吻合的組也可能獲益更多。這是探索性固定站群區間，不是因果結論。</p></section><section><h2>RHmax：全部lead的地方吻合度</h2><img src="humidity_validity_rh_max.png"><p><b>左圖：</b>X=lead1–9、Y=絕對MAE，三種顏色直接代表三組。每站同樣89個日期，每站先平均，再組內等站權；全年日曆只覆蓋89日，僅描述性，月份覆蓋見CSV。此圖沒有以缺測站偷偷改變組成。</p><p><b>右圖：</b>X同樣lead，Y是B−A配對MAE差，線色代表對比而非單一組；正值表示前一組較不吻合。使用每站對所有可配對日期，保留更多資料；陰影為95%區間。不能把左圖的組差與右圖要求完全一致，因日期不同。</p><p><b>D9主要配對發現：</b>內陸−近岸差 0.426 [-0.072, 1.001] pp，證據不足；各站對有265–324個有效日。所有lead和三組對比均保存，沒有只抽D9作分析。</p><p><b>假設／限制：</b>共同預報不加offset、不按離HKO遠近放寬誤差。不同站對日期交集仍不同、缺測非隨機、每十分鐘取樣可能漏掉真實極值；此處的RHmin/RHmax不是日平均，也不是概率預報區間。</p></section><section><h2>RHmax：更新的效益是否各lead一樣？</h2><img src="humidity_usefulness_rh_max.png"><p><b>選軸與目的：</b>X是新版本lead k=1–8，表示D(k+1)→Dk；Y為平均U（pp）。三組顏色固定，分欄以相同事件對比，避免all彙總掩蓋時效差異。高於零表示平均改善，陰影跨零表示該組該lead的方向證據不足；不能從線的上下順序判定兩組差異顯著。</p><p><b>數據：</b>僅確有改動事件、同一目標日實測，站對等權。D9沒有D10舊版可配，不能補造D10→D9修訂。RHmin與RHmax的changed事件各自定義，所以兩變數圖不是完全同一批事件。</p><p><b>發現：</b>內陸／近岸比較中，近岸有7/8個lead的U區間高於零，內陸有2/8個；內陸−近岸U差有0個支持正方向、1個支持負方向、7個證據不足。這些lead互相關聯，不能算作八次獨立驗證。</p><p><b>限制：</b>彙總U不是每個lead保證改善。逐lead區間、改善率、惡化率與平均惡化幅度完整保存在contrasts及pairs CSV；採用同日區塊重抽，不能把重複站對當獨立事件。改善率與平均改善量是兩個不同指標。</p></section><h2>限制與證據不足</h2><ul><li>共同預報的確切空間定義仍未獲確認；此處評分是站群地方吻合度，不是官方合格率。</li><li>每十分鐘取樣可能漏極值，完整時槽不等於完整逐分鐘資料。缺測天氣可能有系統性；89日不能代表全年。</li><li>內陸4站、各組站數與環境不同；海岸距離與海拔、建成環境等未分離，不能作因果推論。</li><li>2025已在舊研究看過；結果屬回溯探索。區間跨零表示方向證據不足，不能說完全沒有差異。</li><li>修訂平均有用不表示每次有用或最終已足夠準；沒有預設可接受pp誤差。RHmin/RHmax和氣溫使用不同站群、事件、單位及區塊長度，不直接排名。</li><li>沒有用後見實測風向或其他條件修正預報；沒有以日平均濕度替代極值，也沒有將所有站的日極值合成一個全港包絡。</li></ul></section></body></html>

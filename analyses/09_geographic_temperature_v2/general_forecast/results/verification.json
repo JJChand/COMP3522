@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "geographic_raw_rows": 324,
+  "pair_raw_rows": 20304,
+  "all_forecast_contrasts": 54,
+  "all_stations_retained": true,
+  "max_group_reaggregation_error": 1.3322676295501878e-15,
+  "all_validity_gaps_reaggregated": true,
+  "gap_benefit_identities": true,
+  "images_and_links": 8,
+  "limits": "Raw source values previously independently checked; this run reaggregates saved pair outputs. Bootstrap not independently reimplemented."
+}

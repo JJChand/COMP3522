@@ -1,0 +1,19 @@
+﻿variable,factor,contrast,benefit_difference_all_pairs,benefit_difference_changed_only,benefit_difference_direction_all_pairs,benefit_difference_direction_changed_only,absolute_gap_reduction_all_pairs,absolute_gap_reduction_changed_only,absolute_gap_reduction_direction_all_pairs,absolute_gap_reduction_direction_changed_only
+Tmax,coast,inland minus near,0.0171339050502201,0.0526778036394982,positive,positive,0.0171339050502203,0.0526778036394983,positive,positive
+Tmax,coast,inland minus transition,0.003486053597335,0.0109879909562108,insufficient,insufficient,0.0034860535973351,0.0109879909562107,insufficient,insufficient
+Tmax,coast,transition minus near,0.0140431280747744,0.0432778555135136,positive,positive,0.0140431280747744,0.0432778555135136,insufficient,insufficient
+Tmax,region,Islands minus HKI,0.0008343129791268,0.0023629017481251,insufficient,insufficient,0.0008343129791268,0.0023629017481252,insufficient,insufficient
+Tmax,region,Islands minus KL,-0.0270516354035887,-0.0829617586116777,negative,negative,-0.0270516354035888,-0.0829617586116776,negative,negative
+Tmax,region,Islands minus NT,-0.0217088722094345,-0.066383439219215,negative,negative,-0.0217088722094345,-0.0663834392192149,insufficient,insufficient
+Tmax,region,KL minus HKI,0.027610939018148,0.0851611061736866,positive,positive,0.027610939018148,0.0851611061736866,positive,positive
+Tmax,region,NT minus HKI,0.0227265017779829,0.0698062065449336,positive,positive,0.0227265017779829,0.0698062065449335,positive,positive
+Tmax,region,NT minus KL,-0.0042831348348802,-0.0131232666498305,insufficient,insufficient,-0.0042831348348802,-0.0131232666498305,insufficient,insufficient
+Tmin,coast,inland minus near,-0.0015166043011632,-0.0058161219239655,insufficient,insufficient,-0.0015166043011631,-0.0058161219239656,insufficient,insufficient
+Tmin,coast,inland minus transition,-0.0062581846311313,-0.0266075066328435,insufficient,insufficient,-0.0062581846311315,-0.0266075066328435,insufficient,insufficient
+Tmin,coast,transition minus near,0.005101215150878,0.0223436409886533,insufficient,insufficient,0.005101215150878,0.0223436409886532,insufficient,insufficient
+Tmin,region,Islands minus HKI,0.0005435973338735,0.0029316737002957,insufficient,insufficient,0.0005435973338734,0.0029316737002957,insufficient,insufficient
+Tmin,region,Islands minus KL,-0.0099966467725362,-0.042157651570126,insufficient,insufficient,-0.0099966467725363,-0.0421576515701263,insufficient,insufficient
+Tmin,region,Islands minus NT,-0.0024128023427366,-0.0097920324065933,insufficient,insufficient,-0.0024128023427366,-0.0097920324065933,insufficient,insufficient
+Tmin,region,KL minus HKI,0.0117210274663476,0.0512903205713915,positive,positive,0.0117210274663476,0.0512903205713915,insufficient,insufficient
+Tmin,region,NT minus HKI,0.0025419375211585,0.0113182323229057,insufficient,insufficient,0.0025419375211584,0.0113182323229058,insufficient,insufficient
+Tmin,region,NT minus KL,-0.0073355369691609,-0.031961699240599,insufficient,insufficient,-0.0073355369691608,-0.0319616992405989,insufficient,insufficient

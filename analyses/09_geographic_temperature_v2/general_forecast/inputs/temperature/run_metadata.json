@@ -1,0 +1,65 @@
+{
+  "version": "09_geographic_temperature_v2",
+  "choices": {
+    "Tmax": "monthly_mean",
+    "Tmin": "monthly_median"
+  },
+  "methods": [
+    "raw",
+    "annual_mean",
+    "monthly_mean",
+    "monthly_median"
+  ],
+  "selection": "Equal validation year, lead and station MAE; ties use declared method order; raw eligible",
+  "train": "2022-2024",
+  "test_year": 2025,
+  "retrospective_extension": true,
+  "min_month_training_n": 20,
+  "fallback": "annual mean for both monthly candidates",
+  "diagnostic_rows": 136800,
+  "summary_rows": 4560,
+  "event_rows": 5752,
+  "sources": [
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\initial-reliability\\all-data\\stations.csv",
+      "sha256": "7355516e45d64a388e89d6c077d7d58b897af5f94079905cf9cfc9470495b438"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\initial-reliability\\all-data\\series.csv",
+      "sha256": "426f67f24ec8c9ffce001787064f885e8397a824c859877a228f99319f4768fa"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\initial-reliability\\all-data\\observations.csv",
+      "sha256": "1a754e1ceeed4de705109db7e1b9467f435b77f8173b4d7d022e8736a1fc1a76"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\initial-reliability\\all-data\\forecasts.csv",
+      "sha256": "67eb1d32230b731690250a97c519ee45165fd6be6bb13c9e41c41c19a82e5c72"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\proposal-direction\\sources\\hot.dat",
+      "sha256": "9b62c605756a123d17182c8ca3f593714567f32c5e6412c79a2d4bf214b65598"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-review\\analyses\\09_geographic_temperature\\paired_geography_2025\\results\\station_inventory.csv",
+      "sha256": "c50c9c8045de9da26b318dd32be480dca6b3d3386653f5a29d9cf5558d117e9b"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-review\\analyses\\09_geographic_temperature_v2\\PLAN.md",
+      "sha256": "3b9b405dd9e61aab91e74dd496c48d509b8a31268ff0d2b4d434d48ef4a66c01"
+    }
+  ],
+  "runtime": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\analysis\\temperature-all-stations-evidence\\geography-v2\\v2_runtime.npz",
+  "runtime_sha256": "e0aa1bd7c0a8f5c4277b71a7919876da6817f634189b8714d7dfa878f1221ba4",
+  "geographic_rows": 1296,
+  "pair_rows": 81216,
+  "identity_max_error": 4.718447854656915e-16,
+  "method_comparison_rows": 3888,
+  "bootstrap": {
+    "reps": 2000,
+    "calendar_block_days": 14,
+    "seed": 3522,
+    "multiplicity_adjusted": false,
+    "fixed_fits": true
+  }
+}

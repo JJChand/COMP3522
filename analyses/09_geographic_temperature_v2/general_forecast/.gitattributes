@@ -1,0 +1,4 @@
+# Preserve archived input bytes so manifest SHA-256 values survive checkout.
+inputs/** -text whitespace=cr-at-eol
+# Matplotlib emits trailing spaces inside SVG path data.
+results/*.svg whitespace=-blank-at-eol

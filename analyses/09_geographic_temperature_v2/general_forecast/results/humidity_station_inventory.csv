@@ -1,0 +1,27 @@
+﻿station_code,name_en,name_zh,latitude,longitude,coast_distance_m,coast_group,district_en,region_group
+CCH,Cheung Chau,長洲,22.20111111,114.02666667,151.8442009740987,near,Islands District,Islands
+CWB,Clear Water Bay,清水灣,22.26333333,114.29972222,78.51490876322906,near,Sai Kung District,NT
+HKA,Hong Kong International Airport,香港國際機場,22.30944444,113.92194444,1675.289664470583,transition,Islands District,Islands
+HKO,Hong Kong Observatory,天文台,22.30194444,114.17416667,678.6908775571716,transition,Yau Tsim Mong District,KL
+HKP,Hong Kong Park,香港公園,22.27833333,114.16222222,661.6514021069097,transition,Central and Western District,HKI
+HKS,Wong Chuk Hang,黃竹坑,22.24777778,114.17361111,679.1688573991594,transition,Southern District,HKI
+JKB,Tseung Kwan O,將軍澳,22.31583333,114.25555556,1213.1458084893184,transition,Sai Kung District,NT
+KLT,Kowloon City,九龍城,22.335,114.18472222,1952.9079141216407,transition,Kowloon City District,KL
+KP,King's Park,京士柏,22.31194444,114.17277778,1324.9186781409642,transition,Yau Tsim Mong District,KL
+KSC,Kau Sai Chau,滘西洲,22.37027778,114.3125,449.4879495499639,near,Sai Kung District,NT
+LFS,Lau Fau Shan,流浮山,22.46888889,113.98361111,48.88179590629285,near,Yuen Long District,NT
+PEN,Peng Chau,坪洲,22.29111111,114.04333333,92.87459238465642,near,Islands District,Islands
+SE1,Kai Tak Runway Park,啟德跑道公園,22.305,114.21694444,16.720059562890096,near,Kowloon City District,KL
+SEK,Shek Kong,石崗,22.43611111,114.08472222,7230.249201881864,inland,Yuen Long District,NT
+SHA,Sha Tin,沙田,22.4025,114.21,859.5279756575032,transition,Sha Tin District,NT
+SKG,Sai Kung,西貢,22.37555556,114.27444444,13.747187912804575,near,Sai Kung District,NT
+SKW,Shau Kei Wan,筲箕灣,22.28166667,114.23611111,88.86716357599389,near,Eastern District,HKI
+SSH,Sheung Shui,上水,22.50194444,114.11111111,6437.834046787894,inland,North District,NT
+TKL,Ta Kwu Ling,打鼓嶺,22.52861111,114.15666667,5276.256579113307,inland,North District,NT
+TLS,Tai Lung,大隴,22.48472222,114.1175,7263.771952031433,inland,North District,NT
+TU1,Tuen Mun Children and Juvenile Home,屯門兒童及青少年院,22.38583333,113.96416667,891.1370720795143,transition,Tuen Mun District,NT
+TY1,New Tsing Yi Station,新青衣站,22.34416667,114.11,315.313893818033,near,Kwai Tsing District,NT
+TYW,Pak Tam Chung (Tsak Yue Wu),北潭涌(鯽魚湖),22.40277778,114.32305556,1006.7454561601572,transition,Sai Kung District,NT
+WGL,Waglan Island,橫瀾島,22.18222222,114.30333333,66.36083166512472,near,Islands District,Islands
+WLP,Wetland Park,濕地公園,22.46666667,114.00888889,807.5973802708185,transition,Yuen Long District,NT
+YCT,Tai Po(Yuen Chau Tsai Park),大埔(元洲仔公園),22.44833333,114.17722222,35.66505838572458,near,Tai Po District,NT

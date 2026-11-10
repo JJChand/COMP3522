@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "contrast_rows": 162,
+  "pair_rows": 11286,
+  "station_rows": 468,
+  "common89_rows": 54,
+  "raw_arrays_rebuilt_match_prior": true,
+  "prior_D9_and_revision_point_max_error": 4.440892098500626e-16,
+  "prior_new_gap_intervals_match": true,
+  "legacy_C_matches_separate_pairwise_metric": true,
+  "all_pair_means_reaggregated": true,
+  "max_benefit_identity_error": 1.7763568394002505e-15,
+  "images": 6,
+  "limitations": "Bootstrap algorithm not independently reimplemented. Raw source quality and official spatial definition not established by these arithmetic checks."
+}

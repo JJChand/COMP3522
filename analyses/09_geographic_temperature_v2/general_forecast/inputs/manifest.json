@@ -1,0 +1,114 @@
+[
+  {
+    "original": "results/station_inventory.csv",
+    "packaged": "inputs/temperature/station_inventory.csv",
+    "selection": "unchanged",
+    "original_sha256": "c50c9c8045de9da26b318dd32be480dca6b3d3386653f5a29d9cf5558d117e9b",
+    "packaged_sha256": "c50c9c8045de9da26b318dd32be480dca6b3d3386653f5a29d9cf5558d117e9b"
+  },
+  {
+    "original": "results/geographic_contrasts.csv",
+    "packaged": "inputs/temperature/geographic_contrasts.csv",
+    "selection": "method == raw",
+    "original_sha256": "e20c82c7578d7a1849a45e8acf6197167ac05fe34247fba9694cd4c83d0739d4",
+    "packaged_sha256": "0d3d39353c4533ddd0b3e3ae2b7e98277aabf141fa32a0f8126ab6f1eced0954"
+  },
+  {
+    "original": "results/pair_metrics.csv",
+    "packaged": "inputs/temperature/pair_metrics.csv",
+    "selection": "method == raw",
+    "original_sha256": "89d1a65c43b1d8764bad9ee9ba6bb75904bb9202851ff099f8d8ffb2999cbae8",
+    "packaged_sha256": "395662c788a8e4cdf49fb44a9006041adb431512878b266c017b4757d0f3c246"
+  },
+  {
+    "original": "results/station_revision_metrics.csv",
+    "packaged": "inputs/temperature/station_revision_metrics.csv",
+    "selection": "method == raw",
+    "original_sha256": "7ed0f0dc121afcdb2c805e9e8aa37653bc4f91ca35bcba29827f66a686742fba",
+    "packaged_sha256": "299d64991c6c896c2db8c60000d04a27c0d0224192ef788b3cc6833ac055e979"
+  },
+  {
+    "original": "results/distance_threshold_contrasts.csv",
+    "packaged": "inputs/temperature/distance_threshold_contrasts.csv",
+    "selection": "method == raw",
+    "original_sha256": "5c5148758b544023b760d43ff49d7162754f24ed0f5b4b3db90a3b00839ab8e0",
+    "packaged_sha256": "37dd52b44d84684ef425e8484175d702a812c05015602b7ade222c6b649c9f43"
+  },
+  {
+    "original": "results/distance_pair_metrics.csv",
+    "packaged": "inputs/temperature/distance_pair_metrics.csv",
+    "selection": "method == raw",
+    "original_sha256": "a9d347176c931e93a05cf9c3876248b5dda661910541dbe540e620dc2bef0ffa",
+    "packaged_sha256": "c571c64eb941509e54a96ecf912a09736dba84442c36beaf51344b6e2f959802"
+  },
+  {
+    "original": "results/run_metadata.json",
+    "packaged": "inputs/temperature/run_metadata.json",
+    "selection": "unchanged",
+    "original_sha256": "e413317dddac1c1e507b5ec65a5092d5fdc4fdd1150ba602ce4e1bc41dddc398",
+    "packaged_sha256": "e413317dddac1c1e507b5ec65a5092d5fdc4fdd1150ba602ce4e1bc41dddc398"
+  },
+  {
+    "original": "results/geography_verification.json",
+    "packaged": "inputs/temperature/geography_verification.json",
+    "selection": "unchanged",
+    "original_sha256": "23f4d130ff5f79a399e4802f8ba8ed416b59ccdd0e63ec05e6491931bd6cfe62",
+    "packaged_sha256": "23f4d130ff5f79a399e4802f8ba8ed416b59ccdd0e63ec05e6491931bd6cfe62"
+  },
+  {
+    "original": "results/distance_metadata.json",
+    "packaged": "inputs/temperature/distance_metadata.json",
+    "selection": "unchanged",
+    "original_sha256": "d58da8a1f21cc8370bdd87fb3948821bf7724d09f9e080672da60247ab4ddd44",
+    "packaged_sha256": "d58da8a1f21cc8370bdd87fb3948821bf7724d09f9e080672da60247ab4ddd44"
+  },
+  {
+    "original": "PLAN.md",
+    "packaged": "inputs/temperature/source_plan.md",
+    "selection": "unchanged",
+    "original_sha256": "3b9b405dd9e61aab91e74dd496c48d509b8a31268ff0d2b4d434d48ef4a66c01",
+    "packaged_sha256": "3b9b405dd9e61aab91e74dd496c48d509b8a31268ff0d2b4d434d48ef4a66c01"
+  },
+  {
+    "original": "humidity/results/station_inventory.csv",
+    "packaged": "inputs/humidity/station_inventory.csv",
+    "selection": "unchanged",
+    "original_sha256": "5623c2d4ddae4a22eae11dc5ab8c4aded167f65007258db4a1e308d1bee40ca8",
+    "packaged_sha256": "5623c2d4ddae4a22eae11dc5ab8c4aded167f65007258db4a1e308d1bee40ca8"
+  },
+  {
+    "original": "humidity/results/daily_observations.csv",
+    "packaged": "inputs/humidity/daily_observations.csv",
+    "selection": "unchanged",
+    "original_sha256": "f6e8b5eb2ea4564e15121db19efa5f14b397704254a588acd4ae3263021db909",
+    "packaged_sha256": "f6e8b5eb2ea4564e15121db19efa5f14b397704254a588acd4ae3263021db909"
+  },
+  {
+    "original": "humidity/results/forecast_daily_latest.csv",
+    "packaged": "inputs/humidity/forecast_daily_latest.csv",
+    "selection": "unchanged",
+    "original_sha256": "75ff5d450a5553a559ae6898907c830c6200192eed88da804e578b50c650e48d",
+    "packaged_sha256": "75ff5d450a5553a559ae6898907c830c6200192eed88da804e578b50c650e48d"
+  },
+  {
+    "original": "humidity/results/analysis_arrays.npz",
+    "packaged": "inputs/humidity/analysis_arrays.npz",
+    "selection": "unchanged",
+    "original_sha256": "0e953ad3acfed6ee859a8051cbdfb50e0591b27d25653c363338de4c3ff73719",
+    "packaged_sha256": "0e953ad3acfed6ee859a8051cbdfb50e0591b27d25653c363338de4c3ff73719"
+  },
+  {
+    "original": "humidity/results/paired_contrasts.csv",
+    "packaged": "inputs/humidity/paired_contrasts.csv",
+    "selection": "method == raw",
+    "original_sha256": "b170ee36783c4a90dd1eab153f484527f0c8069f12425db715ca0351616c7ec9",
+    "packaged_sha256": "5179b41dce84d096658544dddd7e49de43ab7fce48541eca5f8d53a5f58dc296"
+  },
+  {
+    "original": "humidity/results/verification.json",
+    "packaged": "inputs/humidity/verification.json",
+    "selection": "unchanged",
+    "original_sha256": "0a3cca4daacf9fd094a36e5375427cccb1a5006b9fdfefe4997b5e350b9dfcd8",
+    "packaged_sha256": "0a3cca4daacf9fd094a36e5375427cccb1a5006b9fdfefe4997b5e350b9dfcd8"
+  }
+]

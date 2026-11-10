@@ -1,0 +1,75 @@
+{
+  "scenario": "Hypothetical general Hong Kong common forecast; raw only; no spatial-average assumption",
+  "year": 2025,
+  "station_counts": {
+    "transition": 15,
+    "near": 10,
+    "inland": 5
+  },
+  "images": [
+    "group_overview_Tmax.png",
+    "group_overview_Tmin.png",
+    "validity_Tmax.png",
+    "matched_Tmax.png",
+    "gap_Tmax.png",
+    "validity_Tmin.png",
+    "matched_Tmin.png",
+    "gap_Tmin.png"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\station_inventory.csv",
+      "sha256": "c50c9c8045de9da26b318dd32be480dca6b3d3386653f5a29d9cf5558d117e9b"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\geographic_contrasts.csv",
+      "sha256": "0d3d39353c4533ddd0b3e3ae2b7e98277aabf141fa32a0f8126ab6f1eced0954"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\pair_metrics.csv",
+      "sha256": "395662c788a8e4cdf49fb44a9006041adb431512878b266c017b4757d0f3c246"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\station_revision_metrics.csv",
+      "sha256": "299d64991c6c896c2db8c60000d04a27c0d0224192ef788b3cc6833ac055e979"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\distance_threshold_contrasts.csv",
+      "sha256": "37dd52b44d84684ef425e8484175d702a812c05015602b7ade222c6b649c9f43"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\distance_pair_metrics.csv",
+      "sha256": "c571c64eb941509e54a96ecf912a09736dba84442c36beaf51344b6e2f959802"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\PLAN.md",
+      "sha256": "a890bd8a70435add28faf1b7d4f4cec43b5c3822a747e7f64881c8e57270bf14"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\build_analysis.py",
+      "sha256": "7f22789b13dd22cad20db74be70c109d6976156e831fe5caf90aaa303888a934"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\source_plan.md",
+      "sha256": "3b9b405dd9e61aab91e74dd496c48d509b8a31268ff0d2b4d434d48ef4a66c01"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\04_rq3_revision_usefulness\\run_analysis.py",
+      "sha256": "cbd5e2ce1a8d9f9c285dfd3ff926d63a1735a48600611cdbd7ab6c31060ff780"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\run_metadata.json",
+      "sha256": "e413317dddac1c1e507b5ec65a5092d5fdc4fdd1150ba602ce4e1bc41dddc398"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\geography_verification.json",
+      "sha256": "23f4d130ff5f79a399e4802f8ba8ed416b59ccdd0e63ec05e6491931bd6cfe62"
+    },
+    {
+      "path": "C:\\Users\\Sena\\Documents\\ChatGPT\\Project FYP - demo\\tmp\\COMP3522-general-forecast-pr\\analyses\\09_geographic_temperature_v2\\general_forecast\\inputs\\temperature\\distance_metadata.json",
+      "sha256": "d58da8a1f21cc8370bdd87fb3948821bf7724d09f9e080672da60247ab4ddd44"
+    }
+  ],
+  "reuse": "Existing raw point estimates and bootstrap intervals; no independent new evidence",
+  "bootstrap": "2000 circular 14-day calendar blocks, seed 3522, fixed stations, unadjusted exploratory intervals"
+}
