@@ -3,7 +3,7 @@
 **Database:** `course_project`  
 **Primary schema:** `project`  
 **Database engine:** PostgreSQL with PostGIS  
-**Context version:** 2026-11-13
+**Context version:** 2026-11-14
 **Audience:** COMP3522 project teammates and their coding agents
 
 This is the canonical working guide for querying the course-project database.
@@ -860,6 +860,11 @@ preserved; original HKO definitions above were inspected on 2026-09-18.
 run times and forecast hours, source URLs, checksums and retrieval metadata.
 `project.external_model_temperature` contains station extractions and joins to
 the source table by `source_id` and `project.hko_station` by `station_code`.
+`project.external_model_precipitation` is the separately authorized rainfall
+extension with the same source/station joins. The source table is shared across
+field families: the same original forecast URL may have a temperature subset
+and a different rainfall subset. Filter by child table or manifest requested
+fields before counting a variable's run/lead coverage.
 Column types, keys, constraints and indexes are listed in the live-schema
 snapshot at the end of this guide.
 DDL is maintained in `data_management/model_forecasts/schema.sql`.
@@ -909,7 +914,9 @@ receipt is `data_management/model_forecasts/results/gfs_2025_verification.json`.
 The verifier uses a read-only repeatable-read snapshot and does not trust the
 importer's progress file. The existing 2024-01-01 pilot remains additional to
 the counts above. The generated inventory below includes that pilot, so its
-all-model total is 97,045 source subsets and 288,149 temperature rows.
+temperature-subset total is 97,045 source subsets and 288,149 temperature rows.
+The shared model-source total also includes rainfall as that import progresses;
+it must not be interpreted as a temperature-only source count.
 The two external-model tables together measured 308,895,744 bytes including
 indexes/TOAST at verification, versus 187,970,294,345 bytes of original subsets
 processed for the new scope. Raw global fields were not retained by this import.
@@ -948,6 +955,70 @@ arbitrary exception text or credentials.
 The runner refreshes this guide from the committed catalog every 260 newly
 processed sources and on graceful exit, including partial failure. A hard
 termination can leave the snapshot behind; refresh it before a final handoff.
+
+### GFS 2025 rainfall streaming import (2026-11-14 HKT)
+
+The user authorized rainfall at the same acquisition scale as temperature:
+2024-12-24 through 2025-12-31 UTC run dates, four cycles, nearest HKO grid point,
+through +192 hours every three hours. Lead zero has no accumulated APCP field
+in the sampled source indexes and is intentionally excluded, never filled with
+zero. The requested positive-lead schedule is 1,492 runs / 95,488 source subsets.
+Expected precipitation rows are 190,976 when both APCP messages are present at
+all 64 positive leads. These are targets; generated live coverage below records
+the committed scope, including partial import. Forty-eight monthly index checks
+(12 months × leads 0/3/9/192, rotating cycles) verified this field structure before
+the bulk import; each production file is checked independently.
+
+The initial 2025-01-01 00 UTC pilot committed all 64 subsets / 128 rows. Its
+read-only independent audit found zero missing/duplicate slots, invalid values,
+message-group errors or decoded-row hash mismatches, and all three NOAA
+re-downloads matched bytes and values. Receipt:
+`data_management/model_forecasts/results/gfs_2025_rainfall_pilot_verification.json`.
+The original temperature scope was independently rechecked after this pilot:
+96,980 sources / 287,956 rows, no missing slots or row-hash errors.
+These pilot results do not certify completion of the full rainfall schedule.
+
+`data_management/model_forecasts/stream_gfs_rainfall.py` writes only the shared
+`external_model_source` provenance table and the new precipitation table. DDL
+is in `rainfall_schema.sql`. It reuses the process-isolated, bounded-memory,
+resumable engine and robust status-file updates from the temperature importer.
+Raw global subsets are not saved. Manifest requested fields are `["APCP"]`,
+`field_family='precipitation'`, storage mode is `station_extract_only`, and raw
+retention is false. Temperature rows and original HKO tables are not modified.
+`download_gfs_rainfall_2025.ps1` runs the importer, then the independent read-only
+`verify_gfs_rainfall_2025.py` audit and a final live-guide refresh. The final
+rainfall verification receipt must report `passed: true`; importer completion
+and an independent audit are separate checks.
+
+The precipitation table grain is one source subset / station / original GRIB
+message. PK `(source_id,station_code,message_number)` uses the message's position
+within the APCP-only subset. `original_message_number` preserves its distinct
+number in the NOAA full-file index. Both native APCP messages are retained:
+for example +9 can include +6–+9 and +0–+9 accumulations; +3/+6 can have coincident
+early intervals. Equal early intervals are not collapsed or treated as extra
+independent forecasts. **Do not sum both message families, overlapping windows
+or all positive-lead amounts.** Use actual start/end metadata to define a
+non-overlapping accumulation or a justified deaccumulation before daily scoring.
+
+Only GRIB2 discipline 0 / parameter category 1 / parameter number 8, surface,
+`stepType='accum'` and the requested initialization/end lead are accepted.
+`source_value` / `source_unit` preserve decoded native values; `precipitation_mm`
+uses 1 kg m^-2 = 1 mm, or ×1000 for a source explicitly encoded in metres.
+Rainfall rates, convective precipitation and categorical/probability fields are
+not substituted. Values must be finite and nonnegative; legitimate zero rain
+is retained. Types, NOT NULL fields, FKs, positive message-number constraints,
+accumulation checks and the validity/station index are generated from the live
+committed catalog below. Join `source_id` to `external_model_source` and
+`station_code` to `hko_station`; no new joins to HKO forecast/observation facts
+are assumed.
+
+Values are grid-point interval amounts, not exact HKT calendar-day totals,
+territorial rainfall labels or probabilities comparable directly to HKO PSR.
+Historical publication times remain unknown. Checksums, raw byte ranges, both
+index lines, field identities, processing/packing metadata and decoded-row
+digests remain in the source manifest for later verification and re-download.
+The ignored progress file is `downloads/gfs_2025_rainfall_status.json`. Live
+documentation refresh occurs every 256 new sources and on graceful exit/failure.
 
 ### HQ Grid nowcast extension (2026-10-05 HKT)
 
@@ -1037,7 +1108,7 @@ foreign keys, checks and indexes are generated below from the committed catalog.
 
 Live database: `course_project`. Schema: `project`.
 
-Verified at: 2026-11-13T12:54:18+00:00.
+Verified at: 2026-11-13T19:40:46+00:00.
 
 Generated by `data_management/model_forecasts/schema_document.py` using
 a read-only connection loaded from the repository-root `.env`.
@@ -1053,6 +1124,7 @@ Refresh this section after every database modification, including imports.
 | Object | Kind |
 | --- | --- |
 | `project.benchmark_gfs_pilot_case` | table |
+| `project.external_model_precipitation` | table |
 | `project.external_model_source` | table |
 | `project.external_model_temperature` | table |
 | `project.hko_daily_observation` | table |
@@ -1072,7 +1144,7 @@ Refresh this section after every database modification, including imports.
 
 | Model | Source subsets | First run (UTC) | Last run (UTC) |
 | --- | ---: | --- | --- |
-| GFS | 97,045 | 2024-01-01T00:00:00+00:00 | 2025-12-31T18:00:00+00:00 |
+| GFS | 192,533 | 2024-01-01T00:00:00+00:00 | 2025-12-31T18:00:00+00:00 |
 
 GFS HKO extraction coverage by UTC run month and cycle:
 
@@ -1133,6 +1205,66 @@ GFS HKO extraction coverage by UTC run month and cycle:
 | 2025-12 | 18 | 31 | 2,015 | 5,983 | 31 |
 
 These counts check the 0–192 h three-hourly extraction schedule, not exact HKT daily-extrema reconstruction or historical publication availability.
+
+GFS HKO rainfall extraction coverage (APCP surface, both native accumulation messages):
+
+| Run month | Cycle UTC | Runs present | Rainfall subsets | Precipitation rows | Runs with 64 leads / both messages |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2024-12 | 00 | 8 | 512 | 1,024 | 8 |
+| 2024-12 | 06 | 8 | 512 | 1,024 | 8 |
+| 2024-12 | 12 | 8 | 512 | 1,024 | 8 |
+| 2024-12 | 18 | 8 | 512 | 1,024 | 8 |
+| 2025-01 | 00 | 31 | 1,984 | 3,968 | 31 |
+| 2025-01 | 06 | 31 | 1,984 | 3,968 | 31 |
+| 2025-01 | 12 | 31 | 1,984 | 3,968 | 31 |
+| 2025-01 | 18 | 31 | 1,984 | 3,968 | 31 |
+| 2025-02 | 00 | 28 | 1,792 | 3,584 | 28 |
+| 2025-02 | 06 | 28 | 1,792 | 3,584 | 28 |
+| 2025-02 | 12 | 28 | 1,792 | 3,584 | 28 |
+| 2025-02 | 18 | 28 | 1,792 | 3,584 | 28 |
+| 2025-03 | 00 | 31 | 1,984 | 3,968 | 31 |
+| 2025-03 | 06 | 31 | 1,984 | 3,968 | 31 |
+| 2025-03 | 12 | 31 | 1,984 | 3,968 | 31 |
+| 2025-03 | 18 | 31 | 1,984 | 3,968 | 31 |
+| 2025-04 | 00 | 30 | 1,920 | 3,840 | 30 |
+| 2025-04 | 06 | 30 | 1,920 | 3,840 | 30 |
+| 2025-04 | 12 | 30 | 1,920 | 3,840 | 30 |
+| 2025-04 | 18 | 30 | 1,920 | 3,840 | 30 |
+| 2025-05 | 00 | 31 | 1,984 | 3,968 | 31 |
+| 2025-05 | 06 | 31 | 1,984 | 3,968 | 31 |
+| 2025-05 | 12 | 31 | 1,984 | 3,968 | 31 |
+| 2025-05 | 18 | 31 | 1,984 | 3,968 | 31 |
+| 2025-06 | 00 | 30 | 1,920 | 3,840 | 30 |
+| 2025-06 | 06 | 30 | 1,920 | 3,840 | 30 |
+| 2025-06 | 12 | 30 | 1,920 | 3,840 | 30 |
+| 2025-06 | 18 | 30 | 1,920 | 3,840 | 30 |
+| 2025-07 | 00 | 31 | 1,984 | 3,968 | 31 |
+| 2025-07 | 06 | 31 | 1,984 | 3,968 | 31 |
+| 2025-07 | 12 | 31 | 1,984 | 3,968 | 31 |
+| 2025-07 | 18 | 31 | 1,984 | 3,968 | 31 |
+| 2025-08 | 00 | 31 | 1,984 | 3,968 | 31 |
+| 2025-08 | 06 | 31 | 1,984 | 3,968 | 31 |
+| 2025-08 | 12 | 31 | 1,984 | 3,968 | 31 |
+| 2025-08 | 18 | 31 | 1,984 | 3,968 | 31 |
+| 2025-09 | 00 | 30 | 1,920 | 3,840 | 30 |
+| 2025-09 | 06 | 30 | 1,920 | 3,840 | 30 |
+| 2025-09 | 12 | 30 | 1,920 | 3,840 | 30 |
+| 2025-09 | 18 | 30 | 1,920 | 3,840 | 30 |
+| 2025-10 | 00 | 31 | 1,984 | 3,968 | 31 |
+| 2025-10 | 06 | 31 | 1,984 | 3,968 | 31 |
+| 2025-10 | 12 | 31 | 1,984 | 3,968 | 31 |
+| 2025-10 | 18 | 31 | 1,984 | 3,968 | 31 |
+| 2025-11 | 00 | 30 | 1,920 | 3,840 | 30 |
+| 2025-11 | 06 | 30 | 1,920 | 3,840 | 30 |
+| 2025-11 | 12 | 30 | 1,920 | 3,840 | 30 |
+| 2025-11 | 18 | 30 | 1,920 | 3,840 | 30 |
+| 2025-12 | 00 | 31 | 1,984 | 3,968 | 31 |
+| 2025-12 | 06 | 31 | 1,984 | 3,968 | 31 |
+| 2025-12 | 12 | 31 | 1,984 | 3,968 | 31 |
+| 2025-12 | 18 | 31 | 1,984 | 3,968 | 31 |
+
+Precipitation extract rows: **190,976** (committed at verification time).
+Lead zero is structurally excluded. Two accumulation messages are retained per positive lead; never sum overlapping windows or both message families.
 
 Temperature extract rows: **288,149** (actual count at verification time).
 
@@ -1200,6 +1332,53 @@ Indexes:
 
 ```sql
 CREATE UNIQUE INDEX benchmark_gfs_pilot_case_pkey ON project.benchmark_gfs_pilot_case USING btree (benchmark_id, valid_date, variable, station_code);
+```
+
+#### `project.external_model_precipitation`
+
+Kind: table.
+
+| Column | PostgreSQL type | Nullable | Default / generation |
+| --- | --- | --- | --- |
+| `source_id` | `uuid` | No |  |
+| `station_code` | `text` | No |  |
+| `message_number` | `integer` | No |  |
+| `original_message_number` | `integer` | No |  |
+| `parameter_id` | `integer` | No |  |
+| `short_name` | `text` | No |  |
+| `parameter_name` | `text` | No |  |
+| `step_type` | `text` | No |  |
+| `interval_start_utc` | `timestamp with time zone` | No |  |
+| `valid_time_utc` | `timestamp with time zone` | No |  |
+| `target_latitude` | `double precision` | No |  |
+| `target_longitude` | `double precision` | No |  |
+| `grid_latitude` | `double precision` | No |  |
+| `grid_longitude` | `double precision` | No |  |
+| `grid_distance_km` | `double precision` | No |  |
+| `extraction_method` | `text` | No |  |
+| `source_value` | `double precision` | No |  |
+| `source_unit` | `text` | No |  |
+| `precipitation_mm` | `double precision` | No |  |
+
+Constraints (including foreign-key join contracts):
+
+- `external_model_precipitation_check`: `CHECK (interval_start_utc < valid_time_utc)`
+- `external_model_precipitation_extraction_method_check`: `CHECK (extraction_method = 'nearest_grid_point'::text)`
+- `external_model_precipitation_grid_distance_km_check`: `CHECK (grid_distance_km >= 0::double precision)`
+- `external_model_precipitation_message_number_check`: `CHECK (message_number > 0)`
+- `external_model_precipitation_original_message_number_check`: `CHECK (original_message_number > 0)`
+- `external_model_precipitation_pkey`: `PRIMARY KEY (source_id, station_code, message_number)`
+- `external_model_precipitation_precipitation_mm_check`: `CHECK (precipitation_mm >= 0::double precision AND precipitation_mm < 'Infinity'::double precision)`
+- `external_model_precipitation_source_id_fkey`: `FOREIGN KEY (source_id) REFERENCES external_model_source(source_id)`
+- `external_model_precipitation_source_value_check`: `CHECK (source_value >= 0::double precision AND source_value < 'Infinity'::double precision)`
+- `external_model_precipitation_station_code_fkey`: `FOREIGN KEY (station_code) REFERENCES hko_station(station_code)`
+- `external_model_precipitation_step_type_check`: `CHECK (step_type = 'accum'::text)`
+
+Indexes:
+
+```sql
+CREATE UNIQUE INDEX external_model_precipitation_pkey ON project.external_model_precipitation USING btree (source_id, station_code, message_number);
+CREATE INDEX external_model_precipitation_valid_time_idx ON project.external_model_precipitation USING btree (valid_time_utc, station_code);
 ```
 
 #### `project.external_model_source`
