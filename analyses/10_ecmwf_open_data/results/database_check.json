@@ -1,0 +1,539 @@
+{
+  "status": "ok",
+  "transaction_read_only": "on",
+  "database_write": false,
+  "inspected_at_utc": "2026-11-08T02:00:20.515209+00:00",
+  "station": {
+    "station_code": "HKO",
+    "station_name": "Hong Kong Observatory",
+    "latitude": 22.30194444,
+    "longitude": 114.17416667,
+    "elevation_m": "32"
+  },
+  "columns": [
+    {
+      "table_name": "external_model_source",
+      "column_name": "source_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "provider",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "model",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "product",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "run_time_utc",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "forecast_hour",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "source_url",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "index_url",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "retrieved_at_utc",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "subset_relative_path",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "subset_sha256",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "subset_size_bytes",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "manifest",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_source",
+      "column_name": "imported_at_utc",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "source_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "station_code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "message_number",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "parameter_id",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "short_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "parameter_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "step_type",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "interval_start_utc",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "valid_time_utc",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "target_latitude",
+      "data_type": "double precision",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "target_longitude",
+      "data_type": "double precision",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "grid_latitude",
+      "data_type": "double precision",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "grid_longitude",
+      "data_type": "double precision",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "grid_distance_km",
+      "data_type": "double precision",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "extraction_method",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "source_value",
+      "data_type": "double precision",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "source_unit",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "column_name": "temperature_c",
+      "data_type": "double precision",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "forecast_issue_id",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "valid_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "lead_days",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "wind",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "weather",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "forecast_tmin_c",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "forecast_tmax_c",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "forecast_rh_min_pct",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "forecast_rh_max_pct",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "column_name": "psr",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "column_name": "forecast_issue_id",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "column_name": "source_file_id",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "column_name": "bulletin_time_hkt",
+      "data_type": "timestamp without time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "column_name": "published_time_utc",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "column_name": "title",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "column_name": "general_situation",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "column_name": "raw_description",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_station",
+      "column_name": "station_code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_station",
+      "column_name": "source_file_id",
+      "data_type": "bigint",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_station",
+      "column_name": "station_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_station",
+      "column_name": "first_operation_date",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_station",
+      "column_name": "elevation_m",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "hko_station",
+      "column_name": "latitude",
+      "data_type": "double precision",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_station",
+      "column_name": "longitude",
+      "data_type": "double precision",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "hko_station",
+      "column_name": "geom",
+      "data_type": "USER-DEFINED",
+      "is_nullable": "NO"
+    }
+  ],
+  "constraints": [
+    {
+      "table_name": "external_model_source",
+      "name": "external_model_source_forecast_hour_check",
+      "definition": "CHECK ((forecast_hour >= 0))"
+    },
+    {
+      "table_name": "external_model_source",
+      "name": "external_model_source_pkey",
+      "definition": "PRIMARY KEY (source_id)"
+    },
+    {
+      "table_name": "external_model_source",
+      "name": "external_model_source_source_url_subset_sha256_key",
+      "definition": "UNIQUE (source_url, subset_sha256)"
+    },
+    {
+      "table_name": "external_model_source",
+      "name": "external_model_source_subset_sha256_check",
+      "definition": "CHECK ((length(subset_sha256) = 64))"
+    },
+    {
+      "table_name": "external_model_source",
+      "name": "external_model_source_subset_size_bytes_check",
+      "definition": "CHECK ((subset_size_bytes > 0))"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "name": "external_model_temperature_check",
+      "definition": "CHECK ((interval_start_utc <= valid_time_utc))"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "name": "external_model_temperature_extraction_method_check",
+      "definition": "CHECK ((extraction_method = 'nearest_grid_point'::text))"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "name": "external_model_temperature_grid_distance_km_check",
+      "definition": "CHECK ((grid_distance_km >= (0)::double precision))"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "name": "external_model_temperature_message_number_check",
+      "definition": "CHECK ((message_number > 0))"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "name": "external_model_temperature_pkey",
+      "definition": "PRIMARY KEY (source_id, station_code, message_number)"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "name": "external_model_temperature_source_id_fkey",
+      "definition": "FOREIGN KEY (source_id) REFERENCES external_model_source(source_id)"
+    },
+    {
+      "table_name": "external_model_temperature",
+      "name": "external_model_temperature_station_code_fkey",
+      "definition": "FOREIGN KEY (station_code) REFERENCES hko_station(station_code)"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "name": "hko_forecast_daily_forecast_issue_id_fkey",
+      "definition": "FOREIGN KEY (forecast_issue_id) REFERENCES hko_forecast_issue(forecast_issue_id) ON DELETE CASCADE"
+    },
+    {
+      "table_name": "hko_forecast_daily",
+      "name": "hko_forecast_daily_pkey",
+      "definition": "PRIMARY KEY (forecast_issue_id, valid_date)"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "name": "hko_forecast_issue_pkey",
+      "definition": "PRIMARY KEY (forecast_issue_id)"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "name": "hko_forecast_issue_source_file_id_fkey",
+      "definition": "FOREIGN KEY (source_file_id) REFERENCES hko_source_file(source_file_id) ON DELETE CASCADE"
+    },
+    {
+      "table_name": "hko_forecast_issue",
+      "name": "hko_forecast_issue_source_file_id_key",
+      "definition": "UNIQUE (source_file_id)"
+    },
+    {
+      "table_name": "hko_station",
+      "name": "hko_station_pkey",
+      "definition": "PRIMARY KEY (station_code)"
+    },
+    {
+      "table_name": "hko_station",
+      "name": "hko_station_source_file_id_fkey",
+      "definition": "FOREIGN KEY (source_file_id) REFERENCES hko_source_file(source_file_id) ON DELETE SET NULL"
+    }
+  ],
+  "indexes": [
+    {
+      "tablename": "hko_forecast_issue",
+      "indexname": "hko_forecast_issue_pkey",
+      "indexdef": "CREATE UNIQUE INDEX hko_forecast_issue_pkey ON project.hko_forecast_issue USING btree (forecast_issue_id)"
+    },
+    {
+      "tablename": "hko_forecast_issue",
+      "indexname": "hko_forecast_issue_source_file_id_key",
+      "indexdef": "CREATE UNIQUE INDEX hko_forecast_issue_source_file_id_key ON project.hko_forecast_issue USING btree (source_file_id)"
+    },
+    {
+      "tablename": "hko_forecast_daily",
+      "indexname": "hko_forecast_daily_pkey",
+      "indexdef": "CREATE UNIQUE INDEX hko_forecast_daily_pkey ON project.hko_forecast_daily USING btree (forecast_issue_id, valid_date)"
+    },
+    {
+      "tablename": "hko_forecast_daily",
+      "indexname": "hko_forecast_daily_valid_date_idx",
+      "indexdef": "CREATE INDEX hko_forecast_daily_valid_date_idx ON project.hko_forecast_daily USING btree (valid_date)"
+    },
+    {
+      "tablename": "hko_station",
+      "indexname": "hko_station_pkey",
+      "indexdef": "CREATE UNIQUE INDEX hko_station_pkey ON project.hko_station USING btree (station_code)"
+    },
+    {
+      "tablename": "hko_station",
+      "indexname": "hko_station_geom_idx",
+      "indexdef": "CREATE INDEX hko_station_geom_idx ON project.hko_station USING gist (geom)"
+    },
+    {
+      "tablename": "external_model_source",
+      "indexname": "external_model_source_pkey",
+      "indexdef": "CREATE UNIQUE INDEX external_model_source_pkey ON project.external_model_source USING btree (source_id)"
+    },
+    {
+      "tablename": "external_model_source",
+      "indexname": "external_model_source_source_url_subset_sha256_key",
+      "indexdef": "CREATE UNIQUE INDEX external_model_source_source_url_subset_sha256_key ON project.external_model_source USING btree (source_url, subset_sha256)"
+    },
+    {
+      "tablename": "external_model_temperature",
+      "indexname": "external_model_temperature_pkey",
+      "indexdef": "CREATE UNIQUE INDEX external_model_temperature_pkey ON project.external_model_temperature USING btree (source_id, station_code, message_number)"
+    },
+    {
+      "tablename": "external_model_temperature",
+      "indexname": "external_model_temperature_valid_time_idx",
+      "indexdef": "CREATE INDEX external_model_temperature_valid_time_idx ON project.external_model_temperature USING btree (valid_time_utc, station_code)"
+    },
+    {
+      "tablename": "external_model_source",
+      "indexname": "external_model_source_run_time_idx",
+      "indexdef": "CREATE INDEX external_model_source_run_time_idx ON project.external_model_source USING btree (model, run_time_utc, forecast_hour)"
+    }
+  ],
+  "existing_models": [
+    {
+      "model": "GFS",
+      "sources": 65,
+      "first_run": "2024-01-01T08:00:00+08:00",
+      "last_run": "2024-01-01T08:00:00+08:00"
+    }
+  ],
+  "observation_profile": [
+    {
+      "series_code": "obs_hko_daily_tmax",
+      "unit": "°C",
+      "rows": 731,
+      "first_date": "2024-01-01",
+      "last_date": "2025-12-31",
+      "null_values": 0,
+      "not_complete": 0
+    },
+    {
+      "series_code": "obs_hko_daily_tmin",
+      "unit": "°C",
+      "rows": 731,
+      "first_date": "2024-01-01",
+      "last_date": "2025-12-31",
+      "null_values": 0,
+      "not_complete": 0
+    }
+  ]
+}

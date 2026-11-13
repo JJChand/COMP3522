@@ -1,0 +1,26 @@
+[
+  {
+    "run_date": "2025-01-01",
+    "file_lead": 0,
+    "index_step": "3",
+    "decoded_end_step": 3,
+    "parameter": "mx2t3",
+    "value": 0.0,
+    "units": "K",
+    "field_bytes": 224,
+    "sha256": "b4b502cdf5435a5e6b99870f864d11087c81ca477721ab4e5299455fbd7559a3",
+    "excluded": true
+  },
+  {
+    "run_date": "2025-01-01",
+    "file_lead": 0,
+    "index_step": "3",
+    "decoded_end_step": 3,
+    "parameter": "mn2t3",
+    "value": 0.0,
+    "units": "K",
+    "field_bytes": 224,
+    "sha256": "e2ff12ebd7eb9f61ce73dba0e3faece16f78f39b0f72d5adef5b527f280e0271",
+    "excluded": true
+  }
+]

@@ -1,0 +1,9 @@
+forecast_hour,start_run_date,end_run_date,run_count,resolution,has_extrema,status
+24,2024-01-01,2024-02-28,59,0p4-beta,False,ok
+24,2024-02-29,2024-09-17,202,0p25,False,ok
+24,2024-09-18,2024-09-18,1,0p25,True,ok
+24,2024-09-19,2024-11-12,55,0p25,False,ok
+24,2024-11-13,2025-12-31,414,0p25,True,ok
+168,2024-01-01,2024-02-28,59,0p4-beta,False,ok
+168,2024-02-29,2024-03-05,6,0p25,False,ok
+168,2024-03-06,2025-12-31,666,0p25,True,ok

@@ -1,0 +1,4 @@
+case,observed_tmax_c,hko_forecast_c,ifs_forecast_c,hko_absolute_error_c,ifs_absolute_error_c,paired_difference_c,synthetic
+Day A,25,27,26,2,1,-1,True
+Day B,28,27,29,1,1,0,True
+Day C,30,32,29,2,1,-1,True

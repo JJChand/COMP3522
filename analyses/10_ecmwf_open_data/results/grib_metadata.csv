@@ -1,0 +1,227 @@
+run_date,forecast_hour,edition,paramId,shortName,name,stepType,units,dataDate,dataTime,startStep,endStep,typeOfLevel,level,gridType,Ni,Nj,iDirectionIncrementInDegrees,jDirectionIncrementInDegrees,packingType,binaryScaleFactor,decimalScaleFactor,bitsPerValue
+2024-01-01,0,2,167,2t,2 metre temperature,instant,K,20240101,0,0,0,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,3,2,167,2t,2 metre temperature,instant,K,20240101,0,3,3,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,6,2,167,2t,2 metre temperature,instant,K,20240101,0,6,6,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,9,2,167,2t,2 metre temperature,instant,K,20240101,0,9,9,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,12,2,167,2t,2 metre temperature,instant,K,20240101,0,12,12,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,15,2,167,2t,2 metre temperature,instant,K,20240101,0,15,15,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,18,2,167,2t,2 metre temperature,instant,K,20240101,0,18,18,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,21,2,167,2t,2 metre temperature,instant,K,20240101,0,21,21,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,24,2,167,2t,2 metre temperature,instant,K,20240101,0,24,24,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,27,2,167,2t,2 metre temperature,instant,K,20240101,0,27,27,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,30,2,167,2t,2 metre temperature,instant,K,20240101,0,30,30,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,33,2,167,2t,2 metre temperature,instant,K,20240101,0,33,33,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,36,2,167,2t,2 metre temperature,instant,K,20240101,0,36,36,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,39,2,167,2t,2 metre temperature,instant,K,20240101,0,39,39,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,42,2,167,2t,2 metre temperature,instant,K,20240101,0,42,42,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,45,2,167,2t,2 metre temperature,instant,K,20240101,0,45,45,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,48,2,167,2t,2 metre temperature,instant,K,20240101,0,48,48,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,51,2,167,2t,2 metre temperature,instant,K,20240101,0,51,51,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,54,2,167,2t,2 metre temperature,instant,K,20240101,0,54,54,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,57,2,167,2t,2 metre temperature,instant,K,20240101,0,57,57,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,60,2,167,2t,2 metre temperature,instant,K,20240101,0,60,60,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,63,2,167,2t,2 metre temperature,instant,K,20240101,0,63,63,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,66,2,167,2t,2 metre temperature,instant,K,20240101,0,66,66,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,69,2,167,2t,2 metre temperature,instant,K,20240101,0,69,69,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,72,2,167,2t,2 metre temperature,instant,K,20240101,0,72,72,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,75,2,167,2t,2 metre temperature,instant,K,20240101,0,75,75,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,78,2,167,2t,2 metre temperature,instant,K,20240101,0,78,78,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,81,2,167,2t,2 metre temperature,instant,K,20240101,0,81,81,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,84,2,167,2t,2 metre temperature,instant,K,20240101,0,84,84,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,87,2,167,2t,2 metre temperature,instant,K,20240101,0,87,87,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,90,2,167,2t,2 metre temperature,instant,K,20240101,0,90,90,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,93,2,167,2t,2 metre temperature,instant,K,20240101,0,93,93,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,96,2,167,2t,2 metre temperature,instant,K,20240101,0,96,96,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,99,2,167,2t,2 metre temperature,instant,K,20240101,0,99,99,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,102,2,167,2t,2 metre temperature,instant,K,20240101,0,102,102,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,105,2,167,2t,2 metre temperature,instant,K,20240101,0,105,105,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,108,2,167,2t,2 metre temperature,instant,K,20240101,0,108,108,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,111,2,167,2t,2 metre temperature,instant,K,20240101,0,111,111,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,114,2,167,2t,2 metre temperature,instant,K,20240101,0,114,114,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,117,2,167,2t,2 metre temperature,instant,K,20240101,0,117,117,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,120,2,167,2t,2 metre temperature,instant,K,20240101,0,120,120,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,123,2,167,2t,2 metre temperature,instant,K,20240101,0,123,123,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,126,2,167,2t,2 metre temperature,instant,K,20240101,0,126,126,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,129,2,167,2t,2 metre temperature,instant,K,20240101,0,129,129,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,132,2,167,2t,2 metre temperature,instant,K,20240101,0,132,132,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,135,2,167,2t,2 metre temperature,instant,K,20240101,0,135,135,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,138,2,167,2t,2 metre temperature,instant,K,20240101,0,138,138,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,141,2,167,2t,2 metre temperature,instant,K,20240101,0,141,141,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,144,2,167,2t,2 metre temperature,instant,K,20240101,0,144,144,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,150,2,167,2t,2 metre temperature,instant,K,20240101,0,150,150,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,156,2,167,2t,2 metre temperature,instant,K,20240101,0,156,156,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,162,2,167,2t,2 metre temperature,instant,K,20240101,0,162,162,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,168,2,167,2t,2 metre temperature,instant,K,20240101,0,168,168,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,174,2,167,2t,2 metre temperature,instant,K,20240101,0,174,174,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,180,2,167,2t,2 metre temperature,instant,K,20240101,0,180,180,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,186,2,167,2t,2 metre temperature,instant,K,20240101,0,186,186,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2024-01-01,192,2,167,2t,2 metre temperature,instant,K,20240101,0,192,192,heightAboveGround,2,regular_ll,900,451,0.4,0.4,grid_ccsds,-5,0,12
+2025-01-01,0,2,167,2t,2 metre temperature,instant,K,20250101,0,0,0,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,3,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,0,3,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,3,2,167,2t,2 metre temperature,instant,K,20250101,0,3,3,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,3,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,0,3,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,6,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,3,6,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,6,2,167,2t,2 metre temperature,instant,K,20250101,0,6,6,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,6,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,3,6,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,9,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,6,9,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,9,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,6,9,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,9,2,167,2t,2 metre temperature,instant,K,20250101,0,9,9,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,12,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,9,12,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,12,2,167,2t,2 metre temperature,instant,K,20250101,0,12,12,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,12,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,9,12,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,15,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,12,15,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,15,2,167,2t,2 metre temperature,instant,K,20250101,0,15,15,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,15,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,12,15,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,18,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,15,18,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,18,2,167,2t,2 metre temperature,instant,K,20250101,0,18,18,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,18,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,15,18,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,21,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,18,21,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,21,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,18,21,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,21,2,167,2t,2 metre temperature,instant,K,20250101,0,21,21,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,24,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,21,24,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,24,2,167,2t,2 metre temperature,instant,K,20250101,0,24,24,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,24,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,21,24,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,27,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,24,27,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,27,2,167,2t,2 metre temperature,instant,K,20250101,0,27,27,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,27,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,24,27,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,30,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,27,30,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,30,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,27,30,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,30,2,167,2t,2 metre temperature,instant,K,20250101,0,30,30,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,33,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,30,33,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,33,2,167,2t,2 metre temperature,instant,K,20250101,0,33,33,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,33,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,30,33,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,36,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,33,36,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,36,2,167,2t,2 metre temperature,instant,K,20250101,0,36,36,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,36,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,33,36,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,39,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,36,39,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,39,2,167,2t,2 metre temperature,instant,K,20250101,0,39,39,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,39,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,36,39,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,42,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,39,42,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,42,2,167,2t,2 metre temperature,instant,K,20250101,0,42,42,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,42,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,39,42,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,45,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,42,45,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,45,2,167,2t,2 metre temperature,instant,K,20250101,0,45,45,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,45,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,42,45,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,48,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,45,48,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,48,2,167,2t,2 metre temperature,instant,K,20250101,0,48,48,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,48,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,45,48,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,51,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,48,51,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,51,2,167,2t,2 metre temperature,instant,K,20250101,0,51,51,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,51,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,48,51,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,54,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,51,54,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,54,2,167,2t,2 metre temperature,instant,K,20250101,0,54,54,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,54,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,51,54,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,57,2,167,2t,2 metre temperature,instant,K,20250101,0,57,57,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,57,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,54,57,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,57,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,54,57,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,60,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,57,60,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,60,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,57,60,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,60,2,167,2t,2 metre temperature,instant,K,20250101,0,60,60,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,63,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,60,63,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,63,2,167,2t,2 metre temperature,instant,K,20250101,0,63,63,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,63,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,60,63,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,66,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,63,66,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,66,2,167,2t,2 metre temperature,instant,K,20250101,0,66,66,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,66,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,63,66,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,69,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,66,69,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,69,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,66,69,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,69,2,167,2t,2 metre temperature,instant,K,20250101,0,69,69,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,72,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,69,72,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,72,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,69,72,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,72,2,167,2t,2 metre temperature,instant,K,20250101,0,72,72,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,75,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,72,75,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,75,2,167,2t,2 metre temperature,instant,K,20250101,0,75,75,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,75,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,72,75,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,78,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,75,78,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,78,2,167,2t,2 metre temperature,instant,K,20250101,0,78,78,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,78,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,75,78,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,81,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,78,81,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,81,2,167,2t,2 metre temperature,instant,K,20250101,0,81,81,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,81,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,78,81,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,84,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,81,84,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,84,2,167,2t,2 metre temperature,instant,K,20250101,0,84,84,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,84,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,81,84,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,87,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,84,87,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,87,2,167,2t,2 metre temperature,instant,K,20250101,0,87,87,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,87,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,84,87,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,90,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,87,90,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,90,2,167,2t,2 metre temperature,instant,K,20250101,0,90,90,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,90,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,87,90,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,93,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,90,93,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,93,2,167,2t,2 metre temperature,instant,K,20250101,0,93,93,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,93,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,90,93,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,96,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,93,96,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,96,2,167,2t,2 metre temperature,instant,K,20250101,0,96,96,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,96,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,93,96,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,99,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,96,99,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,99,2,167,2t,2 metre temperature,instant,K,20250101,0,99,99,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,99,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,96,99,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,102,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,99,102,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,102,2,167,2t,2 metre temperature,instant,K,20250101,0,102,102,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,102,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,99,102,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,105,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,102,105,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,105,2,167,2t,2 metre temperature,instant,K,20250101,0,105,105,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,105,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,102,105,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,108,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,105,108,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,108,2,167,2t,2 metre temperature,instant,K,20250101,0,108,108,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,108,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,105,108,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,111,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,108,111,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,111,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,108,111,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,111,2,167,2t,2 metre temperature,instant,K,20250101,0,111,111,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,114,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,111,114,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,114,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,111,114,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,114,2,167,2t,2 metre temperature,instant,K,20250101,0,114,114,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,117,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,114,117,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,117,2,167,2t,2 metre temperature,instant,K,20250101,0,117,117,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,117,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,114,117,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,120,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,117,120,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,120,2,167,2t,2 metre temperature,instant,K,20250101,0,120,120,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,120,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,117,120,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,123,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,120,123,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,123,2,167,2t,2 metre temperature,instant,K,20250101,0,123,123,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,123,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,120,123,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,126,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,123,126,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,126,2,167,2t,2 metre temperature,instant,K,20250101,0,126,126,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,126,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,123,126,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,129,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,126,129,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,129,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,126,129,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,129,2,167,2t,2 metre temperature,instant,K,20250101,0,129,129,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,132,2,167,2t,2 metre temperature,instant,K,20250101,0,132,132,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,132,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,129,132,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,132,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,129,132,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,135,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,132,135,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,135,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,132,135,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,135,2,167,2t,2 metre temperature,instant,K,20250101,0,135,135,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,138,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,135,138,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,138,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,135,138,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,138,2,167,2t,2 metre temperature,instant,K,20250101,0,138,138,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,141,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,138,141,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,141,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,138,141,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,141,2,167,2t,2 metre temperature,instant,K,20250101,0,141,141,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,144,2,228026,mx2t3,Maximum temperature at 2 metres in the last 3 hours,max,K,20250101,0,141,144,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,144,2,167,2t,2 metre temperature,instant,K,20250101,0,144,144,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,144,2,228027,mn2t3,Minimum temperature at 2 metres in the last 3 hours,min,K,20250101,0,141,144,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,150,2,167,2t,2 metre temperature,instant,K,20250101,0,150,150,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,150,2,121,mx2t6,Maximum temperature at 2 metres in the last 6 hours,max,K,20250101,0,144,150,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,150,2,122,mn2t6,Minimum temperature at 2 metres in the last 6 hours,min,K,20250101,0,144,150,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,156,2,167,2t,2 metre temperature,instant,K,20250101,0,156,156,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,156,2,121,mx2t6,Maximum temperature at 2 metres in the last 6 hours,max,K,20250101,0,150,156,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,156,2,122,mn2t6,Minimum temperature at 2 metres in the last 6 hours,min,K,20250101,0,150,156,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,162,2,167,2t,2 metre temperature,instant,K,20250101,0,162,162,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,162,2,121,mx2t6,Maximum temperature at 2 metres in the last 6 hours,max,K,20250101,0,156,162,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,162,2,122,mn2t6,Minimum temperature at 2 metres in the last 6 hours,min,K,20250101,0,156,162,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,168,2,167,2t,2 metre temperature,instant,K,20250101,0,168,168,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,168,2,121,mx2t6,Maximum temperature at 2 metres in the last 6 hours,max,K,20250101,0,162,168,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,168,2,122,mn2t6,Minimum temperature at 2 metres in the last 6 hours,min,K,20250101,0,162,168,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,174,2,167,2t,2 metre temperature,instant,K,20250101,0,174,174,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,174,2,121,mx2t6,Maximum temperature at 2 metres in the last 6 hours,max,K,20250101,0,168,174,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,174,2,122,mn2t6,Minimum temperature at 2 metres in the last 6 hours,min,K,20250101,0,168,174,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,180,2,167,2t,2 metre temperature,instant,K,20250101,0,180,180,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,180,2,121,mx2t6,Maximum temperature at 2 metres in the last 6 hours,max,K,20250101,0,174,180,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,180,2,122,mn2t6,Minimum temperature at 2 metres in the last 6 hours,min,K,20250101,0,174,180,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,186,2,167,2t,2 metre temperature,instant,K,20250101,0,186,186,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,186,2,121,mx2t6,Maximum temperature at 2 metres in the last 6 hours,max,K,20250101,0,180,186,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,186,2,122,mn2t6,Minimum temperature at 2 metres in the last 6 hours,min,K,20250101,0,180,186,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,192,2,167,2t,2 metre temperature,instant,K,20250101,0,192,192,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,192,2,121,mx2t6,Maximum temperature at 2 metres in the last 6 hours,max,K,20250101,0,186,192,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12
+2025-01-01,192,2,122,mn2t6,Minimum temperature at 2 metres in the last 6 hours,min,K,20250101,0,186,192,heightAboveGround,2,regular_ll,1440,721,0.25,0.25,grid_ccsds,-5,0,12

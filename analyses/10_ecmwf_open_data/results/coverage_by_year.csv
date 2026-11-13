@@ -1,0 +1,5 @@
+year,forecast_hour,expected,available,has_2t,has_extrema,unresolved
+2024,24,366,366,366,50,0
+2024,168,366,366,366,301,0
+2025,24,365,365,365,365,0
+2025,168,365,365,365,365,0

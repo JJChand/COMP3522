@@ -17,6 +17,7 @@ analyses/
   07_rq6_psr_calibration/          # RQ6: PSR calibration and event verification
   08_rq7_error_factors/            # RQ7: conditions associated with errors
   09_hq_grid_nowcast/              # supplementary Task 1: short-term rainfall proxy
+  10_ecmwf_open_data/              # Task 2: public IFS access/data-engineering feasibility
     README.md
     run_analysis.py
     results/
@@ -33,8 +34,12 @@ Its requested research CSVs and plots are aggregate outputs in
 
 Task 2 (RQ8–RQ9, external-model comparison) has an initial
 [GFS fairness pilot](../benchmark/README.md), with 14 diagnostic cases and
-explicit daily-window and availability limitations. Full-period ranking remains
-pending. Each Task 1 folder owns its method note, scripts and results.
+explicit daily-window and availability limitations. The
+[ECMWF Open Data investigation](10_ecmwf_open_data/README.md) adds a two-anchor
+2024–2025 historical audit, two complete engineering downloads, database
+compatibility checks and a proposed metric example. It makes no database
+changes and does not adopt the team's final metric protocol. Full-period
+ranking remains pending. Each Task 1 folder owns its method note, scripts and results.
 Existing rainfall files are preserved rather than moved or copied.
 
 | RQ | Directory | Status |

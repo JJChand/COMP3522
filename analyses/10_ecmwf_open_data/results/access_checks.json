@@ -1,0 +1,274 @@
+[
+  {
+    "provider": "AWS",
+    "url": "https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/20250101/00z/ifs/0p25/oper/20250101000000-24h-oper-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:56:54.981318+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:56:55.175978+00:00",
+    "bytes": 34299,
+    "sha256": "8865c5694af00b1aa112b42c6c4a53b7be86b39feb0f56b34a684e9d973f3f25",
+    "etag": "\"27e93b7aee161674a50d9ba678b23007\"",
+    "last_modified": "Wed, 01 Jan 2025 08:34:09 GMT"
+  },
+  {
+    "provider": "Google",
+    "url": "https://storage.googleapis.com/ecmwf-open-data/20250101/00z/ifs/0p25/oper/20250101000000-24h-oper-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:56:56.007126+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:56:56.214902+00:00",
+    "bytes": 34299,
+    "sha256": "8865c5694af00b1aa112b42c6c4a53b7be86b39feb0f56b34a684e9d973f3f25",
+    "etag": "\"27e93b7aee161674a50d9ba678b23007\"",
+    "last_modified": "Wed, 01 Jan 2025 08:35:47 GMT"
+  },
+  {
+    "provider": "ECMWF rolling endpoint",
+    "url": "https://data.ecmwf.int/forecasts/20250101/00z/ifs/0p25/oper/20250101000000-24h-oper-fc.index",
+    "status": 404,
+    "attempts": [
+      {
+        "status": 404,
+        "checked_at_utc": "2026-11-08T01:56:57.924832+00:00"
+      }
+    ]
+  },
+  {
+    "provider": "Azure anonymous, no SAS",
+    "url": "https://ai4edataeuwest.blob.core.windows.net/ecmwf/20250101/00z/ifs/0p25/oper/20250101000000-24h-oper-fc.index",
+    "status": 409,
+    "attempts": [
+      {
+        "status": 409,
+        "checked_at_utc": "2026-11-08T01:56:59.397684+00:00"
+      }
+    ]
+  },
+  {
+    "provider": "AWS 0.1-degree historical probe",
+    "url": "https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/20250101/00z/ifs/0p1/oper/20250101000000-24h-oper-fc-sfc.index",
+    "status": 404,
+    "attempts": [
+      {
+        "status": 404,
+        "checked_at_utc": "2026-11-08T01:56:59.703875+00:00"
+      }
+    ]
+  },
+  {
+    "provider": "Google transition cross-check",
+    "run_date": "2024-03-05",
+    "forecast_hour": 168,
+    "parameters": [
+      "2t"
+    ],
+    "url": "https://storage.googleapis.com/ecmwf-open-data/20240305/00z/ifs/0p25/oper/20240305000000-168h-oper-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:57:00.032289+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:57:00.089182+00:00",
+    "bytes": 18258,
+    "sha256": "24570ed696ae1515bb8441ec73f1e882100bf9b44cffb5b7a5e7d66fb64ffa3a",
+    "etag": "\"113f684730dfa3057caffbf6cb12155d\"",
+    "last_modified": "Tue, 05 Mar 2024 07:35:07 GMT"
+  },
+  {
+    "provider": "Google transition cross-check",
+    "run_date": "2024-03-06",
+    "forecast_hour": 168,
+    "parameters": [
+      "2t",
+      "mn2t6",
+      "mx2t6"
+    ],
+    "url": "https://storage.googleapis.com/ecmwf-open-data/20240306/00z/ifs/0p25/oper/20240306000000-168h-oper-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:57:00.346331+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:57:00.441038+00:00",
+    "bytes": 31198,
+    "sha256": "826edfc2e685c513e355bac96f705bc30789fed039df1d026aedaf616663e5fb",
+    "etag": "\"2544800de18324ff54f671433aa0cb54\"",
+    "last_modified": "Wed, 06 Mar 2024 07:36:34 GMT"
+  },
+  {
+    "provider": "Google transition cross-check",
+    "run_date": "2024-09-18",
+    "forecast_hour": 24,
+    "parameters": [
+      "2t",
+      "mn2t3",
+      "mx2t3"
+    ],
+    "url": "https://storage.googleapis.com/ecmwf-open-data/20240918/00z/ifs/0p25/oper/20240918000000-24h-oper-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:57:00.640412+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:57:00.723561+00:00",
+    "bytes": 32084,
+    "sha256": "12f8a605f36cd83194cfec964671f230ae9001a55b76a97c5e346a27a62b31ce",
+    "etag": "\"1eb9f41ca5cc4203c8456df6b58a9bb1\"",
+    "last_modified": "Thu, 19 Sep 2024 02:09:14 GMT"
+  },
+  {
+    "provider": "Google transition cross-check",
+    "run_date": "2024-09-19",
+    "forecast_hour": 24,
+    "parameters": [
+      "2t"
+    ],
+    "url": "https://storage.googleapis.com/ecmwf-open-data/20240919/00z/ifs/0p25/oper/20240919000000-24h-oper-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:57:00.982913+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:57:01.057528+00:00",
+    "bytes": 31666,
+    "sha256": "d82553ff61aa963de2825366a4cd1bd07a3dd33d381552f55ca22ccc32bbeca7",
+    "etag": "\"7f2d1d73997cb7c4bfc93267517ba387\"",
+    "last_modified": "Thu, 19 Sep 2024 07:57:14 GMT"
+  },
+  {
+    "provider": "Google transition cross-check",
+    "run_date": "2024-11-12",
+    "forecast_hour": 24,
+    "parameters": [
+      "2t"
+    ],
+    "url": "https://storage.googleapis.com/ecmwf-open-data/20241112/00z/ifs/0p25/oper/20241112000000-24h-oper-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:57:01.355251+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:57:01.427696+00:00",
+    "bytes": 31881,
+    "sha256": "2b9bbc80775abcaea4118918b640274e3c16821837cc12902522fcc8b19465f5",
+    "etag": "\"dff2982854219800310403889e9339da\"",
+    "last_modified": "Tue, 12 Nov 2024 07:57:26 GMT"
+  },
+  {
+    "provider": "Google transition cross-check",
+    "run_date": "2024-11-13",
+    "forecast_hour": 24,
+    "parameters": [
+      "2t",
+      "mn2t3",
+      "mx2t3"
+    ],
+    "url": "https://storage.googleapis.com/ecmwf-open-data/20241113/00z/ifs/0p25/oper/20241113000000-24h-oper-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:57:01.708680+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:57:01.786009+00:00",
+    "bytes": 34298,
+    "sha256": "9de610aa6fe231c0bbaa58611f8567045b05845e528d82f38c8eb70dea4e5f3a",
+    "etag": "\"71605ff0191888f3374f544f80c9ce61\"",
+    "last_modified": "Wed, 13 Nov 2024 07:57:34 GMT"
+  },
+  {
+    "provider": "AWS historical cycle probe",
+    "cycle_utc": 12,
+    "forecast_hour": 168,
+    "stream": "oper",
+    "url": "https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/20250101/12z/ifs/0p25/oper/20250101120000-168h-oper-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 503,
+        "checked_at_utc": "2026-11-08T01:57:03.001685+00:00"
+      },
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:57:05.081357+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:57:05.279867+00:00",
+    "bytes": 34453,
+    "sha256": "c7367b2e799fdc430c60a807606d054c41c44f1413f9bffe0b51aa7b959d018c",
+    "etag": "\"3ed12be4fbe0e5b58417cb932db643d9\"",
+    "last_modified": "Wed, 01 Jan 2025 20:34:41 GMT"
+  },
+  {
+    "provider": "AWS historical cycle probe",
+    "cycle_utc": 6,
+    "forecast_hour": 90,
+    "stream": "scda",
+    "url": "https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/20250101/06z/ifs/0p25/scda/20250101060000-90h-scda-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:57:05.604475+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:57:05.683405+00:00",
+    "bytes": 34298,
+    "sha256": "f739f4c00103f4ddaefd47867ac2421bb7eac8db412157b0e5edf7f55a1fe41b",
+    "etag": "\"b0ea39103a16a56de07304eae8647919\"",
+    "last_modified": "Wed, 01 Jan 2025 13:27:41 GMT"
+  },
+  {
+    "provider": "AWS historical cycle probe",
+    "cycle_utc": 6,
+    "forecast_hour": 144,
+    "stream": "scda",
+    "url": "https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/20250101/06z/ifs/0p25/scda/20250101060000-144h-scda-fc.index",
+    "status": 200,
+    "attempts": [
+      {
+        "status": 200,
+        "checked_at_utc": "2026-11-08T01:57:06.000991+00:00"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-08T01:57:06.075222+00:00",
+    "bytes": 34455,
+    "sha256": "c02129f2f3af05cab58e00271883c908d4f206224fe5b5481ed23e3add35cc5c",
+    "etag": "\"59b4329031d5b661cffa9ed37f331b0e\"",
+    "last_modified": "Wed, 01 Jan 2025 13:27:54 GMT"
+  },
+  {
+    "provider": "AWS historical cycle probe",
+    "cycle_utc": 6,
+    "forecast_hour": 168,
+    "stream": "scda",
+    "url": "https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/20250101/06z/ifs/0p25/scda/20250101060000-168h-scda-fc.index",
+    "status": 404,
+    "attempts": [
+      {
+        "status": 404,
+        "checked_at_utc": "2026-11-08T01:57:06.378567+00:00"
+      }
+    ]
+  }
+]
