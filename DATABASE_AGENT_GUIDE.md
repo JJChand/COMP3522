@@ -3,7 +3,7 @@
 **Database:** `course_project`  
 **Primary schema:** `project`  
 **Database engine:** PostgreSQL with PostGIS  
-**Context version:** 2026-10-23
+**Context version:** 2026-11-13
 **Audience:** COMP3522 project teammates and their coding agents
 
 This is the canonical working guide for querying the course-project database.
@@ -870,7 +870,8 @@ extrema. Preserve `step_type`, `interval_start_utc` and `valid_time_utc`.
 The grid-point extraction is nearest point, with its distance recorded; do not
 assume it is a station measurement or a Hong Kong territory average.
 Initialization time and retrieval time do not establish historical publication
-time. Keep the manifests and GRIB files with the database backup.
+time. Keep retained pilot manifests and GRIB files with the database backup.
+The station-only streaming import below deliberately retains no global GRIB files.
 
 Update this document whenever a migration changes a table, column, constraint,
 view, index, parsing rule, canonical series mapping, or important analytical
@@ -879,6 +880,74 @@ document against the live catalog using the schema-inspection query above.
 
 Do not put passwords, authentication tokens, raw personal credentials, or
 machine-specific secret files in this guide.
+
+### GFS 2025 station-only streaming import (2026-11-13 HKT)
+
+The user authorized all four daily UTC cycles (00/06/12/18) for 2025, plus
+2024-12-24 through 2024-12-31 initialization buffers. The fixed acquisition
+schedule is forecast hours 0–192 every three hours, for HKO Headquarters only.
+The full import is complete and was independently verified against the live
+database on 2026-11-13 HKT. The committed acquisition coverage is:
+
+| UTC initialization period | Runs | Source subsets | HKO temperature rows |
+| --- | ---: | ---: | ---: |
+| 2025-01-01 through 2025-12-31 | 1,460 | 94,900 | 281,780 |
+| 2024-12-24 through 2024-12-31 buffer | 32 | 2,080 | 6,176 |
+| Total imported scope | 1,492 | 96,980 | 287,956 |
+
+Every run has all 65 leads and the expected instantaneous/max/min fields (only
+instantaneous temperature at lead zero). An independent SQL Cartesian schedule
+found zero missing, unexpected or duplicate run/lead slots. Every station row
+passed variable identity, units/conversion, coordinates, interval and finite-value
+checks; all 96,980 decoded-row SHA-256 digests matched the committed values.
+All 12 monthly NOAA re-download samples, varying UTC cycle and forecast lead,
+matched both original subset checksums and decoded station values. This is a
+sampled external source check, not a second download of every raw field.
+
+Reproduce with `data_management/model_forecasts/verify_gfs_2025.py`; the small
+receipt is `data_management/model_forecasts/results/gfs_2025_verification.json`.
+The verifier uses a read-only repeatable-read snapshot and does not trust the
+importer's progress file. The existing 2024-01-01 pilot remains additional to
+the counts above. The generated inventory below includes that pilot, so its
+all-model total is 97,045 source subsets and 288,149 temperature rows.
+The two external-model tables together measured 308,895,744 bytes including
+indexes/TOAST at verification, versus 187,970,294,345 bytes of original subsets
+processed for the new scope. Raw global fields were not retained by this import.
+
+`data_management/model_forecasts/stream_gfs.py` downloads only original NOAA
+2 m temperature messages by byte range. It validates forecast identity, fields,
+intervals and station values, then atomically inserts into the existing two
+external-model tables and reads every inserted station field back before
+releasing the in-memory GRIB bytes. No new tables or columns are required.
+Resume checks committed source/field coverage, rather than trusting a local
+progress file. Existing HKO data and the 2024 fairness pilot are preserved.
+
+For these new sources, `manifest.storage_mode='station_extract_only'` and
+`manifest.raw_subset_retained=false`. A `subset_relative_path` beginning with
+`not-retained/` is an explicitly non-materialized provenance label, not a
+readable disk path. The original subset SHA-256, size, URLs, selected index
+lines, byte ranges, station snapshot, decoded-row checksum and GRIB packing/grid
+metadata are retained in the source manifest. The existing disk-file importer
+must not be used to reload these station-only records. Additional extraction
+locations or exact offline raw re-decoding require obtaining the original data
+again. Back up the database; there is no second local raw archive for this mode.
+
+`manifest.grib_message_metadata` records each message's processing interval,
+parameter identity, grid increments and inspected packing factors. Its computed
+`quantization_step_k` is diagnostic, not a certified error bound. Min/max remain
+interval fields, not exact HKT daily endpoints. Historical publication times
+remain unknown. Acquisition completeness does not establish a fair operational
+comparison or resolve the previously documented reconstruction approximation.
+
+The ignored `downloads/gfs_2025_stream_status.json` reports progress and errors.
+Progress snapshots are throttled to five seconds and retry Windows sharing
+violations. If a reader still locks the snapshot, the import continues, logs a
+warning and attempts later snapshots; committed database rows remain the resume
+authority. Fatal diagnostics retain exception class and code location without
+arbitrary exception text or credentials.
+The runner refreshes this guide from the committed catalog every 260 newly
+processed sources and on graceful exit, including partial failure. A hard
+termination can leave the snapshot behind; refresh it before a final handoff.
 
 ### HQ Grid nowcast extension (2026-10-05 HKT)
 
@@ -968,7 +1037,7 @@ foreign keys, checks and indexes are generated below from the committed catalog.
 
 Live database: `course_project`. Schema: `project`.
 
-Verified at: 2026-10-23T15:33:05+00:00.
+Verified at: 2026-11-13T12:54:18+00:00.
 
 Generated by `data_management/model_forecasts/schema_document.py` using
 a read-only connection loaded from the repository-root `.env`.
@@ -1003,9 +1072,69 @@ Refresh this section after every database modification, including imports.
 
 | Model | Source subsets | First run (UTC) | Last run (UTC) |
 | --- | ---: | --- | --- |
-| GFS | 65 | 2024-01-01T00:00:00+00:00 | 2024-01-01T00:00:00+00:00 |
+| GFS | 97,045 | 2024-01-01T00:00:00+00:00 | 2025-12-31T18:00:00+00:00 |
 
-Temperature extract rows: **193** (actual count at verification time).
+GFS HKO extraction coverage by UTC run month and cycle:
+
+| Run month | Cycle UTC | Runs present | Source subsets | HKO temperature rows | Runs with all 65 leads / expected row counts |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2024-01 | 00 | 1 | 65 | 193 | 1 |
+| 2024-12 | 00 | 8 | 520 | 1,544 | 8 |
+| 2024-12 | 06 | 8 | 520 | 1,544 | 8 |
+| 2024-12 | 12 | 8 | 520 | 1,544 | 8 |
+| 2024-12 | 18 | 8 | 520 | 1,544 | 8 |
+| 2025-01 | 00 | 31 | 2,015 | 5,983 | 31 |
+| 2025-01 | 06 | 31 | 2,015 | 5,983 | 31 |
+| 2025-01 | 12 | 31 | 2,015 | 5,983 | 31 |
+| 2025-01 | 18 | 31 | 2,015 | 5,983 | 31 |
+| 2025-02 | 00 | 28 | 1,820 | 5,404 | 28 |
+| 2025-02 | 06 | 28 | 1,820 | 5,404 | 28 |
+| 2025-02 | 12 | 28 | 1,820 | 5,404 | 28 |
+| 2025-02 | 18 | 28 | 1,820 | 5,404 | 28 |
+| 2025-03 | 00 | 31 | 2,015 | 5,983 | 31 |
+| 2025-03 | 06 | 31 | 2,015 | 5,983 | 31 |
+| 2025-03 | 12 | 31 | 2,015 | 5,983 | 31 |
+| 2025-03 | 18 | 31 | 2,015 | 5,983 | 31 |
+| 2025-04 | 00 | 30 | 1,950 | 5,790 | 30 |
+| 2025-04 | 06 | 30 | 1,950 | 5,790 | 30 |
+| 2025-04 | 12 | 30 | 1,950 | 5,790 | 30 |
+| 2025-04 | 18 | 30 | 1,950 | 5,790 | 30 |
+| 2025-05 | 00 | 31 | 2,015 | 5,983 | 31 |
+| 2025-05 | 06 | 31 | 2,015 | 5,983 | 31 |
+| 2025-05 | 12 | 31 | 2,015 | 5,983 | 31 |
+| 2025-05 | 18 | 31 | 2,015 | 5,983 | 31 |
+| 2025-06 | 00 | 30 | 1,950 | 5,790 | 30 |
+| 2025-06 | 06 | 30 | 1,950 | 5,790 | 30 |
+| 2025-06 | 12 | 30 | 1,950 | 5,790 | 30 |
+| 2025-06 | 18 | 30 | 1,950 | 5,790 | 30 |
+| 2025-07 | 00 | 31 | 2,015 | 5,983 | 31 |
+| 2025-07 | 06 | 31 | 2,015 | 5,983 | 31 |
+| 2025-07 | 12 | 31 | 2,015 | 5,983 | 31 |
+| 2025-07 | 18 | 31 | 2,015 | 5,983 | 31 |
+| 2025-08 | 00 | 31 | 2,015 | 5,983 | 31 |
+| 2025-08 | 06 | 31 | 2,015 | 5,983 | 31 |
+| 2025-08 | 12 | 31 | 2,015 | 5,983 | 31 |
+| 2025-08 | 18 | 31 | 2,015 | 5,983 | 31 |
+| 2025-09 | 00 | 30 | 1,950 | 5,790 | 30 |
+| 2025-09 | 06 | 30 | 1,950 | 5,790 | 30 |
+| 2025-09 | 12 | 30 | 1,950 | 5,790 | 30 |
+| 2025-09 | 18 | 30 | 1,950 | 5,790 | 30 |
+| 2025-10 | 00 | 31 | 2,015 | 5,983 | 31 |
+| 2025-10 | 06 | 31 | 2,015 | 5,983 | 31 |
+| 2025-10 | 12 | 31 | 2,015 | 5,983 | 31 |
+| 2025-10 | 18 | 31 | 2,015 | 5,983 | 31 |
+| 2025-11 | 00 | 30 | 1,950 | 5,790 | 30 |
+| 2025-11 | 06 | 30 | 1,950 | 5,790 | 30 |
+| 2025-11 | 12 | 30 | 1,950 | 5,790 | 30 |
+| 2025-11 | 18 | 30 | 1,950 | 5,790 | 30 |
+| 2025-12 | 00 | 31 | 2,015 | 5,983 | 31 |
+| 2025-12 | 06 | 31 | 2,015 | 5,983 | 31 |
+| 2025-12 | 12 | 31 | 2,015 | 5,983 | 31 |
+| 2025-12 | 18 | 31 | 2,015 | 5,983 | 31 |
+
+These counts check the 0–192 h three-hourly extraction schedule, not exact HKT daily-extrema reconstruction or historical publication availability.
+
+Temperature extract rows: **288,149** (actual count at verification time).
 
 ### GFS benchmark pilot status
 

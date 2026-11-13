@@ -9,6 +9,11 @@ Task 1 RQ1–RQ7 have executed results and findings reports. Task 2 now has a
 [small GFS fairness pilot](benchmark/README.md): 14 diagnostic cases from one
 existing run, with daily-window and historical-availability blockers documented.
 It is not yet a validated full-period benchmark or a model ranking.
+The [2025 GFS temperature acquisition](data_management/model_forecasts/README.md#low-disk-2025-temperature-import)
+is now complete for all four daily cycles plus late-December 2024 buffers:
+1,492 runs and 287,956 Headquarters temperature extracts. Live coverage,
+all stored row digests and 12 monthly NOAA re-download samples were verified.
+This supplies benchmark inputs; the fair-comparison analysis remains pending.
 See [`analyses/README.md`](analyses/README.md) for the folder map and progress,
 and [`analyses/02_rq1_revisions/README.md`](analyses/02_rq1_revisions/README.md)
 for the first completed revision analysis.

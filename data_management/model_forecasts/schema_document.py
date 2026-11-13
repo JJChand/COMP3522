@@ -74,6 +74,37 @@ def refresh_schema_document(destination=None):
                 lines.append(f"| {cell(model)} | {count:,} | {cell(first)} | {cell(last)} |")
             if not sources:
                 lines.append("| No imported sources | 0 | | |")
+            if "external_model_temperature" in names:
+                coverage = connection.execute("""
+                    WITH station_counts AS (
+                        SELECT source_id, count(*) AS rows
+                        FROM project.external_model_temperature WHERE station_code='HKO'
+                        GROUP BY source_id
+                    ), runs AS (
+                        SELECT s.run_time_utc,count(*) AS sources,
+                               count(DISTINCT s.forecast_hour) AS distinct_hours,
+                               min(s.forecast_hour) AS first_hour,max(s.forecast_hour) AS last_hour,
+                               sum(COALESCE(t.rows,0)) AS temperature_rows,
+                               bool_and(COALESCE(t.rows,0) = CASE WHEN s.forecast_hour=0 THEN 1 ELSE 3 END
+                                        AND s.forecast_hour % 3=0) AS field_counts_match
+                        FROM project.external_model_source s
+                        LEFT JOIN station_counts t USING(source_id)
+                        WHERE s.model='GFS' AND s.product='pgrb2.0p25'
+                        GROUP BY s.run_time_utc
+                    )
+                    SELECT to_char(run_time_utc AT TIME ZONE 'UTC','YYYY-MM'),
+                           EXTRACT(HOUR FROM run_time_utc AT TIME ZONE 'UTC')::int,
+                           count(*),sum(sources),sum(temperature_rows),
+                           count(*) FILTER (WHERE sources=65 AND distinct_hours=65 AND first_hour=0
+                                             AND last_hour=192 AND field_counts_match)
+                    FROM runs GROUP BY 1,2 ORDER BY 1,2
+                """).fetchall()
+                lines.extend(["", "GFS HKO extraction coverage by UTC run month and cycle:", "",
+                              "| Run month | Cycle UTC | Runs present | Source subsets | HKO temperature rows | Runs with all 65 leads / expected row counts |",
+                              "| --- | ---: | ---: | ---: | ---: | ---: |"])
+                for month, cycle, runs, subsets, rows, complete in coverage:
+                    lines.append(f"| {month} | {cycle:02d} | {runs:,} | {subsets:,} | {rows:,} | {complete:,} |")
+                lines.extend(["", "These counts check the 0–192 h three-hourly extraction schedule, not exact HKT daily-extrema reconstruction or historical publication availability."])
         else:
             lines.append("`project.external_model_source` has not been created.")
         if "external_model_temperature" in names:

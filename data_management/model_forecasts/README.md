@@ -17,7 +17,7 @@ rather than assuming these tables are still absent.
 | Data | Source / download mechanism | Credentials |
 | --- | --- | --- |
 | Original NOAA GFS forecasts | [NOAA public GFS archive on AWS](https://registry.opendata.aws/noaa-gfs-bdp-pds/), direct HTTPS GRIB2 files and `.idx` indexes | No API key or AWS account |
-| Original ECMWF IFS forecasts from 2024–2025 | [ECMWF archive / MARS](https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets), catalogue download or Python Web API | ECMWF account and appropriate archive entitlement; check institutional access and any charges |
+| Original ECMWF IFS forecasts from 2024–2025 | [Public ECMWF cloud archive](https://registry.opendata.aws/ecmwf-forecasts/); [tested feasibility and limitations](../../analyses/10_ecmwf_open_data/README.md). MARS is an alternative for additional historical fields. | No account/key for tested public AWS/Google downloads; MARS separately requires archive entitlement |
 | Existing HKO forecasts, observations, station coordinates | Your PostgreSQL database, connection settings in repository-root `.env` | Your existing `PG*` settings |
 
 Example GFS file for the 00 UTC run on 1 January 2024, forecast hour 24:
@@ -163,6 +163,57 @@ JOIN project.external_model_temperature AS t USING (source_id)
 ORDER BY s.run_time_utc, t.valid_time_utc, t.station_code, t.message_number;
 ```
 
+## Low-disk 2025 temperature import
+
+The user authorized all four UTC cycles for 2025 and late-December 2024 buffers.
+The import is complete: 1,492 runs, 96,980 source subsets and 287,956 HKO
+temperature rows. Independent live verification found no missing/duplicate
+run-lead slots, invalid field groups or decoded-row digest mismatches. All 12
+monthly NOAA raw-byte/decoded-value re-download checks passed. Actual scope and
+interpretation are maintained in [DATABASE_AGENT_GUIDE.md](../../DATABASE_AGENT_GUIDE.md).
+
+Read-only verification and its small aggregate receipt:
+
+```powershell
+.\.venv\Scripts\python.exe data_management/model_forecasts/verify_gfs_2025.py
+```
+
+The receipt is [results/gfs_2025_verification.json](results/gfs_2025_verification.json).
+This checks all committed records and re-downloads 12 source samples; it does
+not re-download the full year. `--offline` skips external NOAA checks but still
+queries the live database. Use a different `--output` to retain an earlier receipt.
+
+Use the resumable station-only runner to avoid retaining roughly a full year's
+global temperature-message archive:
+
+```powershell
+.\.venv\Scripts\python.exe -u data_management/model_forecasts/stream_gfs.py --workers 16
+```
+
+Defaults: run dates 2024-12-24 inclusive to 2026-01-01 exclusive, all four cycles,
+HKO Headquarters only, TMP/TMAX/TMIN, forecast hours 0–192 every three hours.
+Expected schedule: 1,492 runs / 96,980 subsets; actual field completeness is
+checked rather than assumed. This command writes the existing external-model
+tables, verifies committed extracts, and refreshes `DATABASE_AGENT_GUIDE.md`.
+Resume by rerunning the same command; a process lock prevents duplicate runners
+using the same status file. No recurring automation is installed.
+
+Raw subsets exist only in bounded worker memory and are not written to disk.
+Source URLs, byte ranges, checksums, field/packing metadata and station extracts
+remain in PostgreSQL. `not-retained/` source paths are provenance labels, not
+local files; see the canonical database guide for the interpretation contract.
+Exact raw re-decoding and extraction of other stations require downloading the
+original messages again. The original 2024 raw pilot is preserved.
+
+Progress is in ignored `downloads/gfs_2025_stream_status.json`. On a graceful
+stop or failure the guide is refreshed to the committed partial scope. After a
+hard kill, run `schema_document.py` before reporting the final import status.
+The progress file updates at most every five seconds. Temporary Windows file
+locks are retried and cannot stop data ingestion; if still locked, progress is
+logged and a later snapshot is attempted. Resume always checks committed rows.
+The runner attempts transient failures again and reports unfilled slots; it
+never replaces a missing archive field with a fabricated value.
+
 ## 5. Expand after the pilot
 
 **2026-10-23 fairness gate:** the [executed benchmark pilot](../../benchmark/README.md)
@@ -203,7 +254,23 @@ recorded data-preparation choice your teammate should review for coastal station
 
 ## 6. ECMWF IFS: where and how
 
-After account registration, **first verify archive access**. A registered account
+### Public Open Data route: investigated 2026-11-08
+
+Start with the [executed Open Data investigation](../../analyses/10_ecmwf_open_data/results/findings.md).
+Anonymous cloud downloads work for the tested historical operational IFS fields;
+the archive-account restriction below is not a blanket restriction on IFS.
+The audit checks +24/+168 hours for all 731 daily 00 UTC runs in 2024–2025,
+and decodes all published leads through +192 hours for two engineering pilots.
+Native min/max field coverage and output grids change within 2024. The current
+recommendation is to consider 2025 for a consistent primary proxy comparison,
+subject to the analysis team's scope and native-field consistency caveats.
+No IFS records were imported. Existing external-model columns fit the tested
+subset, but a dedicated transactional IFS manifest/import adapter remains needed.
+Do not pass the investigation cache or payload preview to the GFS importer.
+
+### MARS alternative and the earlier entitlement pilot
+
+For the MARS route only, **first verify archive access**. A registered account
 and an API key do not by themselves establish permission to retrieve the
 historical operational IFS product. Open the
 [MARS catalogue](https://apps.ecmwf.int/mars-catalogue/) while signed in. If it is
@@ -271,8 +338,10 @@ an access-rejection message means archive entitlement needs resolving.
    records the same provenance and station-extraction fields. **Do not pass IFS
    files to `manage_gfs.py import`**: it currently requires the GFS manifests.
 
-ECMWF [real-time open data](https://www.ecmwf.int/en/forecasts/datasets/open-data)
-has a short rolling archive, so it is not by itself a 2024–2025 historical source.
+ECMWF's own [real-time Open Data endpoint](https://www.ecmwf.int/en/forecasts/datasets/open-data)
+has a short rolling archive, but its public cloud mirrors retain historical
+files. The investigation above verifies bounded 2024–2025 coverage; do not
+infer the cloud history is absent from the rolling endpoint's retention limit.
 [Open-Meteo Single Runs](https://open-meteo.com/en/docs/single-runs-api) is another
 interface, but inspect its model/date coverage and forecast-vs-hindcast provenance
 before using it. It is not assumed equivalent to original operational IFS/GFS.

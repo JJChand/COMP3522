@@ -35,6 +35,11 @@ Its requested research CSVs and plots are aggregate outputs in
 Task 2 (RQ8–RQ9, external-model comparison) has an initial
 [GFS fairness pilot](../benchmark/README.md), with 14 diagnostic cases and
 explicit daily-window and availability limitations. The
+[full-year GFS temperature acquisition](../data_management/model_forecasts/README.md#low-disk-2025-temperature-import)
+now supplies all four 2025 daily cycles plus late-2024 buffers: 1,492 runs,
+96,980 source subsets and 287,956 Headquarters extracts, verified against the
+live database and monthly NOAA samples. Performance comparisons remain pending.
+The
 [ECMWF Open Data investigation](10_ecmwf_open_data/README.md) adds a two-anchor
 2024–2025 historical audit, two complete engineering downloads, database
 compatibility checks and a proposed metric example. It makes no database

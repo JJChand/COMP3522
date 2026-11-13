@@ -1,0 +1,135 @@
+{
+  "verified_at_utc": "2026-11-13T12:52:41.444712+00:00",
+  "scope": {
+    "run_start_utc": "2024-12-24T00:00:00+00:00",
+    "run_end_exclusive_utc": "2026-01-01T00:00:00+00:00",
+    "cycles_utc": [
+      0,
+      6,
+      12,
+      18
+    ],
+    "forecast_hours": "0:192:3",
+    "station": "HKO"
+  },
+  "checks": {
+    "read_only_session": true,
+    "complete_unique_schedule": true,
+    "year_and_buffer_counts": true,
+    "required_live_columns": true,
+    "source_provenance_consistent": true,
+    "all_station_fields_valid": true,
+    "noaa_monthly_sample_redownloads_match": true
+  },
+  "schedule": {
+    "expected_sources": 96980,
+    "missing_sources": 0,
+    "unexpected_slots": 0,
+    "duplicate_slots": 0
+  },
+  "inventory": {
+    "2024_buffer": {
+      "runs": 32,
+      "source_subsets": 2080,
+      "temperature_rows": 6176
+    },
+    "2025": {
+      "runs": 1460,
+      "source_subsets": 94900,
+      "temperature_rows": 281780
+    }
+  },
+  "live_catalog_columns_checked": 32,
+  "source_audit": {
+    "checked": 96980,
+    "invalid": 0,
+    "original_subset_bytes": 187970294345
+  },
+  "station_audit": {
+    "rows_checked": 287956,
+    "invalid_rows": 0,
+    "sources_checked": 96980,
+    "invalid_field_groups": 0,
+    "decoded_digest_mismatches": 0
+  },
+  "table_storage_bytes": {
+    "external_model_source": 233259008,
+    "external_model_temperature": 75636736
+  },
+  "online_samples": [
+    {
+      "run_time_utc": "2025-01-15T00:00:00+00:00",
+      "forecast_hour": 0,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-02-15T06:00:00+00:00",
+      "forecast_hour": 3,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-03-15T12:00:00+00:00",
+      "forecast_hour": 96,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-04-15T18:00:00+00:00",
+      "forecast_hour": 192,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-05-15T00:00:00+00:00",
+      "forecast_hour": 0,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-06-15T06:00:00+00:00",
+      "forecast_hour": 3,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-07-15T12:00:00+00:00",
+      "forecast_hour": 96,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-08-15T18:00:00+00:00",
+      "forecast_hour": 192,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-09-15T00:00:00+00:00",
+      "forecast_hour": 0,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-10-15T06:00:00+00:00",
+      "forecast_hour": 3,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-11-15T12:00:00+00:00",
+      "forecast_hour": 96,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    },
+    {
+      "run_time_utc": "2025-12-15T18:00:00+00:00",
+      "forecast_hour": 192,
+      "raw_sha256_matches": true,
+      "decoded_rows_match": true
+    }
+  ],
+  "passed": true,
+  "limits": "Full committed schedule, provenance identities, field validity and decoded-row hashes checked. External raw-byte verification is a 12-file monthly sample, not a re-download of every source. Global raw fields are not retained; this does not validate exact HKT daily extrema, other stations, historical publication times or forecast skill."
+}
