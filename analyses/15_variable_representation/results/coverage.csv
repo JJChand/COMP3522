@@ -1,0 +1,33 @@
+year,channel,family,expected_days,source_rows,usable_days,qc_C,trace_days,common_days,station,unit
+2022,tmax,temperature,365,365,365,365,0,365,Hong Kong Observatory,°C
+2022,tmin,temperature,365,365,365,365,0,365,Hong Kong Observatory,°C
+2022,rh_min,humidity,365,365,365,0,0,365,Hong Kong Observatory,%
+2022,rh_max,humidity,365,365,365,0,0,365,Hong Kong Observatory,%
+2022,rainfall,rainfall,365,365,365,365,52,365,Hong Kong Observatory,mm
+2022,wind_speed,wind,365,365,365,365,0,365,Hong Kong International Airport,km/h
+2022,cloud,weather,365,365,365,365,0,365,Hong Kong Observatory,%
+2022,sunshine,weather,365,365,365,365,0,365,King's Park,hours
+2023,tmax,temperature,365,365,365,365,0,362,Hong Kong Observatory,°C
+2023,tmin,temperature,365,365,365,365,0,362,Hong Kong Observatory,°C
+2023,rh_min,humidity,365,365,365,0,0,362,Hong Kong Observatory,%
+2023,rh_max,humidity,365,365,365,0,0,362,Hong Kong Observatory,%
+2023,rainfall,rainfall,365,365,365,365,60,362,Hong Kong Observatory,mm
+2023,wind_speed,wind,365,365,364,364,0,362,Hong Kong International Airport,km/h
+2023,cloud,weather,365,365,365,365,0,362,Hong Kong Observatory,%
+2023,sunshine,weather,365,365,363,363,0,362,King's Park,hours
+2024,tmax,temperature,366,366,366,366,0,366,Hong Kong Observatory,°C
+2024,tmin,temperature,366,366,366,366,0,366,Hong Kong Observatory,°C
+2024,rh_min,humidity,366,366,366,0,0,366,Hong Kong Observatory,%
+2024,rh_max,humidity,366,366,366,0,0,366,Hong Kong Observatory,%
+2024,rainfall,rainfall,366,366,366,366,73,366,Hong Kong Observatory,mm
+2024,wind_speed,wind,366,366,366,366,0,366,Hong Kong International Airport,km/h
+2024,cloud,weather,366,366,366,366,0,366,Hong Kong Observatory,%
+2024,sunshine,weather,366,366,366,366,0,366,King's Park,hours
+2025,tmax,temperature,365,365,365,365,0,365,Hong Kong Observatory,°C
+2025,tmin,temperature,365,365,365,365,0,365,Hong Kong Observatory,°C
+2025,rh_min,humidity,365,365,365,0,0,365,Hong Kong Observatory,%
+2025,rh_max,humidity,365,365,365,0,0,365,Hong Kong Observatory,%
+2025,rainfall,rainfall,365,365,365,365,53,365,Hong Kong Observatory,mm
+2025,wind_speed,wind,365,365,365,365,0,365,Hong Kong International Airport,km/h
+2025,cloud,weather,365,365,365,365,0,365,Hong Kong Observatory,%
+2025,sunshine,weather,365,365,365,365,0,365,King's Park,hours

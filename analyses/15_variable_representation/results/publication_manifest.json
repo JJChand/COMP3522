@@ -1,0 +1,39 @@
+{
+  "publication_date_hkt": "2026-11-18",
+  "run_id": "20261118T065444356823Z",
+  "scope": "Summaries, figures and code; excludes frozen observations, raw sources, full predictions and credentials",
+  "file_sha256": {
+    "code/README.md": "e85605ab72447ae3e85915b074f69fd6fedbfc63e6a0dd5274c108e07b0abc9b",
+    "code/requirements-variable-selection.txt": "a3c2cf8f7ab0c53114208524d3fbabc1540974c8663370abe192c257507747fb",
+    "code/research/task1_three_family_representation.ipynb": "42d3287caa98cb215142b301dfd9ea7734563e2ab49f9892ab199f4422b1dc92",
+    "code/research/task1_variable_selection.ipynb": "cf9ddde64872b1cda089e65be3ccf01d4c211ea31eb49ff0c746b43dca39be97",
+    "code/scripts/run_task1_three_family_notebook.py": "5289a8f653e9fd989d32a5bb4563319b746e41a57498dbc672febe4d015d4fa8",
+    "code/scripts/task1_three_family_representation.py": "3f9051a9cb7af92c4fa988e96d5f1a16552d01eeab591f4ef86abe2184e7063d",
+    "code/scripts/test_task1_three_family_representation.py": "fd677de84e3549232b6a434a15900e1c1ecb557a7903f05fd59a999f11f763bf",
+    "FINDINGS_ZH.md": "be4b709204b9cb5686b24448050a4df546f48e77db1812079f27162d26265ef1",
+    "README.md": "569b13e607f8884f93b257ad1d4c97839bcb0a5f1876b50c89ff7bf40f89efbf",
+    "results/analysis_validation.json": "b79c76b7b0325ed5e379b1ae556533dd6ea24dea76a62a6b144fe2d9412ceb89",
+    "results/bayesian_models.csv": "b74280be834ffa3139a67e9061f52074c8b837c5b8fe637eae81dcb05eaf2dd6",
+    "results/bayesian_pips.csv": "8ef4d6c8a7ce1a2e886add2afca279ef0d323bfc0ed85dacf43bbc296186c441",
+    "results/comparison.csv": "68cf29aeeef53491f8ba509923037315d1db405be2b87e886f017f4f7cdfd09a",
+    "results/coverage.csv": "cdd5b3c72df89deeae3a1684fd5c5e39faca6b23ce17869b20a7353d5815c6a4",
+    "results/input_manifest.json": "b58d64384cec21c8828375c2aba4e33bfed1c0cefa12666fd7c3487d930626f8",
+    "results/lasso_coefficients.csv": "6a7d9195e1176349de62c09669e2518e4e7d136fc14eab33ffa47c5c33b2d2bf",
+    "results/lasso_cv.csv": "5f5a84877a3ae947eb1525be4df084356fb131c8d8064b244650ac53ccf61d2d",
+    "results/ols_coefficients.csv": "665399723df76145df09d5dd3a9bf0aa4c73a3edb2052fd2eca59bc4b860c444",
+    "results/ols_skill.png": "f606745913f57510aa894d272b13402d33e9fe957a63f5bf525d9b1a89f9692d",
+    "results/paired_skill_gap.png": "faf8e07480db01e84581f774c997d4505896ec2903437acdf763e14bdb5e8e35",
+    "results/settings.json": "67c34e54ad511998cd8520829bfca84dfc0e546ce2a5b1967d2814e9ae898270",
+    "results/status.csv": "f5f73b11c0a07b7d4c6c786edea6ab10fe5bf50f287197e94f4becff22b7fd81",
+    "results/versions.json": "84d140ba4a6176a8e283d6b5f7d241709ff9f4a129e68c882cb72e9d73c659dd"
+  },
+  "source_notebook_normalization": "Root discovery marker and local output paths only; original numerical outputs retained",
+  "checks": {
+    "relative_links": "pass",
+    "notebooks_format_and_compilation": "pass",
+    "synthetic_unit_tests": 3,
+    "experiment_scripts_identical_to_executed_sources": "Identical source text after line-ending normalization",
+    "model_notebook_code_identical_except_root_discovery": true
+  },
+  "text_line_endings": "LF; numerical values unchanged"
+}

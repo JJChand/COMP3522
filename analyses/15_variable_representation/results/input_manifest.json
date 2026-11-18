@@ -1,0 +1,14 @@
+{
+  "created_at_utc": "2026-11-17T15:22:15.686380+00:00",
+  "scope": "2022-2025 HKT daily observations; ex-post cross-variable reconstruction",
+  "source": "user-started PostgreSQL read-only bridge",
+  "transaction_note": "Each query uses its own read-only transaction, not a shared repeatable-read snapshot.",
+  "hash_note": "Full SHA-256 hashes below cover exported files. Upstream sha256_prefix is only a prefix, not full raw-file verification.",
+  "files": {
+    "channel_catalog.json": "79dd347bf4f261cc035980fd368cc20b2ff1cc1af66ab5cb982a5a9753a6f770",
+    "extraction_audit.json": "6b6c5a21c5beec1917f1cdcca22990ef8ef9b3bc28bdb8eac3a5f3d831bc4abe",
+    "observations_long.csv": "51df3dea6b5918ff05170bf4b8cd5378de91ab326d26c3d29944554f1ee821be",
+    "query_receipts.json": "3972334df89699ea8176b0af7da09003e9df08423d679afd53575106dbb7b761",
+    "sources.json": "917a4f464171089e57a0c0b947d1a382fe7503a61ff939e3fdda2eb9d086c8f8"
+  }
+}

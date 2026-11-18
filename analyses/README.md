@@ -96,3 +96,11 @@ daily JSON reports, not the mean-RH CSV; see the RQ4 source audit and canonical
 guide for the validated mapping and the absent CSV-style completeness flag.
 Exact territorial PSR calibration remains unproven; accepting the research
 proxy changes that question's operational definition and needs team agreement.
+
+## Variable-scope information coverage
+
+[Three-family representation supplement](15_variable_representation/README.md)
+tests whether temperature, RH and rainfall reconstruct omitted wind/cloud/sunshine
+observations in future-year evaluations. It reports paired full-versus-restricted
+loss gaps and method sensitivities, supporting bounded Task 1 scope justification.
+It does not measure forecast accuracy, rank variable importance or establish equivalence.

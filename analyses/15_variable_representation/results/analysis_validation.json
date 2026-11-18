@@ -1,0 +1,32 @@
+{
+  "real_run": "data\\derived\\task1_three_family_representation_20261118\\results\\20261118T065444356823Z",
+  "synthetic_run": "data\\derived\\task1_three_family_representation_20261118\\synthetic_validation\\20261118T064839595294Z",
+  "synthetic_unit_tests_passed": 3,
+  "real": {
+    "manifest_hashes_verified": 15,
+    "prediction_rows": 157392,
+    "metric_rows": 432,
+    "model_statuses": 432,
+    "max_mse_recompute_error": 4.547473508864641e-13,
+    "lasso_failed_alphas": 0,
+    "all_checks_passed": true
+  },
+  "synthetic": {
+    "manifest_hashes_verified": 15,
+    "prediction_rows": 157824,
+    "metric_rows": 432,
+    "model_statuses": 432,
+    "max_mse_recompute_error": 6.661338147750939e-15,
+    "lasso_failed_alphas": 9,
+    "all_checks_passed": true
+  },
+  "execution_backend": "IPython InteractiveShell sequential in-process cells; local Jupyter kernel unavailable",
+  "visual_qa": [
+    "ols_skill.png",
+    "paired_skill_gap.png"
+  ],
+  "independent_QR_prediction_max_error": 8.384404281969182e-13,
+  "notebook_format_and_all_code_cells_executed": true,
+  "executed_notebook_sha256": "5d4042df30be774bf48d014342fc99645e8498bc67677c0b70178aee1da4fa30",
+  "publication_notes": "Historical verification of the complete local result set, including predictions omitted from this publication. Notebook root-discovery/output-path normalization changes its file hash; original executed notebook hash remains provenance."
+}
