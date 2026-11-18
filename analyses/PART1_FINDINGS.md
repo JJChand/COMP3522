@@ -176,3 +176,18 @@ Independent live SQL covers RQ2 directions/PSR counts, RQ3 temperature/RH useful
 The previously reported RH-extrema gap was a catalog-only inference: the daily JSON reports already contained matching endpoints. The read-only source audit now validates all 1,461 dates and the analysis scores them. No database import was needed. Daily mean RH was never substituted for the endpoints. The guide documents the corrected mapping and its missing-completeness-flag caveat.
 
 Exact territorial PSR calibration needs the official realized event label or an agreed research definition accepting the documented spatial proxy. Operational persistence requires historical publication-availability evidence. These gaps are distinct from successful script execution.
+
+## Task 1(a) RH metric sensitivity supplement (2025)
+
+A [fixed-reference supplement](05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/README.md)
+compares Hausdorff, mean endpoint absolute error and overlap loss on 89 complete
+2025 dates from the same 26-station sampled regional reference. All three metrics
+support lower near-term discrepancy, smaller near-term revisions and positive
+mean RevisionGain under the stated cadence scopes. Among changed updates,
+Hausdorff/endpoint classification agreement is about 61% with equal-date weighting;
+majority-improvement wording is metric-sensitive.
+
+This is a companion-workspace result publication, with aggregate CSVs, figures
+and validation receipts. It uses a different target from the Headquarters endpoint
+track above, does not extend Task 1(b), and does not establish official territorial
+accuracy or an untouched-test generalization.

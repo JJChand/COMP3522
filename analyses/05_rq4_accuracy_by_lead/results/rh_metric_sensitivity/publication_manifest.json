@@ -1,0 +1,140 @@
+{
+  "published_on_hkt": "2026-11-17",
+  "source": "Verified companion-workspace RH metric sensitivity run",
+  "base_commit": "0a1695eff6c4cbd0ef0d40751e57ded82a158284",
+  "scope": "Result-only Task 1(a) supplement; no raw or full case-level export, execution pipeline or database write",
+  "original_validation_sha256": "173764f281b07360a1f6b775d8c847151880adc9e546dba42a402ec5f65e606d",
+  "files": {
+    "analyses/05_rq4_accuracy_by_lead/README.md": {
+      "bytes": 4530,
+      "sha256": "2aa3dd3c8ad071244160630eeae275dc5d3e47e1c69953c4ff3a0b035b3d475f",
+      "git_blob_sha1": "0e1aaf1f4b2b5e45c8155d43e80f1b7da0f4b913"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/accuracy.png": {
+      "bytes": 152104,
+      "sha256": "d546317ab57486a0eae5a9041a740cda923ade8bcd22156cf8696d06046573ad",
+      "git_blob_sha1": "5b5480129f0c1d35bdbc68882f28af587fd50ba2"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/accuracy.svg": {
+      "bytes": 79352,
+      "sha256": "fd8026c1c1146519c9caed993e4e5f0931ad442bfa97442c198d797f06713845",
+      "git_blob_sha1": "93e6ae4df273a86d5bd34d7113cfe203f788e2e1"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/accuracy_summary.csv": {
+      "bytes": 3936,
+      "sha256": "53230678aa8e9bd59aa0355cc51cbc25e1ea8fd523e3850e943672d11dc2434d",
+      "git_blob_sha1": "36725692833b468e0b42ea19c012458cfd20b5cc"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/agreement_matrices.csv": {
+      "bytes": 10701,
+      "sha256": "e108b6c095294d3cc33514f89bd3b9debc6026e5c8e1bc6a1d9f97d7fa215019",
+      "git_blob_sha1": "e12e56376bb4b59985772acae85060d42fe3b0a2"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/agreement_summary.csv": {
+      "bytes": 1617,
+      "sha256": "5f8170f111e9e59c3b9e4b7cf6942eed957c8331f96cb794905e586f4bdd046a",
+      "git_blob_sha1": "65059ec4d2d5a594535c8702623a120b2a88b64c"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/analysis_validation.json": {
+      "bytes": 5382,
+      "sha256": "b1df7e00ab1c1e98a95e1bc368a334f8e6324a7b25c6d2d6f26f95dcfc73afcc",
+      "git_blob_sha1": "0bdbb2eac1423bf4861b326fd75912aea3b0149f"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/coverage_by_month.csv": {
+      "bytes": 200,
+      "sha256": "bff59de2aec4287efd7f42973be8dd49c7327d34c966aa346a85f1a1e779dfcd",
+      "git_blob_sha1": "1fe5e85d61290b32033a37b681f7e88e82055b86"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/endpoint_diagnostics.csv": {
+      "bytes": 904,
+      "sha256": "e91243b6819d51031bc9377db12eaf7fc09693253c8376ee3be2a97fe0dd7d55",
+      "git_blob_sha1": "b22c7625385eb82b12a7c265f0778867ca4e3f35"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/FINDINGS_ZH.md": {
+      "bytes": 10582,
+      "sha256": "4680c491dbf0bb8f1fd0d75352307d4fad1ccc99dfa6e57c9422d0e68362703a",
+      "git_blob_sha1": "aedc959d7d5212788519619622b806a836d99017"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/independent_validation.json": {
+      "bytes": 533,
+      "sha256": "882431873ba4488d03afa6fa8b662aeddd9137f0337b0969490dbfe5845a2a5d",
+      "git_blob_sha1": "3fe091c52b077c3ea83aed8275ba05f96ebd1874"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/metric_disagreement_examples.csv": {
+      "bytes": 6610,
+      "sha256": "3fd46f61f6991035c1b494746c177bd4802ce6e2de5154e8013bff4cb1d676ba",
+      "git_blob_sha1": "c553a3b386dad9e23714e618c288668dc0040317"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/metric_rank_correlations.csv": {
+      "bytes": 2888,
+      "sha256": "aaa4c5682f533af24f7366e5e5e6a89da8f08fca9567b44aa85697d0bd5e72e8",
+      "git_blob_sha1": "94cee348c71f85fdf5acb3e1b0392ac6d5869238"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/paired_contrasts.csv": {
+      "bytes": 3226,
+      "sha256": "6e60afc3d53bf6148d0e852e62af6a3d5c4a25d91860b802593864c66d671bf1",
+      "git_blob_sha1": "fe6b2e87217a3fc6641979d129b58a21ff87f4b0"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/README.md": {
+      "bytes": 16072,
+      "sha256": "16b16e27adc3148ead0b707bfdc89b2adb75046ea3f8eb5960d840740824d576",
+      "git_blob_sha1": "f7dbfd2531d429331674c585626985e44cae39f8"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/revision_agreement.png": {
+      "bytes": 139402,
+      "sha256": "a170e9792f8c604713feb7122220ab6dd591d250404a24fc7c411bd8e7badeb3",
+      "git_blob_sha1": "24326facfa3f6abe1bab476d31b5a0fdfae1e085"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/revision_agreement.svg": {
+      "bytes": 116715,
+      "sha256": "a85e3be49b467408021521cbaed77b5d0935b1b69d982ecc73226e3d5b8d714f",
+      "git_blob_sha1": "a42b65cbcfaa5d0efdd1a16eab5c55522cb6d069"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/revision_cadence_summary.csv": {
+      "bytes": 2850,
+      "sha256": "cafe6b36be9fc828baacb78bcd783d31420d93d3eb3a4839c86efea066c40f2b",
+      "git_blob_sha1": "5e3293e13a713d1b9d756ffecadc3dd83415689d"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/revision_coverage.csv": {
+      "bytes": 170,
+      "sha256": "13fbf9dd20e4c9b9bef800971ec7b8d43219879efdd47eb1e14d525824239432",
+      "git_blob_sha1": "a952f353fd74abad446accd3bba0605e34046c6e"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/stability.png": {
+      "bytes": 205605,
+      "sha256": "4b6d0f719749796750c4b00c0026739a14bf7d35046013ba1f98255325060d04",
+      "git_blob_sha1": "4bfa1ae0f95a06d48683125d88b4d643d78bec10"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/stability.svg": {
+      "bytes": 98976,
+      "sha256": "ca306f81d2ff508f7848eca4bd5f76796ba7880f2c78e9e787558f89ac43a6ce",
+      "git_blob_sha1": "1d1765bb734235e276bccfb13a7739996bc12cae"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/stability_summary.csv": {
+      "bytes": 16262,
+      "sha256": "61bd4f468dfffe722d443cf7060cd64afd23990b69157dfca9066b0458d15c91",
+      "git_blob_sha1": "19641256b8a03e9dc3dab8a50ad5d4b51b96e3be"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/usefulness.png": {
+      "bytes": 266004,
+      "sha256": "4d93b0b1bd6a7a0134dd64226c9ee80bf213bd7f0c6dac91133a5f4e4fe44586",
+      "git_blob_sha1": "f751cc07db5ae760866d960c67ec47fa15879bdb"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/usefulness.svg": {
+      "bytes": 105033,
+      "sha256": "c45d96d279e7744b2ada4d9fc887e6ed5591473e9d0bf9e5a9dd8b332a944b96",
+      "git_blob_sha1": "1763e444dae7c33be38020d5ab519db3cd1f8647"
+    },
+    "analyses/05_rq4_accuracy_by_lead/results/rh_metric_sensitivity/usefulness_summary.csv": {
+      "bytes": 40442,
+      "sha256": "75e570d4d666cc3b5bdbf8a87ceda7ac6bdce12cabac3baa96b4c331f28fb328",
+      "git_blob_sha1": "3167141ee1a8ab73a0d1ff64fe51d08d4014c1b8"
+    },
+    "analyses/PART1_FINDINGS.md": {
+      "bytes": 12844,
+      "sha256": "c170cc1e72d6fa8d1f4457fdc246fcf96d4e755807d82a075d5c9fe0c1064bb3",
+      "git_blob_sha1": "01b529f0aca2350216baa3863bbc6555d8e0f70e"
+    }
+  },
+  "text_newlines": "LF; numeric CSV values unchanged"
+}

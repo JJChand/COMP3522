@@ -65,3 +65,18 @@ This supplement records an analysis already executed in a companion workspace.
 It contains method and findings documents only; regional raw inputs and analysis
 scripts are not included in this update. The existing `run_analysis.py` does not
 reproduce this supplement. No database import or schema change is part of it.
+
+## RH metric sensitivity: fixed reference (2025)
+
+The [Task 1(a) metric-sensitivity results](results/rh_metric_sensitivity/README.md)
+compare Hausdorff distance, mean endpoint absolute error and 1−IoU on the same
+26-station reference, 89 complete dates and 801 daily-latest cases. Accuracy,
+revision stability and mean revision benefit have consistent aggregate directions;
+individual changed-update classifications remain metric-sensitive.
+[中文摘要](results/rh_metric_sensitivity/FINDINGS_ZH.md) is also available.
+
+The supplement publishes validated tables, figures and validation receipts from
+the companion analysis workspace. It does not add raw observations, full case-level
+exports or an executable pipeline to this repository. The regional-reference
+spatial/sampling limits remain; no Task 1(b) factor analysis or database change
+is included.

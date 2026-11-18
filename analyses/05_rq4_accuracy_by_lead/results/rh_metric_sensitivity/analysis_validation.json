@@ -1,0 +1,116 @@
+{
+  "status": "passed",
+  "task": "Task 1(a); RQ-A/RQ-C metric sensitivity only",
+  "year_hkt": 2025,
+  "station_count": 26,
+  "common_dates": 89,
+  "accuracy_cases": 801,
+  "raw_forecast_rows": 12884,
+  "canonical_forecast_rows": 12884,
+  "duplicate_rows_removed": 0,
+  "complete_payload_duplicate_groups": 0,
+  "revision_pairs_by_scope": {
+    "consecutive_le24h": 2885,
+    "daily_latest": 712
+  },
+  "revision_dates_by_scope": {
+    "consecutive_le24h": 89,
+    "daily_latest": 89
+  },
+  "missing_publication_times": 0,
+  "runtime_versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.3"
+  },
+  "validation_checks": [
+    "Frozen RH hashes including canonical readings",
+    "26 x 144-slot station-day gate",
+    "Reconstructed strict26 reference endpoints",
+    "801 frozen forecast IDs, times, values and Hausdorff losses",
+    "All nine published strict26 Hausdorff means",
+    "Independent live SQL: 27 accuracy mean cells and nine counts",
+    "Shared cases across metrics",
+    "Full trajectory before pair eligibility",
+    "Positive leads and pre-valid publication cutoff"
+  ],
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 3522,
+    "calendar_days": 365,
+    "circular_block_days": 7,
+    "missing_mask": "Preserved; all within-date leads/pairs move together",
+    "weighting": "Equal dates; pair-weighted sensitivity separate",
+    "singleton_groups": "CI undefined; fewer than two dates",
+    "tie_tolerance": 1e-10
+  },
+  "conclusions": [
+    {
+      "experiment": "accuracy_near_minus_far",
+      "scope": "daily_latest",
+      "denominator": "all_pairs",
+      "verdict": "same_direction_ci_excludes_zero"
+    },
+    {
+      "experiment": "stability_near_minus_far",
+      "scope": "consecutive_le24h",
+      "denominator": "all_pairs",
+      "verdict": "same_direction_ci_excludes_zero"
+    },
+    {
+      "experiment": "stability_near_minus_far",
+      "scope": "daily_latest",
+      "denominator": "all_pairs",
+      "verdict": "same_direction_ci_excludes_zero"
+    },
+    {
+      "experiment": "mean_revision_gain",
+      "scope": "consecutive_le24h",
+      "denominator": "all_pairs",
+      "verdict": "same_direction_ci_excludes_zero"
+    },
+    {
+      "experiment": "mean_revision_gain",
+      "scope": "consecutive_le24h",
+      "denominator": "changed_only",
+      "verdict": "same_direction_ci_excludes_zero"
+    },
+    {
+      "experiment": "mean_revision_gain",
+      "scope": "daily_latest",
+      "denominator": "all_pairs",
+      "verdict": "same_direction_ci_excludes_zero"
+    },
+    {
+      "experiment": "mean_revision_gain",
+      "scope": "daily_latest",
+      "denominator": "changed_only",
+      "verdict": "same_direction_ci_excludes_zero"
+    }
+  ],
+  "input_and_code_sha256": {
+    "data/derived/task1_regional_rh_2025/station_sampled_intervals.csv": "674aa2227cb58f79b070ec4556dd2253c71207ab66c6c6532e77aa3e940b9ad5",
+    "data/derived/task1_regional_rh_2025/canonical_observations.csv.gz": "846f8bd47f16e5620ab5bb4d028d5400f92d1f2c8279515e087d88062a32cfca",
+    "data/derived/task1_rh_expanded_20261005/expanded_forecast_comparison_cases.csv": "00dae2dd0ba857ef7da4749f1211e2a5c4a149c9783225d181e00fa87673c20a",
+    "data/derived/task1_rh_expanded_20261005/all_acquired_readings_envelopes.csv": "62b7602fb2d406deb78fa0ebd7d9dba54651b526a6e0de3128126ec3aa5b330c",
+    "data/derived/task1_rh_expanded_20261005/all26_strict_summary_by_lead.csv": "1bdb7da219fed0a672760278d138c9fbabc26a3f45bd8e4599415ed078ca7ab6",
+    "scripts/analyze_task1_rh_metric_sensitivity_20261117.py": "29b37ae17c27422f9144d787791804b87bfa057060c14981d1612653fa5daab9",
+    "scripts/audit_task1_rh_station_database.py": "2e894a2aad9511941cde3f1ddb59885517fdbbf58e35d213b052bbfa1f67e467",
+    "scripts/test_task1_rh_metric_sensitivity_20261117.py": "2a1beaf11e44759a88816c194c113f5ec8a2d10970b85d2a120e758f81d242dc",
+    "output/comp3522-grid-publish-20261005/analyses/common/task1.py": "f6a65ac9d8f026de957982ac23314df62e18a9b6eb4a895f818ba811bffe4fa0",
+    "output/comp3522-grid-publish-20261005/analyses/02_rq1_revisions/run_analysis.py": "027d4105d6f25d11600128cc04ff0d1962e9865a2013f3dfda0e7d1733bba08a",
+    "data/derived/task1_rh_metric_sensitivity_20261117/forecast_vintages.sql": "0df1df8779a2e5c54722d341b5fb7ab9f423c98813fc1bb92d194373a95f21b0",
+    "data/derived/task1_rh_metric_sensitivity_20261117/forecast_vintages.json": "48972b6879d3e95a89353f870a6541509030f235c723d6ebb99f7914ed2f04f2",
+    "data/derived/task1_rh_metric_sensitivity_20261117/accuracy_validation.sql": "7e64916e61393590e1465a0cfbbaba66d655815094111438f68493c6d8164f0e",
+    "data/derived/task1_rh_metric_sensitivity_20261117/accuracy_validation.json": "7164956672d94a91bf8f1f4313298cbade6962ee02bf9cb485108010cdd53a57"
+  },
+  "limitations": [
+    "Regional sampled reference not verified as the public forecast spatial target",
+    "89/365 dates; missingness is not corrected by bootstrap",
+    "Sampled 1-minute means at nominal 10-minute updates, not full-minute extrema",
+    "2025 exploratory sample; no long-term, all-Hong-Kong, agency-wide or baseline skill claim",
+    "Published issue timestamp is not independently verified historical public availability",
+    "IoU saturates for disjoint ranges and depends on range widths; not a probabilistic score"
+  ]
+}

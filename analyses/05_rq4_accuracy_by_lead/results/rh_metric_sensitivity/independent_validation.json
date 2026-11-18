@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "verification": "Independent CSV/stdlib formulas; no production imports",
+  "canonical_station_days_reconstructed": 2314,
+  "reference_days_reconstructed": 89,
+  "accuracy_cases_checked": 801,
+  "revision_cases_checked": 3597,
+  "summary_rows_checked": 252,
+  "paired_contrasts_and_block_CIs_checked": 21,
+  "agreement_matrix_cells_checked": 108,
+  "forecast_pair_key_sets_match": true,
+  "fingerprints_match": true,
+  "verifier_sha256": "fe033213e003775f81f12ac742b659a45b251cdf686eb6d1f410d84d4c0106ad"
+}
